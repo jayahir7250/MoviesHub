@@ -104,6 +104,33 @@
         @media (max-width: 600px) {
             .movie-card { min-width: 50%; } /* 2 Items */
         }
+                    /* --- SEARCH RESULTS STYLES --- */
+#search-results {
+    display: none; /* Hidden by default */
+    padding: 20px;
+    min-height: 80vh;
+}
+
+.search-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 movies per row */
+    gap: 15px;
+}
+
+/* Override slider styles for search results */
+.search-grid .movie-card {
+    min-width: auto; /* Reset the slider width */
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Responsive for Search Grid */
+@media (max-width: 1000px) {
+    .search-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 600px) {
+    .search-grid { grid-template-columns: repeat(2, 1fr); }
+}
     </style>
 </head>
 <body>
@@ -122,12 +149,23 @@
             <input type="text" placeholder="Search...">
         </div>
     </header>
+    <div id="search-results" class="container">
+    <div class="section-title">
+        <i class="fas fa-search"></i> Search Results
+    </div>
+    <div class="search-grid" id="search-grid-content">
+        </div>
+</div>
+
+<div id="main-content">
 
     <div class="warning-banner">
         <span class="red">× Avoid FAKE Copies</span> - Always use <span class="blue">HDHub4u.Tv</span>
     </div>
+    
 
     <main class="container">
+         <div id="main-content">
         <div class="section-title">
             <i class="fas fa-bolt" style="color: #ffc107;"></i> Marvel Cinematic Universe
         </div>
@@ -456,10 +494,106 @@
                 </div>
             </div>
         </div>
+
+        <div class="section-title"><i class="fas fa-om"></i> South & Folk Horror Collection</div>
+        <div class="slider-wrapper" id="southWrapper">
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-track" id="southTrack">
+                <div class="movie-card">
+                    <div class="poster"><a href="bramayugam.html"><img src="images/bramayugam.jpg" alt="Bramayugam"></a></div>
+                    <div class="card-details"><a href="bramayugam.html"><strong>Bramayugam (2024)</strong></a>1080p [Malayalam]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="kantara.html"><img src="images/kantara.jpg" alt="Kantara"></a></div>
+                    <div class="card-details"><a href="kantara.html"><strong>Kantara (2022)</strong></a>1080p [Dual Audio]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="kantara2.html"><img src="images/kantara2.jpg" alt="Kantara 1"></a></div>
+                    <div class="card-details"><a href="kantara2.html"><strong>Kantara - A Legend Chapter 1 (2025)</strong></a>1080p </div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="vikrantrona.html"><img src="images/vikrantrona.jpg" alt="Vikrant Rona"></a></div>
+                    <div class="card-details"><a href="vikrantrona.html"><strong>Vikrant Rona (2022)</strong></a>1080p [Dual Audio]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="tumbbad.html"><img src="images/tumbbad.jpg" alt="Tumbbad"></a></div>
+                    <div class="card-details"><a href="tumbbad.html"><strong>Tumbbad (2018)</strong></a>1080p [Hindi]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="maa.html"><img src="images/maa.jpg" alt="Maa"></a></div>
+                    <div class="card-details"><a href="maa.html"><strong>Maa</strong></a>1080p [Dual Audio]</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title"><i class="fas fa-fingerprint"></i> South Crime & Spy Thrillers</div>
+        <div class="slider-wrapper" id="southSpyWrapper">
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-track" id="southSpyTrack">
+                <div class="movie-card"><div class="poster"><a href="hit1.html"><img src="images/hit1.jpg" alt="HIT 1"></a></div><div class="card-details"><a href="hit1.html"><strong>HIT: The First Case</strong></a>1080p [Hindi+Telugu]</div></div>
+                <div class="movie-card"><div class="poster"><a href="hit2.html"><img src="images/hit2.jpg" alt="HIT 2"></a></div><div class="card-details"><a href="hit2.html"><strong>HIT: The Second Case</strong></a>1080p [Hindi+Telugu]</div></div>
+                <div class="movie-card"><div class="poster"><a href="hit3.html"><img src="images/hit3.jpg" alt="HIT 3"></a></div><div class="card-details"><a href="hit3.html"><strong>HIT: The Third Case</strong></a>1080p [Coming Soon]</div></div>
+                <div class="movie-card"><div class="poster"><a href="porthozhil.html"><img src="images/porthozhil.jpg" alt="Por Thozhil"></a></div><div class="card-details"><a href="porthozhil.html"><strong>Por Thozhil</strong></a>1080p [Dual Audio]</div></div>
+                <div class="movie-card"><div class="poster"><a href="v.html"><img src="images/v.jpg" alt="V"></a></div><div class="card-details"><a href="v2020.html"><strong>V (2020)</strong></a>1080p [Hindi+Telugu]</div></div>
+                <div class="movie-card"><div class="poster"><a href="maargan.html"><img src="images/maargan.jpg" alt="Maaran"></a></div><div class="card-details"><a href="maaran.html"><strong>Maaran (2022)</strong></a>1080p [Dual Audio]</div></div>
+            </div>
+        </div>
  
     </main>
 
     <script>
+        // ==================== SEARCH FUNCTIONALITY ====================
+    const searchInput = document.querySelector('.search-container input');
+    const searchResultsContainer = document.getElementById('search-results');
+    const searchGridContent = document.getElementById('search-grid-content');
+    const mainContent = document.getElementById('main-content');
+    
+    // Collect all movie cards from the page immediately
+    // We use a Set to avoid duplicates if you have the same movie in multiple sliders
+    const allMovies = document.querySelectorAll('.movie-card');
+
+    searchInput.addEventListener('keyup', function(e) {
+        const term = e.target.value.toLowerCase().trim();
+
+        if (term.length > 0) {
+            // 1. Hide the main sliders
+            mainContent.style.display = 'none';
+            
+            // 2. Show the search results container
+            searchResultsContainer.style.display = 'block';
+            
+            // 3. Clear previous results
+            searchGridContent.innerHTML = '';
+
+            let found = false;
+
+            // 4. Loop through all movies and check for matches
+            allMovies.forEach(card => {
+                const titleElement = card.querySelector('.card-details strong');
+                if (titleElement) {
+                    const title = titleElement.innerText.toLowerCase();
+                    
+                    if (title.includes(term)) {
+                        // Clone the card so we don't remove it from the slider
+                        const clonedCard = card.cloneNode(true);
+                        searchGridContent.appendChild(clonedCard);
+                        found = true;
+                    }
+                }
+            });
+
+            if (!found) {
+                searchGridContent.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666;">No movies found matching "' + term + '"</p>';
+            }
+
+        } else {
+            // If search is empty, show main content and hide results
+            mainContent.style.display = 'block';
+            searchResultsContainer.style.display = 'none';
+        }
+    });
         const sliderUpdateFunctions = [];
 
         function initSlider(wrapperId, trackId, delay) {
@@ -523,7 +657,9 @@
         initSlider('miWrapper', 'miTrack', 900);
         initSlider('hpWrapper', 'hpTrack', 900);
         initSlider('potcWrapper', 'potcTrack', 900);
-        initSlider('boysWrapper', 'boysTrack', 900); // Added The Boys initialization
+        initSlider('boysWrapper', 'boysTrack', 900);
+        initSlider('southWrapper', 'southTrack', 900);
+        initSlider('southSpyWrapper', 'southSpyTrack', 900); // Added The Boys initialization
     </script>
 
 </body> 
