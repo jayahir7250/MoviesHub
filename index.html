@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoviesHub - Ultimate Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- Reset & Global Styles --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #000; color: #fff; overflow-x: hidden; }
+        a { text-decoration: none; color: inherit; }
+
+        /* --- Navbar --- */
+        header { background-color: #111; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #333; }
+        .nav-left { display: flex; align-items: center; gap: 20px; }
+        .logo { background-color: #ffc107; color: #000; font-weight: bold; padding: 5px 10px; border-radius: 3px; display: flex; align-items: center; gap: 5px; font-size: 14px; }
+        .nav-links { display: flex; gap: 15px; font-size: 13px; }
+        .nav-links a:hover { color: #ffc107; }
+        .search-container input { padding: 6px 10px; border: none; border-radius: 2px; width: 200px; }
+
+        /* --- Warning Banner --- */
+        .warning-banner { background: linear-gradient(to bottom, #220b0b, #1a0505); border: 1px solid #4a1818; padding: 12px; text-align: center; font-size: 13px; margin: 10px 20px; color: #ccc; }
+        .warning-banner span.red { color: #ff4d4d; font-weight: bold; }
+        .warning-banner span.blue { color: #3399ff; font-weight: bold; cursor: pointer; }
+        .warning-banner span.yellow { color: #ffc107; font-weight: bold; }
+
+        /* --- Main Content --- */
+        .container { padding: 0 20px; margin-bottom: 50px; }
+        /* Added margin-top to separate sections */
+        .section-title { font-size: 16px; font-weight: bold; margin: 30px 0 20px 0; display: flex; align-items: center; gap: 8px; }
+        .section-title i { color: #fff; }
+
+        /* --- SLIDER STYLES --- */
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden; 
+            padding: 0 10px;
+        }
+
+        .slider-track {
+            display: flex;
+            /* Changed transition to 0.3s to match the fast speed */
+            transition: transform 0.3s ease-in-out; 
+            width: 100%;
+        }
+
+        .movie-card {
+            min-width: 20%; /* 5 Items per screen */
+            padding: 0 8px; 
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .poster {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background-color: #333;
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        
+        .poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .poster a:hover img { transform: scale(1.05); opacity: 0.8; }
+
+        .card-details { padding: 10px 0; font-size: 13px; line-height: 1.4; }
+        .card-details strong { display: block; margin-bottom: 4px; color: #eee; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .card-details a:hover strong { color: #ffc107; }
+
+        /* --- Slider Buttons --- */
+        .slider-btn {
+            position: absolute;
+            top: 35%; 
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            font-size: 24px;
+            padding: 15px 10px;
+            cursor: pointer;
+            z-index: 10;
+            transition: 0.3s;
+            border-radius: 4px;
+        }
+
+        .slider-btn:hover { background-color: #ffc107; color: #000; }
+        .prev-btn { left: 0; }
+        .next-btn { right: 0; }
+
+        /* --- Responsive Logic --- */
+        @media (max-width: 1000px) {
+            .movie-card { min-width: 33.33%; } /* 3 Items */
+            .nav-links { display: none; }
+        }
+        @media (max-width: 600px) {
+            .movie-card { min-width: 50%; } /* 2 Items */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-left">
+            <div class="logo"><i class="fas fa-film"></i> MoviesHub</div>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">BollyWood</a>
+                <a href="#">HollyWood</a>
+                <a href="#">Web Series</a>
+            </nav>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search...">
+        </div>
+    </header>
+
+    <div class="warning-banner">
+        <span class="red">× Avoid FAKE Copies</span> - Always use <span class="blue">HDHub4u.Tv</span>
+    </div>
+
+    <main class="container">
+        <div class="section-title">
+            <i class="fas fa-bolt" style="color: #ffc107;"></i> Marvel Cinematic Universe
+        </div>
+
+        <div class="slider-wrapper" id="marvelWrapper">
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+
+            <div class="slider-track" id="marvelTrack">
+                <div class="movie-card">
+                    <div class="poster"><a href="ironman.html"><img src="images/iron man 1.jpg" alt="Iron Man"></a></div>
+                    <div class="card-details"><a href="ironman.html"><strong>Iron Man</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="hulk1.html"><img src="images/The.Incredible.Hulk.2008.jpg" alt="Hulk"></a></div>
+                    <div class="card-details"><a href="hulk1.html"><strong>The Incredible Hulk</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="ironman2.html"><img src="images/iron man2.jpg" alt="Iron Man 2"></a></div>
+                    <div class="card-details"><a href="ironman2.html"><strong>Iron Man 2</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="thor1.html"><img src="images/thor1.jpg" alt="Thor"></a></div>
+                    <div class="card-details"><a href="thor1.html"><strong>Thor</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="captain1.html"><img src="images/captainamerica1.jpg" alt="Captain America"></a></div>
+                    <div class="card-details"><a href="captain1.html"><strong>Captain America</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="avengers1.html"><img src="images/theavengers1.jpg" alt="Avengers"></a></div>
+                    <div class="card-details"><a href="avengers1.html"><strong>The Avengers</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="ironman3.html"><img src="images/iron man 3.jpg" alt="Iron Man 3"></a></div>
+                    <div class="card-details"><a href="ironman3.html"><strong>Iron Man 3</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="thor2.html"><img src="images/thor2.jpg" alt="Thor 2"></a></div>
+                    <div class="card-details"><a href="thor2.html"><strong>Thor: The Dark World</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="captain2.html"><img src="images/captainamerica2.jpg" alt="Captain 2"></a></div>
+                    <div class="card-details"><a href="captain2.html"><strong>Captain America: Winter Soldier</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="guardiansofgalaxy1.html"><img src="images/Guardians.of.the.Galaxy1.jpg" alt="Guardians"></a></div>
+                    <div class="card-details"><a href="guardiansofgalaxy1.html"><strong>Guardians of The Galaxy</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="avengers2.html"><img src="images/Avengers.Age.of.Ultron.2015.jpg" alt="Ultron"></a></div>
+                    <div class="card-details"><a href="avengers2.html"><strong>Avengers: Age of Ultron</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="antman1.html"><img src="images/Ant-Man.1.jpg" alt="AntMan"></a></div>
+                    <div class="card-details"><a href="antman1.html"><strong>Ant-Man</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="captain3.html"><img src="images/captainamerica3.jpg" alt="Civil War"></a></div>
+                    <div class="card-details"><a href="captain3.html"><strong>Captain America: Civil War</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="doctorstrange1.html"><img src="images/doctorstrange.jpg" alt="Strange"></a></div>
+                    <div class="card-details"><a href="doctorstrange1.html"><strong>Doctor Strange</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="guardiansofthegalaxy2.html"><img src="images/Guardians.of.the.Galaxy.Vol.2.jpg" alt="Guardians 2"></a></div>
+                    <div class="card-details"><a href="guardiansofthegalaxy2.html"><strong>Guardians Vol. 2</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="spidermanhomecoming.html"><img src="images/spidermanhomecoming.jpg" alt="Homecoming"></a></div>
+                    <div class="card-details"><a href="spidermanhomecoming.html"><strong>Spider-Man: Homecoming</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="thor3.html"><img src="images/thor3.jpg" alt="Ragnarok"></a></div>
+                    <div class="card-details"><a href="thor3.html"><strong>Thor: Ragnarok</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="blackpanther.html"><img src="images/blackpanther.jpg" alt="Black Panther"></a></div>
+                    <div class="card-details"><a href="blackpanther.html"><strong>Black Panther</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="avengers3.html"><img src="images/Avengers.Infinity.War.2018.jpg" alt="Infinity War"></a></div>
+                    <div class="card-details"><a href="avengers3.html"><strong>Avengers: Infinity War</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="antman2.html"><img src="images/Ant-Man.and.the.Wasp2.jpg" alt="AntMan 2"></a></div>
+                    <div class="card-details"><a href="antman2.html"><strong>Ant-Man and the Wasp</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="captainmarvel.html"><img src="images/Captain.Marvel.2019.jpg" alt="Captain Marvel"></a></div>
+                    <div class="card-details"><a href="captainmarvel.html"><strong>Captain Marvel</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="avengers4.html"><img src="images/Avengers.Endgame.2019..jpg" alt="Endgame"></a></div>
+                    <div class="card-details"><a href="avengers4.html"><strong>Avengers: Endgame</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="spidermanfarfromhome.html"><img src="images/spider-manfarfromhome.jpg" alt="Far From Home"></a></div>
+                    <div class="card-details"><a href="spidermanfarfromhome.html"><strong>Spider-Man: Far From Home</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="blackwidow.html"><img src="images/Black-Widow-2021.jpg" alt="Black Widow"></a></div>
+                    <div class="card-details"><a href="blackwidow.html"><strong>Black Widow</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="shangchi.html"><img src="images/Shang.Chi.2021.jpg" alt="Shang Chi"></a></div>
+                    <div class="card-details"><a href="shangchi.html"><strong>Shang-Chi</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="eternals.html"><img src="images/eternals.jpg" alt="Eternals"></a></div>
+                    <div class="card-details"><a href="eternals.html"><strong>Eternals</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="spidermannowayhome.html"><img src="images/Spider-Man-No-Way-Home-2021-Extended-Hindi-WEBRip-Full-Movie.jpg" alt="No Way Home"></a></div>
+                    <div class="card-details"><a href="spidermannowayhome.html"><strong>No Way Home</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="doctorstrange2.html"><img src="images/Doctor-Strange-2-2022-English-HDRip-Full-Movie-HDHub4ua57a9e75e9371912.jpg" alt="Strange 2"></a></div>
+                    <div class="card-details"><a href="doctorstrange2.html"><strong>Multiverse of Madness</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="thor4.html"><img src="images/thor4.jpg" alt="Thor 4"></a></div>
+                    <div class="card-details"><a href="thor4.html"><strong>Love and Thunder</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="blackpanther2.html"><img src="images/Black-Panther-Wakanda-Forever-2022-Hindi-Dubbed-iMAX-HDRip-Full-Movie-HDHub4ud0673f8867619fb0.jpg" alt="Black Panther 2"></a></div>
+                    <div class="card-details"><a href="blackpanther2.html"><strong>Wakanda Forever</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="antman3.html"><img src="images/ant man 3.jpg" alt="Ant Man 3"></a></div>
+                    <div class="card-details"><a href="antman3.html"><strong>Quantumania</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="guardiansofthegalaxy3.html"><img src="images/Guardians-of-the-Galaxy-Vol-3.jpg" alt="Guardians 3"></a></div>
+                    <div class="card-details"><a href="guardiansofthegalaxy3.html"><strong>Guardians Vol. 3</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="themarvels.html"><img src="images/themarvels.webp" alt="The Marvels"></a></div>
+                    <div class="card-details"><a href="themarvels.html"><strong>The Marvels</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="deadpoolandwolverine.html"><img src="images/deadpoolandwolverine.webp" alt="Deadpool"></a></div>
+                    <div class="card-details"><a href="deadpoolandwolverine.html"><strong>Deadpool & Wolverine</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="captain4.html"><img src="images/captainamericabravenewworld.jpg" alt="Cap 4"></a></div>
+                    <div class="card-details"><a href="captain4.html"><strong>Brave New World</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="thunderbolts.html"><img src="images/thunderbolts.webp" alt="Thunderbolts"></a></div>
+                    <div class="card-details"><a href="thunderbolts.html"><strong>Thunderbolts*</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="thefantasticfourfirststeps.html"><img src="images/thefanstasticfourfirststeps1.jpg" alt="Fantastic 4"></a></div>
+                    <div class="card-details"><a href="thefantasticfourfirststeps.html"><strong>Fantastic Four</strong></a>1080p [x264/HEVC]</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <i class="fas fa-hat-wizard" style="color: #ffc107;"></i> Harry Potter Collection
+        </div>
+
+        <div class="slider-wrapper" id="hpWrapper">
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+
+            <div class="slider-track" id="hpTrack">
+                <div class="movie-card">
+                    <div class="poster"><a href="hp1.html"><img src="images/hp1.jpg" alt="Sorcerer's Stone"></a></div>
+                    <div class="card-details"><a href="hp1.html"><strong>HP: Sorcerer's Stone</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="hp2.html"><img src="images/hp2.jpg" alt="Chamber of Secrets"></a></div>
+                    <div class="card-details"><a href="hp2.html"><strong>HP: Chamber of Secrets</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="hp3.html"><img src="images/hp3.jpg" alt="Prisoner of Azkaban"></a></div>
+                    <div class="card-details"><a href="hp3.html"><strong>HP: Prisoner of Azkaban</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="hp4.html"><img src="images/hp4.jpg" alt="Goblet of Fire"></a></div>
+                    <div class="card-details"><a href="hp4.html"><strong>HP: Goblet of Fire</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="hp5.html"><img src="images/hp5.jpg" alt="Order of the Phoenix"></a></div>
+                    <div class="card-details"><a href="hp5.html"><strong>HP: Order of the Phoenix</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="hp6.html"><img src="images/hp6.jpg" alt="Half-Blood Prince"></a></div>
+                    <div class="card-details"><a href="hp6.html"><strong>HP: Half-Blood Prince</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="hp7p1.html"><img src="images/hp7p1.jpg" alt="Deathly Hallows Pt 1"></a></div>
+                    <div class="card-details"><a href="hp7p1.html"><strong>HP: Deathly Hallows Pt 1</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="hp7p2.html"><img src="images/hp7p2.jpg" alt="Deathly Hallows Pt 2"></a></div>
+                    <div class="card-details"><a href="hp7p2.html"><strong>HP: Deathly Hallows Pt 2</strong></a>1080p [x264/HEVC]</div>
+                </div>
+            </div>
+        </div>
+        <div class="section-title">
+            <i class="fas fa-skull-crossbones"></i> Pirates of the Caribbean Collection
+        </div>
+        <div class="slider-wrapper" id="potcWrapper">
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-track" id="potcTrack">
+                <div class="movie-card">
+                    <div class="poster"><a href="potc1.html"><img src="images/potc1.jpg" alt="Curse of the Black Pearl"></a></div>
+                    <div class="card-details"><a href="potc1.html"><strong>PotC: Curse of the Black Pearl</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="potc2.html"><img src="images/potc2.jpg" alt="Dead Man's Chest"></a></div>
+                    <div class="card-details"><a href="potc2.html"><strong>PotC: Dead Man's Chest</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="potc3.html"><img src="images/potc3.jpg" alt="At World's End"></a></div>
+                    <div class="card-details"><a href="potc3.html"><strong>PotC: At World's End</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="potc4.html"><img src="images/potc4.jpg" alt="On Stranger Tides"></a></div>
+                    <div class="card-details"><a href="potc4.html"><strong>PotC: On Stranger Tides</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="potc5.html"><img src="images/potc5.jpg" alt="Dead Men Tell No Tales"></a></div>
+                    <div class="card-details"><a href="potc5.html"><strong>PotC: Dead Men Tell No Tales</strong></a>1080p [x264/HEVC]</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="section-title">
+            <i class="fas fa-robot"></i> Transformers Collection
+        </div>
+        <div class="slider-wrapper" id="transformersWrapper">
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-track" id="transformersTrack">
+                <div class="movie-card">
+                    <div class="poster"><a href="transformers1.html"><img src="images/transformers1.jpg" alt="Transformers"></a></div>
+                    <div class="card-details"><a href="transformers1.html"><strong>Transformers (2007)</strong></a>1080p [x264]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="transformers2.html"><img src="images/transformers2.jpg" alt="Revenge of the Fallen"></a></div>
+                    <div class="card-details"><a href="transformers2.html"><strong>Revenge of the Fallen</strong></a>1080p [x264]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="transformers3.html"><img src="images/transformers3.jpg" alt="Dark of the Moon"></a></div>
+                    <div class="card-details"><a href="transformers3.html"><strong>Dark of the Moon</strong></a>1080p [x264]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="transformers4.html"><img src="images/transformers4.jpg" alt="Age of Extinction"></a></div>
+                    <div class="card-details"><a href="transformers4.html"><strong>Age of Extinction</strong></a>1080p [x264]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="transformers5.html"><img src="images/transformers5.jpg" alt="The Last Knight"></a></div>
+                    <div class="card-details"><a href="transformers5.html"><strong>The Last Knight</strong></a>1080p [x264]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="transformers6.html"><img src="images/transformers6.jpg" alt="Rise of the Beasts"></a></div>
+                    <div class="card-details"><a href="transformers6.html"><strong>Rise of the Beasts</strong></a>1080p [x264]</div>
+                </div>
+            </div>
+        </div>
+
+    <div class="section-title"><i class="fas fa-user-secret"></i> Mission: Impossible Collection</div>
+        <div class="slider-wrapper" id="miWrapper">
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-track" id="miTrack">
+                <div class="movie-card"><div class="poster"><a href="mi1.html"><img src="images/mi1.jpg" alt="Mission Impossible"></a></div><div class="card-details"><a href="mi1.html"><strong>Mission: Impossible</strong></a>1080p</div></div>
+                <div class="movie-card"><div class="poster"><a href="mi2.html"><img src="images/mi2.jpg" alt="MI-2"></a></div><div class="card-details"><a href="mi2.html"><strong>Mission: Impossible 2</strong></a>1080p</div></div>
+                <div class="movie-card"><div class="poster"><a href="mi3.html"><img src="images/mi3.jpg" alt="MI-3"></a></div><div class="card-details"><a href="mi3.html"><strong>Mission: Impossible III</strong></a>1080p</div></div>
+                <div class="movie-card"><div class="poster"><a href="mi4.html"><img src="images/mi4.jpg" alt="Ghost Protocol"></a></div><div class="card-details"><a href="mi4.html"><strong>Ghost Protocol</strong></a>1080p</div></div>
+                <div class="movie-card"><div class="poster"><a href="mi5.html"><img src="images/mi5.jpg" alt="Rogue Nation"></a></div><div class="card-details"><a href="mi5.html"><strong>Rogue Nation</strong></a>1080p</div></div>
+                <div class="movie-card"><div class="poster"><a href="mi6.html"><img src="images/mi6.jpg" alt="Fallout"></a></div><div class="card-details"><a href="mi6.html"><strong>Fallout</strong></a>1080p</div></div>
+                <div class="movie-card"><div class="poster"><a href="mi7.html"><img src="images/mi7.jpg" alt="Dead Reckoning"></a></div><div class="card-details"><a href="mi7.html"><strong>Dead Reckoning Part One</strong></a>1080p</div></div>
+                <div class="movie-card"><div class="poster"><a href="mi8.html"><img src="images/mi8.jpg" alt="Final Reckoning"></a></div><div class="card-details"><a href="mi8.html"><strong>The Final Reckoning</strong></a>1080p</div></div>
+            </div>
+        </div>
+ 
+    </main>
+
+    <script>
+        const sliderUpdateFunctions = [];
+
+        function initSlider(wrapperId, trackId, delay) {
+            const wrapper = document.getElementById(wrapperId);
+            const track = document.getElementById(trackId);
+            // Safety check: if the wrapper or track doesn't exist, stop to prevent errors
+            if (!wrapper || !track) {
+                console.error(`Slider Error: Element not found for ${wrapperId} or ${trackId}`);
+                return;
+            }
+
+            const items = track.children;
+            const totalItems = items.length;
+            
+            let currentIndex = 0;
+            let autoSlideInterval;
+
+            function moveSlide(direction) {
+                let itemsPerScreen = 5;
+                if (window.innerWidth <= 600) itemsPerScreen = 2;
+                else if (window.innerWidth <= 1000) itemsPerScreen = 3;
+
+                const maxIndex = totalItems - itemsPerScreen;
+                currentIndex += direction;
+
+                if (currentIndex > maxIndex) { currentIndex = 0; } 
+                else if (currentIndex < 0) { currentIndex = maxIndex; }
+
+                const percentage = (100 / itemsPerScreen);
+                track.style.transform = `translateX(-${currentIndex * percentage}%)`;
+            }
+
+            function startAutoSlide() {
+                stopAutoSlide(); 
+                autoSlideInterval = setInterval(() => { moveSlide(1); }, delay);
+            }
+
+            function stopAutoSlide() { clearInterval(autoSlideInterval); }
+
+            const prevBtn = wrapper.querySelector('.prev-btn');
+            const nextBtn = wrapper.querySelector('.next-btn');
+
+            if (prevBtn && nextBtn) {
+                prevBtn.onclick = () => moveSlide(-1);
+                nextBtn.onclick = () => moveSlide(1);
+            }
+
+            wrapper.addEventListener('mouseenter', stopAutoSlide);
+            wrapper.addEventListener('mouseleave', startAutoSlide);
+
+            sliderUpdateFunctions.push(() => moveSlide(0));
+            startAutoSlide();
+        }
+
+        window.addEventListener('resize', () => {
+            sliderUpdateFunctions.forEach(updateFn => updateFn());
+        });
+
+        // Initialize All 5 Sliders (0.5s speed)
+        // Ensure these IDs match your HTML perfectly
+        initSlider('marvelWrapper', 'marvelTrack', 900);
+        initSlider('transformersWrapper', 'transformersTrack', 900);
+        initSlider('miWrapper', 'miTrack', 900); // Added the missing initialization here
+        initSlider('hpWrapper', 'hpTrack', 900);
+        initSlider('potcWrapper', 'potcTrack', 900);
+    </script>
+    </main>
+</body> 
+</html>

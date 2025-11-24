@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformers (2007) - Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- STYLES --- */
+        :root { 
+            --primary: #0288D1; /* AllSpark/Autobot Blue */ 
+            --accent: #CFD8DC;  /* Cybertron Metal */
+            --dark-bg: #0a0a0a; 
+            --card-bg: #161616; 
+            --text-main: #e0e0e0; 
+            --glow: 0 0 25px rgba(2, 136, 209, 0.5); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #0d1b21 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header styled with Orbitron font for Sci-Fi feel */
+        header { background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100; }
+        .logo { background: linear-gradient(135deg, var(--primary), #01579b); color: #fff; font-family: 'Orbitron', sans-serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 16px; box-shadow: var(--glow); letter-spacing: 1px; clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%); }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--primary); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #111; padding: 10px 15px; border-radius: 8px; display: inline-block; }
+        .breadcrumb span { color: var(--primary); font-weight: 600; }
+
+        /* Movie Header */
+        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #222; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #333; }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        /* Title uses Orbitron font */
+        .movie-title { font-family: 'Orbitron', sans-serif; font-size: 30px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #81d4fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.3; }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        .meta-item { background: #222; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--primary); font-size: 13px; }
+        .meta-item:nth-child(even) { border-left: 3px solid var(--accent); }
+        .meta-item strong { display: block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+
+        .section-heading { font-family: 'Orbitron', sans-serif; font-size: 22px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px;}
+        .plot-section { background-color: var(--card-bg); padding: 25px; border-radius: 12px; font-size: 15px; line-height: 1.8; color: #ccc; border-left: 4px solid var(--accent); }
+
+        .download-box { background: #111; padding: 40px; border-radius: 16px; border: 1px solid #333; text-align: center; margin-bottom: 50px; }
+        .d-btn { display: flex; justify-content: space-between; align-items: center; max-width: 650px; margin: 15px auto; padding: 15px 25px; color: #fff; border-radius: 4px; font-weight: 600; transition: 0.4s; box-shadow: 0 4px 10px rgba(0,0,0,0.3); clip-path: polygon(5% 0, 100% 0, 100% 80%, 95% 100%, 0 100%, 0 20%); }
+        .d-btn:hover { transform: translateY(-3px); filter: brightness(1.1); }
+        
+        /* Robotic/Metallic Button Gradients */
+        .btn-480 { background: linear-gradient(45deg, #0277BD, #01579B); }
+        .btn-720 { background: linear-gradient(45deg, #546E7A, #37474F); }
+        .btn-1080 { background: linear-gradient(45deg, #212121, #000000); border: 1px solid #444; }
+
+        @media (max-width: 768px) { .movie-header { flex-direction: column; align-items: center; text-align: center; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fas fa-robot"></i> 4KHDHub</div>
+        <nav class="nav-links">
+            <a href="Movies.html">Home</a>
+            <a href="#">Sci-Fi</a>
+            <a href="#">Action</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Transformers / <span>Transformers (2007)</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                
+                <img src="images/transformers1.jpg" alt="Transformers Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">Transformers (2007) Dual Audio [Hindi+English] 4K</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>7.0/10</span></div>
+                    <div class="meta-item"><strong>Release Year</strong><span>2007</span></div>
+                    <div class="meta-item"><strong>Quality</strong><span>1080p, 720p, 480p</span></div>
+                    <div class="meta-item"><strong>Director</strong><span>Michael Bay</span></div>
+                    <div class="meta-item"><strong>Cast</strong><span>Shia LaBeouf, Megan Fox</span></div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-heading">Storyline</h3>
+        <div class="plot-section">
+            <p>A long time ago, far away on the planet of Cybertron, a war is being waged between the noble Autobots (led by Optimus Prime) and the devious Decepticons (led by Megatron) for the AllSpark, a mystical talisman that would grant unlimited power to whoever possesses it. The Autobots manage to smuggle the AllSpark off the planet, but Megatron blasts off in search of it. He eventually tracks it to the planet Earth.</p>
+        </div>
+
+        <h3 class="section-heading">Download Links</h3>
+        <div class="download-box">
+            <a href="https://hubcloud.foo/drive/b3kqqp5gijps1xb" class="d-btn btn-480"><span>Download 480p</span> <span>500 MB</span></a>
+            <a href="https://hubcloud.foo/drive/h1j2lnps8qpzs52" class="d-btn btn-720"><span>Download 720p</span> <span>1.5 GB</span></a>
+            <a href="https://hubcloud.foo/drive/rtlmtzza9mrzxpx" class="d-btn btn-1080"><span>Download 1080p</span> <span>3.2 GB</span></a>
+        </div>
+    </main>
+
+</body>
+</html>
