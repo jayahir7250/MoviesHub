@@ -421,7 +421,39 @@
                 <div class="movie-card"><div class="poster"><a href="bhediya.html"><img src="images/bhediya.jpg" alt="Bhediya"></a></div><div class="card-details"><a href="bhediya.html"><strong>Bhediya (2022)</strong></a>1080p [Hindi]</div></div>
                 <div class="movie-card"><div class="poster"><a href="munjya.html"><img src="images/munjya.jpg" alt="Munjya"></a></div><div class="card-details"><a href="munjya.html"><strong>Munjya (2024)</strong></a>1080p [Hindi]</div></div>
                 <div class="movie-card"><div class="poster"><a href="stree2.html"><img src="images/stree2.jpg" alt="Stree 2"></a></div><div class="card-details"><a href="stree2.html"><strong>Stree 2 (2024)</strong></a>1080p [Hindi]</div></div>
-                <div class="movie-card"><div class="poster"><a href="thamma.html"><img src="images/thamma.jpg" alt="Thamma"></a></div><div class="card-details"><a href="thamma.html"><strong>Thamma (2025)</strong></a>1080p</div></div>
+                <div class="movie-card"><div class="poster"><a href="thamma.html"><img src="images/thamma.jpg" alt="Stree"></a></div><div class="card-details"><a href="thamma.html"><strong>Thamma (2025)</strong></a>1080p</div></div>
+            </div>
+        </div>
+
+        <div class="section-title"><i class="fas fa-mask"></i> The Boys (Prime Video)</div>
+        <div class="slider-wrapper" id="boysWrapper">
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-track" id="boysTrack">
+                <div class="movie-card">
+                    <div class="poster"><a href="boys_s1.html"><img src="images/boys_s1.jpg" alt="Season 1"></a></div>
+                    <div class="card-details"><a href="boys_s1.html"><strong>The Boys: Season 1</strong></a>1080p [Dual Audio]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="boys_s2.html"><img src="images/boys_s2.jpg" alt="Season 2"></a></div>
+                    <div class="card-details"><a href="boys_s2.html"><strong>The Boys: Season 2</strong></a>1080p [Dual Audio]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="boys_s3.html"><img src="images/boys_s3.jpg" alt="Season 3"></a></div>
+                    <div class="card-details"><a href="boys_s3.html"><strong>The Boys: Season 3</strong></a>1080p [Dual Audio]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="boys_s4.html"><img src="images/boys_s4.jpg" alt="Season 4"></a></div>
+                    <div class="card-details"><a href="boys_s4.html"><strong>The Boys: Season 4</strong></a>1080p [Dual Audio]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="gen_vs1.html"><img src="images/gen_vs1.jpg" alt="Gen V"></a></div>
+                    <div class="card-details"><a href="gen_vs1.html"><strong>Gen V: Season 1</strong></a>1080p [Dual Audio]</div>
+                </div>
+                <div class="movie-card">
+                    <div class="poster"><a href="gen_vs2.html"><img src="images/gen_vs2.jpg" alt="Gen V Season 2"></a></div>
+                    <div class="card-details"><a href="gen_vs2.html"><strong>Gen V: Season 2</strong></a>1080p [Dual Audio]</div>
+                </div>
             </div>
         </div>
  
@@ -433,9 +465,9 @@
         function initSlider(wrapperId, trackId, delay) {
             const wrapper = document.getElementById(wrapperId);
             const track = document.getElementById(trackId);
-            // Safety check: if the wrapper or track doesn't exist, stop to prevent errors
+            
             if (!wrapper || !track) {
-                console.error(`Slider Error: Element not found for ${wrapperId} or ${trackId}`);
+                console.error(`Slider missing: ${wrapperId}`);
                 return;
             }
 
@@ -470,10 +502,8 @@
             const prevBtn = wrapper.querySelector('.prev-btn');
             const nextBtn = wrapper.querySelector('.next-btn');
 
-            if (prevBtn && nextBtn) {
-                prevBtn.onclick = () => moveSlide(-1);
-                nextBtn.onclick = () => moveSlide(1);
-            }
+            if(prevBtn) prevBtn.onclick = () => moveSlide(-1);
+            if(nextBtn) nextBtn.onclick = () => moveSlide(1);
 
             wrapper.addEventListener('mouseenter', stopAutoSlide);
             wrapper.addEventListener('mouseleave', startAutoSlide);
@@ -481,21 +511,20 @@
             sliderUpdateFunctions.push(() => moveSlide(0));
             startAutoSlide();
         }
- 
+
         window.addEventListener('resize', () => {
             sliderUpdateFunctions.forEach(updateFn => updateFn());
         });
 
-        // Initialize All 5 Sliders (0.5s speed)
-        // Ensure these IDs match your HTML perfectly
+        // Initialize All Sliders (900ms speed)
         initSlider('marvelWrapper', 'marvelTrack', 900);
+        initSlider('mhcuWrapper', 'mhcuTrack', 900);
         initSlider('transformersWrapper', 'transformersTrack', 900);
-        initSlider('miWrapper', 'miTrack', 900); // Added the missing initialization here
+        initSlider('miWrapper', 'miTrack', 900);
         initSlider('hpWrapper', 'hpTrack', 900);
         initSlider('potcWrapper', 'potcTrack', 900);
-        initSlider('mhcuWrapper','mhcuTrack', 900);
-        </script>
-    </main>
+        initSlider('boysWrapper', 'boysTrack', 900); // Added The Boys initialization
+    </script>
+
 </body> 
 </html>
-
