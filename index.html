@@ -411,6 +411,19 @@
                 <div class="movie-card"><div class="poster"><a href="mi8.html"><img src="images/mi8.jpg" alt="Final Reckoning"></a></div><div class="card-details"><a href="mi8.html"><strong>The Final Reckoning</strong></a>1080p</div></div>
             </div>
         </div>
+
+        <div class="section-title"><i class="fas fa-ghost"></i> Maddock Horror Comedy Universe</div>
+        <div class="slider-wrapper" id="mhcuWrapper">
+            <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-track" id="mhcuTrack">
+                <div class="movie-card"><div class="poster"><a href="stree.html"><img src="images/stree.jpg" alt="Stree"></a></div><div class="card-details"><a href="stree.html"><strong>Stree (2018)</strong></a>1080p [Hindi]</div></div>
+                <div class="movie-card"><div class="poster"><a href="bhediya.html"><img src="images/bhediya.jpg" alt="Bhediya"></a></div><div class="card-details"><a href="bhediya.html"><strong>Bhediya (2022)</strong></a>1080p [Hindi]</div></div>
+                <div class="movie-card"><div class="poster"><a href="munjya.html"><img src="images/munjya.jpg" alt="Munjya"></a></div><div class="card-details"><a href="munjya.html"><strong>Munjya (2024)</strong></a>1080p [Hindi]</div></div>
+                <div class="movie-card"><div class="poster"><a href="stree2.html"><img src="images/stree2.jpg" alt="Stree 2"></a></div><div class="card-details"><a href="stree2.html"><strong>Stree 2 (2024)</strong></a>1080p [Hindi]</div></div>
+                <div class="movie-card"><div class="poster"><a href="thamma.html"><img src="images/thamma.jpg" alt="Stree"></a></div><div class="card-details"><a href="stree.html"><strong>Stree (2018)</strong></a>1080p</div></div>
+            </div>
+        </div>
  
     </main>
 
@@ -468,7 +481,7 @@
             sliderUpdateFunctions.push(() => moveSlide(0));
             startAutoSlide();
         }
-
+ 
         window.addEventListener('resize', () => {
             sliderUpdateFunctions.forEach(updateFn => updateFn());
         });
@@ -480,7 +493,8 @@
         initSlider('miWrapper', 'miTrack', 900); // Added the missing initialization here
         initSlider('hpWrapper', 'hpTrack', 900);
         initSlider('potcWrapper', 'potcTrack', 900);
-    </script>
+        initSlider('mhcuWrapper','mhcuTrack', 900);
+        </script>
     </main>
 </body> 
 </html>
