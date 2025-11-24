@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Boys: Season 2 (2020) - Download All Episodes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- THEME: Vought White & Sky Blue --- */
+        :root { 
+            --primary: #0288D1; /* Sky Blue (Darker shade for contrast) */
+            --accent: #29B6F6;  /* Light Sky Blue (Brighter shade) */
+            --dark-bg: #0a0a0a; 
+            --card-bg: #161616; 
+            --text-main: #e0e0e0; 
+            /* Updated glow to white/sky blue */
+            --glow: 0 0 25px rgba(41, 182, 246, 0.4); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        /* Updated radial gradient to a cool, dark blue tone */
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #0d1b2a 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100; }
+        .logo { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-family: 'Chakra Petch', sans-serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 18px; box-shadow: var(--glow); letter-spacing: 1px; text-transform: uppercase; transform: skew(-10deg); }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #111; padding: 10px 15px; border-radius: 4px; display: inline-block; }
+        .breadcrumb span { color: var(--accent); font-weight: 600; }
+
+        /* Movie Header */
+        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #333; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #333; }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        /* Updated title gradient to white-to-sky-blue */
+        .movie-title { font-family: 'Chakra Petch', sans-serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #81D4FA); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; text-transform: uppercase; }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        /* Use Primary (Dark Sky Blue) and Accent (Light Sky Blue) for borders */
+        .meta-item { background: #222; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--primary); font-size: 13px; }
+        .meta-item:nth-child(even) { border-left: 3px solid var(--accent); }
+        .meta-item strong { display: block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+
+        .section-heading { font-family: 'Chakra Petch', sans-serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; text-transform: uppercase; }
+        
+        /* --- ZIP DOWNLOAD SECTION --- */
+        /* Updated zip section background to cooler dark tones */
+        .zip-section { background: linear-gradient(45deg, #0f1525, #0a0a0a); padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 40px; text-align: center; }
+        .zip-title { font-size: 18px; color: #fff; margin-bottom: 15px; font-weight: bold; }
+        .zip-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        
+        /* --- EPISODE LIST SECTION --- */
+        .episode-container { display: grid; gap: 15px; }
+        /* Updated left border to primary sky blue */
+        .episode-card { background: #161616; padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--primary); display: flex; flex-direction: column; gap: 10px; transition: 0.3s; }
+        .episode-card:hover { background: #1f1f1f; transform: translateX(5px); }
+        
+        .ep-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 5px; }
+        .ep-title { font-size: 16px; font-weight: 600; color: #fff; }
+        /* Updated episode number badge to sky blue with white text */
+        .ep-number { font-size: 12px; background: var(--primary); color: #fff; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+
+        .links-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        
+        /* Buttons */
+        .d-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .d-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+        
+        /* Updated Button Gradients to Sky Blue/White Themes */
+        /* 480p: Muted Blue/Grey */
+        .btn-480 { background: linear-gradient(45deg, #546E7A, #37474F); } 
+        /* 720p: Mid Sky Blue */
+        .btn-720 { background: linear-gradient(45deg, #039BE5, #0288D1); } 
+        /* 1080p: Brightest Sky Blue/White */
+        .btn-1080 { background: linear-gradient(45deg, #4FC3F7, #29B6F6); }
+        
+        .btn-zip { width: 200px; justify-content: center; border: 1px solid rgba(255,255,255,0.2); }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; text-align: center; } 
+            .zip-grid { flex-direction: column; }
+            .btn-zip { width: 100%; }
+            .links-row { flex-direction: column; }
+            .d-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">VOUGHT ++</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Trending</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / The Boys / <span>Season 2</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                <img src="images/boys_s2.jpg" alt="The Boys Season 2 Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">The Boys: Season 2 (2020) Dual Audio [Hindi+English]</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>8.7/10</span></div>
+                    <div class="meta-item"><strong>Total Episodes</strong><span>8 Episodes</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>Hindi (Org) + English</span></div>
+                    <div class="meta-item"><strong>Creator</strong><span>Eric Kripke</span></div>
+                    <div class="meta-item"><strong>Starring</strong><span>Karl Urban, Antony Starr, Aya Cash</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                    In a more intense, more desperate Season 2 of "The Boys", Butcher, Hughie and the team reel from their losses in Season 1. On the run from the law, they struggle to fight back against the Superheroes. As Vought, the hero management company, cashes in on the panic over the threat of Supervillains, a new hero, Stormfront, shakes up the company and challenges an already unstable Homelander.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Batch/Zip Downloads (All Episodes)</h3>
+        <div class="zip-section">
+            <div class="zip-title">Click below to download the entire Season 2 in one click</div>
+            <div class="zip-grid">
+                <a href="https://hubcloud.foo/drive/gydrdvbqwcn1bup" class="d-btn btn-480 btn-zip">
+                    <i class="fas fa-download"></i> 480p Pack <br><span style="font-size:10px; opacity:0.8">(2.6 GB)</span>
+                </a>
+                <a href="https://hubcloud.foo/drive/a4tjt0tyor22iyl" class="d-btn btn-720 btn-zip">
+                    <i class="fas fa-download"></i> 720p Pack <br><span style="font-size:10px; opacity:0.8">(6.1 GB)</span>
+                </a>
+                <a href="https://hubcloud.foo/drive/z11kdk9iymy1m4l" class="d-btn btn-1080 btn-zip">
+                    <i class="fas fa-download"></i> 1080p Pack <br><span style="font-size:10px; opacity:0.8">(15.5 GB)</span>
+                </a>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-list"></i> Individual Episode Links</h3>
+        <div class="episode-container">
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 1: The Big Ride</span>
+                    <span class="ep-number">S02 E01</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/qep1dvueo7zupch" class="d-btn btn-720">720p [460MB]</a>
+                    <a href="https://hubcloud.foo/drive/a8h2lnuuhuhogb5" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 2: Proper Preparation and Planning</span>
+                    <span class="ep-number">S02 E02</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/egw1ge2gzo7fegl" class="d-btn btn-720">720p [460MB]</a>
+                    <a href="https://hubcloud.foo/drive/z7iffrm4pi8p423" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 3: Over the Hill with the Swords...</span>
+                    <span class="ep-number">S02 E03</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/vioxo8o4q4jjvc8" class="d-btn btn-720">720p [460MB]</a>
+                    <a href="https://hubcloud.foo/drive/hzpzzzejghzuzzy" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 4: Nothing Like It in the World</span>
+                    <span class="ep-number">S02 E04</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/czcritxqcppj1l8" class="d-btn btn-720">720p [460MB]</a>
+                    <a href="https://hubcloud.foo/drive/npahhuynp3hghmo" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 5: We Gotta Go Now</span>
+                    <span class="ep-number">S02 E05</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/ljsfuzxltouu1xr" class="d-btn btn-720">720p [460MB]</a>
+                    <a href="https://hubcloud.foo/drive/kakgarrccgzl3jm" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 6: The Bloody Doors Off</span>
+                    <span class="ep-number">S02 E06</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/veyds3jofhonoie" class="d-btn btn-720">720p [460MB]</a>
+                    <a href="https://hubcloud.foo/drive/2etevnuue1ielww" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 7: Butcher, Baker, Candlestick Maker</span>
+                    <span class="ep-number">S02 E07</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/6viszl1vvplinqu" class="d-btn btn-720">720p [460MB]</a>
+                    <a href="https://hubcloud.foo/drive/comcmtfz6mofvgt" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 8: What I Know</span>
+                    <span class="ep-number">S02 E08</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/1z0zprfsl0bsb51" class="d-btn btn-720">720p [500MB]</a>
+                    <a href="https://hubcloud.foo/drive/xccvmoyysflcmue" class="d-btn btn-1080">1080p [1.5GB]</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #555; font-size: 12px; border-top: 1px solid #222;">
+        &copy; 2025 Vought International. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen V: Season 2 (2025) - Download All Episodes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- THEME: Godolkin University (Gold & Maroon) --- */
+        :root { 
+            --primary: #FFD700; /* Godolkin Gold */ 
+            --accent: #800000;  /* University Maroon */
+            --dark-bg: #0a0a0a; 
+            --card-bg: #161616; 
+            --text-main: #e0e0e0; 
+            --glow: 0 0 25px rgba(255, 215, 0, 0.3); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #2e0a0a 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100; }
+        .logo { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-family: 'Chakra Petch', sans-serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 18px; box-shadow: var(--glow); letter-spacing: 1px; text-transform: uppercase; transform: skew(-10deg); }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--primary); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #111; padding: 10px 15px; border-radius: 4px; display: inline-block; }
+        .breadcrumb span { color: var(--primary); font-weight: 600; }
+
+        /* Movie Header */
+        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #222; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #333; }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        .movie-title { font-family: 'Chakra Petch', sans-serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #fff59d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; text-transform: uppercase; }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        .meta-item { background: #222; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--primary); font-size: 13px; }
+        .meta-item:nth-child(even) { border-left: 3px solid var(--accent); }
+        .meta-item strong { display: block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+
+        .section-heading { font-family: 'Chakra Petch', sans-serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; text-transform: uppercase; }
+        
+        /* --- ZIP DOWNLOAD SECTION --- */
+        .zip-section { background: linear-gradient(45deg, #1a0505, #1f1a05); padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 40px; text-align: center; }
+        .zip-title { font-size: 18px; color: #fff; margin-bottom: 15px; font-weight: bold; }
+        .zip-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        
+        /* --- EPISODE LIST SECTION --- */
+        .episode-container { display: grid; gap: 15px; }
+        .episode-card { background: #161616; padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--accent); display: flex; flex-direction: column; gap: 10px; transition: 0.3s; }
+        .episode-card:hover { background: #1f1f1f; transform: translateX(5px); }
+        
+        .ep-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 5px; }
+        .ep-title { font-size: 16px; font-weight: 600; color: #fff; }
+        .ep-number { font-size: 12px; background: var(--primary); padding: 2px 8px; border-radius: 4px; color: #000; font-weight: 700; }
+
+        .links-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        
+        /* Buttons */
+        .d-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .d-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+        
+        .btn-480 { background: linear-gradient(45deg, #5D4037, #3E2723); }
+        .btn-720 { background: linear-gradient(45deg, #FFC107, #FF8F00); color: #000; }
+        .btn-1080 { background: linear-gradient(45deg, #800000, #B71C1C); }
+        .btn-zip { width: 200px; justify-content: center; border: 1px solid rgba(255,255,255,0.2); }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; text-align: center; } 
+            .zip-grid { flex-direction: column; }
+            .btn-zip { width: 100%; }
+            .links-row { flex-direction: column; }
+            .d-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">GODOLKIN UNIV.</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Trending</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Gen V / <span>Season 2</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                <img src="images/gen_vs2.jpg" alt="Gen V Season 2 Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">Gen V: Season 2 (2025) Dual Audio [Hindi+English]</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>8.4</span></div>
+                    <div class="meta-item"><strong>Total Episodes</strong><span>8 Episodes</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>Hindi (Org) + English</span></div>
+                    <div class="meta-item"><strong>Universe</strong><span>The Boys</span></div>
+                    <div class="meta-item"><strong>Starring</strong><span>Jaz Sinclair, Lizze Broadway</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                    Following the chaotic events of the first season finale and the revelations in "The Boys", the students of Godolkin University return to a campus forever changed. With the true nature of "The Woods" exposed, Marie, Jordan, and Emma must navigate a treacherous political landscape where loyalties are tested and the line between hero and villain is blurrier than ever.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Batch/Zip Downloads (All Episodes)</h3>
+        <div class="zip-section">
+            <div class="zip-title">Click below to download the entire Season 2 in one click</div>
+            <div class="zip-grid">
+                <a href="https://hubcloud.foo/drive/beqlq8b9fqfooow" class="d-btn btn-480 btn-zip">
+                    <i class="fas fa-download"></i> 480p Pack <br><span style="font-size:10px; opacity:0.8">(2.5 GB)</span>
+                </a>
+                <a href="https://hubcloud.foo/drive/099ycpolbaobnpn" class="d-btn btn-720 btn-zip">
+                    <i class="fas fa-download"></i> 720p Pack <br><span style="font-size:10px; opacity:0.8">(6.2 GB)</span>
+                </a>
+                <a href="https://hubcloud.foo/drive/w0n14ezajrav0es" class="d-btn btn-1080 btn-zip">
+                    <i class="fas fa-download"></i> 1080p Pack <br><span style="font-size:10px; opacity:0.8">(15.0 GB)</span>
+                </a>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-list"></i> Individual Episode Links</h3>
+        <div class="episode-container">
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 1: Return to Godolkin</span>
+                    <span class="ep-number">S02 E01</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/aka11uuvbyqkyyh" class="d-btn btn-480">480p [160MB]</a>
+                    <a href="https://vcloud.zip/m2kxslhmmhosrry" class="d-btn btn-720">720p [480MB]</a>
+                    <a href="https://vcloud.zip/1mwdxi5tbz9twmo" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 2: Sophomore Slump</span>
+                    <span class="ep-number">S02 E02</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/-ovu1kg-ocbqqo-" class="d-btn btn-480">480p [155MB]</a>
+                    <a href="https://vcloud.zip/stfo1h1gt9x11ut" class="d-btn btn-720">720p [470MB]</a>
+                    <a href="https://vcloud.zip/9o39v8no6k9frop" class="d-btn btn-1080">1080p [1.2GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 3: The Top Ten</span>
+                    <span class="ep-number">S02 E03</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/rl4n_wnvrjvv14w" class="d-btn btn-480">480p [160MB]</a>
+                    <a href="https://vcloud.zip/vczvzgzzzh_wz_w" class="d-btn btn-720">720p [480MB]</a>
+                    <a href="https://vcloud.zip/l49zaxz2xmg1l9p" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 4: Blood and Gold</span>
+                    <span class="ep-number">S02 E04</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/no-l81jekv0ba2y" class="d-btn btn-480">480p [170MB]</a>
+                    <a href="https://vcloud.zip/rscipluucyly8er" class="d-btn btn-720">720p [500MB]</a>
+                    <a href="https://vcloud.zip/2gdiuggiajjstwi" class="d-btn btn-1080">1080p [1.4GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 5: Midterms</span>
+                    <span class="ep-number">S02 E05</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/s2i0n1ns_s2_fnh" class="d-btn btn-480">480p [165MB]</a>
+                    <a href="https://vcloud.zip/tf9ufoe9uotuttc" class="d-btn btn-720">720p [490MB]</a>
+                    <a href="https://vcloud.zip/8pddwuwwwwxp82q" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 6: Vought Rising</span>
+                    <span class="ep-number">S02 E06</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/iwwba15ba5xwbww" class="d-btn btn-480">480p [170MB]</a>
+                    <a href="https://vcloud.zip/gv7-qvvns0v7afj" class="d-btn btn-720">720p [510MB]</a>
+                    <a href="https://vcloud.zip/njf7pffdpcnwdpp" class="d-btn btn-1080">1080p [1.4GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 7: Fallout</span>
+                    <span class="ep-number">S02 E07</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/zba5g75-a74-g4b" class="d-btn btn-480">480p [160MB]</a>
+                    <a href="https://vcloud.zip/vjq-ycbyqyuufyr" class="d-btn btn-720">720p [480MB]</a>
+                    <a href="https://vcloud.zip/ktxhf6t2tdm1hah" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 8: Graduation</span>
+                    <span class="ep-number">S02 E08</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/mhh147zvk4vbxbc" class="d-btn btn-480">480p [180MB]</a>
+                    <a href="https://vcloud.zip/8mh1cz8hzb96q1_" class="d-btn btn-720">720p [520MB]</a>
+                    <a href="https://vcloud.zip/awqwyha72ltl10g" class="d-btn btn-1080">1080p [1.5GB]</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #555; font-size: 12px; border-top: 1px solid #222;">
+        &copy; 2025 Godolkin University. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
