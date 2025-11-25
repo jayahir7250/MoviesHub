@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ironheart (2025) - Download All Episodes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- THEME: Titanium Red & Arc Blue --- */
+        :root { 
+            --primary: #D50000; /* Armor Red */ 
+            --accent: #00B0FF;  /* Arc Reactor Blue */
+            --dark-bg: #080808; 
+            --card-bg: #121212; 
+            --text-main: #e0e0e0; 
+            --glow: 0 0 25px rgba(0, 176, 255, 0.4); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #1a0505 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header styled with Rajdhani font for Tech feel */
+        header { background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100; }
+        .logo { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-family: 'Rajdhani', sans-serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 18px; box-shadow: var(--glow); letter-spacing: 2px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #111; padding: 10px 15px; border-radius: 4px; display: inline-block; }
+        .breadcrumb span { color: var(--accent); font-weight: 600; }
+
+        /* Movie Header */
+        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #222; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #333; }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        .movie-title { font-family: 'Rajdhani', sans-serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #80d8ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; text-transform: uppercase; }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        .meta-item { background: #222; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--primary); font-size: 13px; }
+        .meta-item:nth-child(even) { border-left: 3px solid var(--accent); }
+        .meta-item strong { display: block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+
+        .section-heading { font-family: 'Rajdhani', sans-serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; text-transform: uppercase; }
+        
+        /* --- ZIP DOWNLOAD SECTION --- */
+        .zip-section { background: linear-gradient(45deg, #1a0505, #0a1015); padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 40px; text-align: center; }
+        .zip-title { font-size: 18px; color: #fff; margin-bottom: 15px; font-weight: bold; }
+        .zip-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        
+        /* --- EPISODE LIST SECTION --- */
+        .episode-container { display: grid; gap: 15px; }
+        .episode-card { background: #161616; padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--primary); display: flex; flex-direction: column; gap: 10px; transition: 0.3s; }
+        .episode-card:hover { background: #1f1f1f; transform: translateX(5px); }
+        
+        .ep-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 5px; }
+        .ep-title { font-size: 16px; font-weight: 600; color: #fff; }
+        .ep-number { font-size: 12px; background: var(--accent); padding: 2px 8px; border-radius: 4px; color: #000; font-weight: 700; }
+
+        .links-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        
+        /* Buttons */
+        .d-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .d-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+        
+        .btn-480 { background: linear-gradient(45deg, #37474F, #263238); }
+        .btn-720 { background: linear-gradient(45deg, #0288D1, #01579B); }
+        .btn-1080 { background: linear-gradient(45deg, #D50000, #B71C1C); }
+        .btn-zip { width: 200px; justify-content: center; border: 1px solid rgba(255,255,255,0.2); }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; text-align: center; } 
+            .zip-grid { flex-direction: column; }
+            .btn-zip { width: 100%; }
+            .links-row { flex-direction: column; }
+            .d-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fas fa-heart"></i> IRONHEART</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Marvel</a>
+            <a href="#">Tech</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Marvel / <span>Ironheart</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                
+                <img src="images/ironheart.jpg" alt="Ironheart Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">Ironheart: Season 1 (2025) Dual Audio [Hindi+English]</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>N/A (2025)</span></div>
+                    <div class="meta-item"><strong>Total Episodes</strong><span>6 Episodes</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>Hindi (Org) + English</span></div>
+                    <div class="meta-item"><strong>Creator</strong><span>Chinaka Hodge</span></div>
+                    <div class="meta-item"><strong>Starring</strong><span>Dominique Thorne, Anthony Ramos</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                    Riri Williams, a brilliant teenage inventor who created the most advanced suit of armor since Iron Man, returns from Wakanda to MIT. She finds herself torn between the worlds of technology and magic when she faces off against The Hood, a mysterious villain who uses dark arts to build his criminal empire.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Batch/Zip Downloads (All Episodes)</h3>
+        <div class="zip-section">
+            <div class="zip-title">Click below to download the entire Season 1 in one click</div>
+            <div class="zip-grid">
+                <a href="https://vcloud.zip/1w1qdbt1twgolyu" class="d-btn btn-480 btn-zip">
+                    <i class="fas fa-download"></i> 480p Pack <br><span style="font-size:10px; opacity:0.8">(1.8 GB)</span>
+                </a>
+                <a href="https://vcloud.zip/0r6cwbplk6pblzy" class="d-btn btn-720 btn-zip">
+                    <i class="fas fa-download"></i> 720p Pack <br><span style="font-size:10px; opacity:0.8">(4.5 GB)</span>
+                </a>
+                <a href="https://vcloud.zip/8i-ddxvlw8qqdmv" class="d-btn btn-1080 btn-zip">
+                    <i class="fas fa-download"></i> 1080p Pack <br><span style="font-size:10px; opacity:0.8">(12.0 GB)</span>
+                </a>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-list"></i> Individual Episode Links</h3>
+        <div class="episode-container">
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 1: Advanced Engineering</span>
+                    <span class="ep-number">S01 E01</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/ssseh0w7n_e2x7m" class="d-btn btn-480">480p [150MB]</a>
+                    <a href="https://vcloud.zip/qtfibv8tnii78wh" class="d-btn btn-720">720p [450MB]</a>
+                    <a href="https://vcloud.zip/yfevey417rulaee" class="d-btn btn-1080">1080p [1.2GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 2: The Hood</span>
+                    <span class="ep-number">S01 E02</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/pnki94k0knb0nk_" class="d-btn btn-480">480p [160MB]</a>
+                    <a href="https://vcloud.zip/ndhzz12lhzs2bbs" class="d-btn btn-720">720p [460MB]</a>
+                    <a href="https://vcloud.zip/gud-d0gdv0jukgc" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 3: Magic vs Machine</span>
+                    <span class="ep-number">S01 E03</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/hzz1zupydyjrpoj" class="d-btn btn-480">480p [155MB]</a>
+                    <a href="https://vcloud.zip/g1o68_bkohc8omo" class="d-btn btn-720">720p [440MB]</a>
+                    <a href="https://vcloud.zip/ifndeqw2l2w4ily" class="d-btn btn-1080">1080p [1.2GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 4: Stark Legacy</span>
+                    <span class="ep-number">S01 E04</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/uqxxdjskyqp1p1k" class="d-btn btn-480">480p [170MB]</a>
+                    <a href="https://vcloud.zip/q0nqqwgfyghzgf0" class="d-btn btn-720">720p [480MB]</a>
+                    <a href="https://vcloud.zip/wtr7dxsn2-qoqi-" class="d-btn btn-1080">1080p [1.4GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 5: Suit Up</span>
+                    <span class="ep-number">S01 E05</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/1svotj1gdlunmno" class="d-btn btn-480">480p [165MB]</a>
+                    <a href="https://vcloud.zip/recvygy2en_xcuy" class="d-btn btn-720">720p [470MB]</a>
+                    <a href="https://vcloud.zip/1ilsuy72g8dfpds" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 6: Ironheart</span>
+                    <span class="ep-number">S01 E06</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://vcloud.zip/6a7aa-mu1hacjaa" class="d-btn btn-480">480p [180MB]</a>
+                    <a href="https://vcloud.zip/plmcpmc8y8g7wqw" class="d-btn btn-720">720p [500MB]</a>
+                    <a href="https://vcloud.zip/utkfl1rpe16bkwb" class="d-btn btn-1080">1080p [1.5GB]</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #555; font-size: 12px; border-top: 1px solid #222;">
+        &copy; 2025 Marvel Studios. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

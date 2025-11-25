@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawkeye (2021) - Download All Episodes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- THEME: Hawkeye Purple & Tactical Black --- */
+        :root { 
+            --primary: #7B1FA2; /* Hawkeye Purple */ 
+            --accent: #212121;  /* Tactical Black */
+            --dark-bg: #0a0a0a; 
+            --card-bg: #161616; 
+            --text-main: #e0e0e0; 
+            --glow: 0 0 25px rgba(123, 31, 162, 0.4); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #1a051f 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header styled with Rajdhani font */
+        header { background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100; }
+        .logo { background: linear-gradient(135deg, var(--primary), #4a148c); color: #fff; font-family: 'Rajdhani', sans-serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 18px; box-shadow: var(--glow); letter-spacing: 2px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--primary); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #111; padding: 10px 15px; border-radius: 4px; display: inline-block; }
+        .breadcrumb span { color: var(--primary); font-weight: 600; }
+
+        /* Movie Header */
+        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #222; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #333; }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        .movie-title { font-family: 'Rajdhani', sans-serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #e1bee7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; text-transform: uppercase; }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        .meta-item { background: #222; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--primary); font-size: 13px; }
+        .meta-item:nth-child(even) { border-left: 3px solid #999; }
+        .meta-item strong { display: block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+
+        .section-heading { font-family: 'Rajdhani', sans-serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; text-transform: uppercase; }
+        
+        /* --- ZIP DOWNLOAD SECTION --- */
+        .zip-section { background: linear-gradient(45deg, #1a051f, #0a0a0a); padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 40px; text-align: center; }
+        .zip-title { font-size: 18px; color: #fff; margin-bottom: 15px; font-weight: bold; }
+        .zip-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        
+        /* --- EPISODE LIST SECTION --- */
+        .episode-container { display: grid; gap: 15px; }
+        .episode-card { background: #161616; padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--primary); display: flex; flex-direction: column; gap: 10px; transition: 0.3s; }
+        .episode-card:hover { background: #1f1f1f; transform: translateX(5px); }
+        
+        .ep-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 5px; }
+        .ep-title { font-size: 16px; font-weight: 600; color: #fff; }
+        .ep-number { font-size: 12px; background: var(--primary); padding: 2px 8px; border-radius: 4px; color: #fff; font-weight: 700; }
+
+        .links-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        
+        /* Buttons */
+        .d-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .d-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+        
+        .btn-480 { background: linear-gradient(45deg, #546E7A, #37474F); }
+        .btn-720 { background: linear-gradient(45deg, #7B1FA2, #4A148C); }
+        .btn-1080 { background: linear-gradient(45deg, #AA00FF, #6200EA); }
+        .btn-zip { width: 200px; justify-content: center; border: 1px solid rgba(255,255,255,0.2); }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; text-align: center; } 
+            .zip-grid { flex-direction: column; }
+            .btn-zip { width: 100%; }
+            .links-row { flex-direction: column; }
+            .d-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fas fa-bullseye"></i> HAWKEYE</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Marvel</a>
+            <a href="#">Series</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Marvel / <span>Hawkeye</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                <img src="images/hawkeye.jpg" alt="Hawkeye Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">Hawkeye (2021) Dual Audio [Hindi+English]</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>7.5/10</span></div>
+                    <div class="meta-item"><strong>Total Episodes</strong><span>6 Episodes</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>Hindi (Org) + English</span></div>
+                    <div class="meta-item"><strong>Creator</strong><span>Jonathan Igla</span></div>
+                    <div class="meta-item"><strong>Starring</strong><span>Jeremy Renner, Hailee Steinfeld</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                    Former Avenger Clint Barton has a seemingly simple mission: get back to his family for Christmas. Possible? Maybe with the help of Kate Bishop, a 22-year-old archer with dreams of becoming a superhero. The two are forced to work together when a presence from Barton's past threatens to derail far more than the festive spirit.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Batch/Zip Downloads (All Episodes)</h3>
+        <div class="zip-section">
+            <div class="zip-title">Click below to download the entire Limited Series in one click</div>
+            <div class="zip-grid">
+                <a href="https://pixeldrain.dev/u/pKnUdV2T?download" class="d-btn btn-480 btn-zip">
+                    <i class="fas fa-download"></i> 480p Pack <br><span style="font-size:10px; opacity:0.8">(1.7 GB)</span>
+                </a>
+                <a href="https://pixeldrain.dev/u/pPSgFD5y?download" class="d-btn btn-720 btn-zip">
+                    <i class="fas fa-download"></i> 720p Pack <br><span style="font-size:10px; opacity:0.8">(4.4 GB)</span>
+                </a>
+                <a href="https://pixeldrain.dev/u/dStAF7VW?download" class="d-btn btn-1080 btn-zip">
+                    <i class="fas fa-download"></i> 1080p Pack <br><span style="font-size:10px; opacity:0.8">(11.5 GB)</span>
+                </a>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-list"></i> Individual Episode Links</h3>
+        <div class="episode-container">
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 1: Never Meet Your Heroes</span>
+                    <span class="ep-number">S01 E01</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/s6-p-k6-saqpnxu" class="d-btn btn-480">480p [150MB]</a>
+                    <a href="https://hubcloud.foo/drive/ej_cd1shwl0i_p1" class="d-btn btn-720">720p [450MB]</a>
+                    <a href="https://hubcloud.foo/drive/4y1yi1aniassdl4" class="d-btn btn-1080">1080p [1.2GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 2: Hide and Seek</span>
+                    <span class="ep-number">S01 E02</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/mavkj1qkvy012g0" class="d-btn btn-480">480p [160MB]</a>
+                    <a href="https://hubcloud.foo/drive/1l4jyjmfhr1hat-" class="d-btn btn-720">720p [460MB]</a>
+                    <a href="https://hubcloud.foo/drive/ubdxxri6qr5xnu0" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 3: Echoes</span>
+                    <span class="ep-number">S01 E03</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/qr9xlocyljqey3y" class="d-btn btn-480">480p [155MB]</a>
+                    <a href="https://hubcloud.foo/drive/k7wxxj6dhl86x7g" class="d-btn btn-720">720p [440MB]</a>
+                    <a href="https://hubcloud.foo/drive/hj2zy54a2-cjh5j" class="d-btn btn-1080">1080p [1.2GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 4: Partners, Am I Right?</span>
+                    <span class="ep-number">S01 E04</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/qeoqjfluom1bbfo" class="d-btn btn-480">480p [170MB]</a>
+                    <a href="https://hubcloud.foo/drive/22hklpv_7w1kbef" class="d-btn btn-720">720p [480MB]</a>
+                    <a href="https://hubcloud.foo/drive/zx8czdadzjzk-7t" class="d-btn btn-1080">1080p [1.4GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 5: Ronin</span>
+                    <span class="ep-number">S01 E05</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/v1nqwii1ia1ii9q" class="d-btn btn-480">480p [165MB]</a>
+                    <a href="https://hubcloud.foo/drive/dciiax2dxtkvvti" class="d-btn btn-720">720p [470MB]</a>
+                    <a href="https://hubcloud.foo/drive/lkpacei2j0gsa55" class="d-btn btn-1080">1080p [1.3GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 6: So This Is Christmas?</span>
+                    <span class="ep-number">S01 E06</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/d9humvvdourrf6u" class="d-btn btn-480">480p [180MB]</a>
+                    <a href="https://hubcloud.foo/drive/t320pwevb40rhvb" class="d-btn btn-720">720p [500MB]</a>
+                    <a href="https://hubcloud.foo/drive/5ji5nufifi55o1n" class="d-btn btn-1080">1080p [1.5GB]</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #555; font-size: 12px; border-top: 1px solid #222;">
+        &copy; 2021 Marvel Studios. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

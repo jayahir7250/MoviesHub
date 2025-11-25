@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loki: Season 2 (2023) - Download All Episodes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- THEME: TVA Gold & Time-Slipping Green --- */
+        :root { 
+            --primary: #43A047; /* Loki Green */ 
+            --accent: #D4AF37;  /* TVA Gold */
+            --dark-bg: #0a0a0a; 
+            --card-bg: #161616; 
+            --text-main: #e0e0e0; 
+            --glow: 0 0 25px rgba(67, 160, 71, 0.4); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #1f1a08 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100; }
+        .logo { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #000; font-family: 'Cinzel', serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 18px; box-shadow: var(--glow); letter-spacing: 2px; }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #111; padding: 10px 15px; border-radius: 4px; display: inline-block; }
+        .breadcrumb span { color: var(--accent); font-weight: 600; }
+
+        /* Movie Header */
+        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #222; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #333; }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        .movie-title { font-family: 'Cinzel', serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #ffe57f); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; text-transform: uppercase; }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        .meta-item { background: #222; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--accent); font-size: 13px; }
+        .meta-item strong { display: block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+
+        .section-heading { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+        
+        /* --- ZIP DOWNLOAD SECTION --- */
+        .zip-section { background: linear-gradient(45deg, #1f1a08, #0a0a0a); padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 40px; text-align: center; }
+        .zip-title { font-size: 18px; color: #fff; margin-bottom: 15px; font-weight: bold; }
+        .zip-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        
+        /* --- EPISODE LIST SECTION --- */
+        .episode-container { display: grid; gap: 15px; }
+        .episode-card { background: #161616; padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--primary); display: flex; flex-direction: column; gap: 10px; transition: 0.3s; }
+        .episode-card:hover { background: #1f1f1f; transform: translateX(5px); }
+        
+        .ep-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 5px; }
+        .ep-title { font-size: 16px; font-weight: 600; color: #fff; }
+        .ep-number { font-size: 12px; background: var(--primary); padding: 2px 8px; border-radius: 4px; color: #fff; font-weight: 700; }
+
+        .links-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        
+        /* Buttons */
+        .d-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .d-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+        
+        .btn-480 { background: linear-gradient(45deg, #5D4037, #3E2723); }
+        .btn-720 { background: linear-gradient(45deg, #2E7D32, #1B5E20); }
+        .btn-1080 { background: linear-gradient(45deg, #FFD700, #FFA000); color: #000; }
+        .btn-4k { background: linear-gradient(45deg, #00E676, #00C853); color: #000; border: 1px solid #fff; font-weight: 800; }
+
+        .btn-zip { width: 220px; justify-content: center; border: 1px solid rgba(255,255,255,0.2); }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; text-align: center; } 
+            .zip-grid { flex-direction: column; }
+            .btn-zip { width: 100%; }
+            .links-row { flex-direction: column; }
+            .d-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">O.B.</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Marvel</a>
+            <a href="#">Series</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Loki / <span>Season 2</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                <img src="images/loki_s2.jpg" alt="Loki Season 2 Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">Loki: Season 2 (2023) Dual Audio [Hindi+English] 4K</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>8.2/10</span></div>
+                    <div class="meta-item"><strong>Total Episodes</strong><span>6 Episodes</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>Hindi (Org) + English</span></div>
+                    <div class="meta-item"><strong>Showrunners</strong><span>Justin Benson, Aaron Moorhead</span></div>
+                    <div class="meta-item"><strong>Starring</strong><span>Tom Hiddleston, Ke Huy Quan</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                    Loki finds himself in a battle for the soul of the Time Variance Authority. Along with Mobius, Hunter B-15 and a team of new and returning characters, Loki navigates an ever-expanding and increasingly dangerous multiverse in search of Sylvie, Judge Renslayer, Miss Minutes and the truth of what it means to possess free will and glorious purpose.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Batch/Zip Downloads (All Episodes)</h3>
+        <div class="zip-section">
+            <div class="zip-title">Click below to download the entire Season 2 in one click</div>
+            <div class="zip-grid">
+                <a href="https://hubcloud.foo/drive/w4svyrrwvt87l61" class="d-btn btn-480 btn-zip">
+                    <i class="fas fa-download"></i> 480p Pack <br><span style="font-size:10px; opacity:0.8">(1.9 GB)</span>
+                </a>
+                <a href="https://hubcloud.foo/drive/dulni13d5wq5nhy" class="d-btn btn-720 btn-zip">
+                    <i class="fas fa-download"></i> 720p Pack <br><span style="font-size:10px; opacity:0.8">(4.8 GB)</span>
+                </a>
+                <a href="https://hubcloud.foo/drive/lncwxliyqncyyqr" class="d-btn btn-1080 btn-zip">
+                    <i class="fas fa-download"></i> 1080p Pack <br><span style="font-size:10px; opacity:0.8">(12.5 GB)</span>
+                </a>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-list"></i> Individual Episode Links</h3>
+        <div class="episode-container">
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 1: Ouroboros</span>
+                    <span class="ep-number">S02 E01</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/fyugasakffkwrwj" class="d-btn btn-480">480p [160MB]</a>
+                    <a href="https://hubcloud.foo/drive/31ji11sd22gj7fq" class="d-btn btn-720">720p [480MB]</a>
+                    <a href="https://hubcloud.foo/drive/sf_duhjbv_vm064" class="d-btn btn-1080">1080p [1.3GB]</a>
+                    <a href="https://hubcloud.foo/drive/aakau8vl0jk0yax" class="d-btn btn-4k">4K HDR [4.8GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 2: Breaking Brad</span>
+                    <span class="ep-number">S02 E02</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/ouqvovbskkwlolp" class="d-btn btn-480">480p [170MB]</a>
+                    <a href="https://hubcloud.foo/drive/nahhmdgk1d5nymj" class="d-btn btn-720">720p [490MB]</a>
+                    <a href="https://hubcloud.foo/drive/3c4sds3cmc1v3gj" class="d-btn btn-1080">1080p [1.4GB]</a>
+                    <a href="https://hubcloud.foo/drive/tmd7mdrgedyimma" class="d-btn btn-4k">4K HDR [4.9GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 3: 1893</span>
+                    <span class="ep-number">S02 E03</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/vtxvjt1tha_lqqh" class="d-btn btn-480">480p [165MB]</a>
+                    <a href="https://hubcloud.foo/drive/papmly_k__t04qy" class="d-btn btn-720">720p [470MB]</a>
+                    <a href="https://hubcloud.foo/drive/6emqgblywuqewwy" class="d-btn btn-1080">1080p [1.3GB]</a>
+                    <a href="https://hubcloud.foo/drive/b5rcqucne1aj5e3" class="d-btn btn-4k">4K HDR [4.7GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 4: Heart of the TVA</span>
+                    <span class="ep-number">S02 E04</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/w0wdji000c70x3w" class="d-btn btn-480">480p [175MB]</a>
+                    <a href="https://hubcloud.foo/drive/3o3k5rrq153wzlg" class="d-btn btn-720">720p [500MB]</a>
+                    <a href="https://hubcloud.foo/drive/izxrwxszbksdwub" class="d-btn btn-1080">1080p [1.5GB]</a>
+                    <a href="https://hubcloud.foo/drive/inygng9pc99g00d" class="d-btn btn-4k">4K HDR [5.0GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 5: Science/Fiction</span>
+                    <span class="ep-number">S02 E05</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/tkxrldrk9krr6rr" class="d-btn btn-480">480p [170MB]</a>
+                    <a href="https://hubcloud.foo/drive/1ddvx_hxi_y5yir" class="d-btn btn-720">720p [480MB]</a>
+                    <a href="https://hubcloud.foo/drive/oo3yfavk1rlo7or" class="d-btn btn-1080">1080p [1.4GB]</a>
+                    <a href="https://hubcloud.foo/drive/oeyc71kyp1bpky1" class="d-btn btn-4k">4K HDR [4.8GB]</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header">
+                    <span class="ep-title">Episode 6: Glorious Purpose</span>
+                    <span class="ep-number">S02 E06</span>
+                </div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/r5a6nmqnqrxtgnv" class="d-btn btn-480">480p [190MB]</a>
+                    <a href="https://hubcloud.foo/drive/8j9p6on8iaidimf" class="d-btn btn-720">720p [550MB]</a>
+                    <a href="https://hubcloud.foo/drive/uq1euwlr57cdiio" class="d-btn btn-1080">1080p [1.6GB]</a>
+                    <a href="https://hubcloud.foo/drive/cxt5oajjooazuju" class="d-btn btn-4k">4K HDR [5.4GB]</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #555; font-size: 12px; border-top: 1px solid #222;">
+        &copy; 2025 Time Variance Authority. For All Time. Always.
+    </footer>
+
+</body>
+</html>
