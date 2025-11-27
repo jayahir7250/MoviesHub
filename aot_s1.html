@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan: Season 1 (2013) - Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- THEME: Scout Regiment (Olive Green & Blood Red) --- */
+        :root { 
+            --primary: #558B2F; /* Scout Green */ 
+            --accent: #B71C1C;  /* Blood Red */
+            --dark-bg: #0a0a0a; 
+            --card-bg: #161616; 
+            --text-main: #e0e0e0; 
+            --glow: 0 0 25px rgba(85, 139, 47, 0.3); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #1f0a0a 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100; }
+        .logo { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-family: 'Cinzel', serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 18px; box-shadow: var(--glow); letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #111; padding: 10px 15px; border-radius: 4px; display: inline-block; }
+        .breadcrumb span { color: var(--primary); font-weight: 600; }
+
+        /* Movie Header */
+        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #222; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #333; }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        .movie-title { font-family: 'Cinzel', serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #a5d6a7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; text-transform: uppercase; }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        .meta-item { background: #222; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--primary); font-size: 13px; }
+        .meta-item strong { display: block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+
+        .section-heading { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
+        
+        /* --- ZIP DOWNLOAD SECTION --- */
+        .zip-section { background: linear-gradient(45deg, #1a1a1a, #220b0b); padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 40px; text-align: center; }
+        .zip-title { font-size: 18px; color: #fff; margin-bottom: 15px; font-weight: bold; }
+        .zip-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        
+        /* --- EPISODE LIST SECTION --- */
+        .episode-container { display: grid; gap: 15px; }
+        .episode-card { background: #161616; padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--primary); display: flex; flex-direction: column; gap: 10px; transition: 0.3s; }
+        .episode-card:hover { background: #1f1f1f; transform: translateX(5px); }
+        
+        .ep-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 5px; }
+        .ep-title { font-size: 16px; font-weight: 600; color: #fff; }
+        .ep-number { font-size: 12px; background: var(--primary); padding: 2px 8px; border-radius: 4px; color: #fff; font-weight: 700; }
+
+        .links-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        
+        /* Buttons */
+        .d-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .d-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+        
+        .btn-480 { background: linear-gradient(45deg, #5D4037, #3E2723); }
+        .btn-720 { background: linear-gradient(45deg, #558B2F, #33691E); }
+        .btn-1080 { background: linear-gradient(45deg, #D32F2F, #B71C1C); }
+        .btn-zip { width: 200px; justify-content: center; border: 1px solid rgba(255,255,255,0.2); }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; text-align: center; } 
+            .zip-grid { flex-direction: column; }
+            .btn-zip { width: 100%; }
+            .links-row { flex-direction: column; }
+            .d-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">SHINGEKI</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Anime</a>
+            <a href="#">Action</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Anime / <span>Attack on Titan Season 1</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                <img src="images/aot_s1.jpg" alt="Attack on Titan S1 Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">Attack on Titan: Season 1 (2013) Dual Audio [Hindi+Japanese]</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>9.1/10</span></div>
+                    <div class="meta-item"><strong>Total Episodes</strong><span>25 Episodes</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>Hindi (Dub) + Japanese</span></div>
+                    <div class="meta-item"><strong>Studio</strong><span>Wit Studio</span></div>
+                    <div class="meta-item"><strong>Genre</strong><span>Action, Dark Fantasy</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                    After his hometown is destroyed and his mother is killed, young Eren Yeager vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction. He joins the elite Survey Corps, a military unit fighting the Titans outside the safety of the walls.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Batch/Zip Downloads (All 25 Episodes)</h3>
+        <div class="zip-section">
+            <div class="zip-title">Click below to download the entire Season 1 in one click</div>
+            <div class="zip-grid">
+                <a href="https://vcloud.zip/kzoob7wzcwcbsne" class="d-btn btn-480 btn-zip">480p Pack (2.5 GB)</a>
+                <a href="https://vcloud.zip/jnknvvkxxvcvoun" class="d-btn btn-720 btn-zip">720p Pack (6.8 GB)</a>
+                <a href="https://hubcloud.foo/drive/ekh5aifq9eeaxe1" class="d-btn btn-1080 btn-zip">1080p Pack (14.2 GB)</a>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-list"></i> Individual Episode Links</h3>
+        <div class="episode-container">
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 1: To You, in 2000 Years</span><span class="ep-number">E01</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/9lpdu7ua3fdqp3y" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/iwh_g0_08hhd15i" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 2: That Day</span><span class="ep-number">E02</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/bg7b8kkhbjf4dhj" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/smvt2t1p6ut46tp" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 3: A Dim Light Amid Despair</span><span class="ep-number">E03</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/mue17beom7boh34" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/zepguiajyduj7me" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 4: The Night of the Closing Ceremony</span><span class="ep-number">E04</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/um214c26d4g8u6s" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/0zszhuccnohswhw" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 5: First Battle</span><span class="ep-number">E05</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/t1apzyrumtbt1nn" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/olohifvdhpokfde" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 6: The World the Girl Saw</span><span class="ep-number">E06</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/wzhzp91wrzs8hoo" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/takfpbt1a1vdaby" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 7: Small Blade</span><span class="ep-number">E07</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/6qa1db_o0oaq1rt" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/takfpbt1a1vdaby" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 8: I Can Hear His Heartbeat</span><span class="ep-number">E08</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/06neaa0najnau66" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/x_b0vb7fevhhuir" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 9: Where's His Left Arm?</span><span class="ep-number">E09</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/0kyjyw7ji4f4d10" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/1avasjbcos3ipav" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 10: The Response</span><span class="ep-number">E10</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/eskwnoe2bbr1s8c" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/_qeq_qttdowzmzc" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 11: Idol</span><span class="ep-number">E11</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/yc_gtxpysswhx1a" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/oinqibte434bier" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 12: Wound</span><span class="ep-number">E12</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/md1811hnmpchqbe" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/mixhmt99fnhahci" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 13: Primal Desire</span><span class="ep-number">E13</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/s1b105kxsngxexp" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/ptzviupfccaqf9d" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 14: Can't Look Into His Eyes Yet</span><span class="ep-number">E14</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/mchpdfh3terlgcg" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/jt_zjb1pbfpttpz" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 15: Special Operations Squad</span><span class="ep-number">E15</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/yv8ybm8ibdfdybv" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/sbflfk8sbb_csbz" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 16: What Needs to be Done Now</span><span class="ep-number">E16</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/wtvihi55w0v0viv" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/va1yav3hymhb9p9" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 17: Female Titan</span><span class="ep-number">E17</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/kcid7zdeoszj7ok" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/wvvlk30crzqveq2" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 18: Forest of Giant Trees</span><span class="ep-number">E18</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/rz00rhj3y6zio05" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/6phvapyvhbvovvp" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 19: Bite</span><span class="ep-number">E19</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/2ccvvavc2c5tc_2" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/ztk2hzi4hxxt8qq" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 20: Erwin Smith</span><span class="ep-number">E20</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/2hb2kr9sioa1rhv" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/twwyotxyo3p5wjw" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 21: Crushing Blow</span><span class="ep-number">E21</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/sdkxzy0bzan1dnd" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/qvttuuun1u00wyt" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 22: The Defeated</span><span class="ep-number">E22</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/a2qr2xft0d1yzdx" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/wqim9uciaqm6hfu" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 23: Smile</span><span class="ep-number">E23</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/3hg3y9vtzca08tl" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/djl4dhqsswoslhn" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 24: Mercy</span><span class="ep-number">E24</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/bggfgff3wmqwmtr" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/ggxea9aapda5fxp" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 25: Wall</span><span class="ep-number">E25</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.foo/drive/judmjd9demu5ksz" class="d-btn btn-720">720p</a> <a href="https://hubcloud.foo/drive/688b6yib1obly_w" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #555; font-size: 12px; border-top: 1px solid #222;">
+        &copy; 2013 Wit Studio / Kodansha. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
