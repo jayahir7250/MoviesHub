@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan: The Final Season (2020-2023) - Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- THEME: The Rumbling (War Grey & Titan Red) --- */
+        :root { 
+            --primary: #D32F2F; /* Rumbling Red */ 
+            --accent: #455A64;  /* Marleyan Steel/War Grey */
+            --dark-bg: #050505; 
+            --card-bg: #101010; 
+            --text-main: #e0e0e0; 
+            --glow: 0 0 25px rgba(211, 47, 47, 0.3); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #1a0505 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100; }
+        .logo { background: linear-gradient(135deg, var(--primary), #8e0000); color: #fff; font-family: 'Cinzel', serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 18px; box-shadow: var(--glow); letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--primary); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #111; padding: 10px 15px; border-radius: 4px; display: inline-block; }
+        .breadcrumb span { color: var(--primary); font-weight: 600; }
+
+        /* Movie Header */
+        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #222; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #333; }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        .movie-title { font-family: 'Cinzel', serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #ef9a9a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; text-transform: uppercase; }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        .meta-item { background: #1a1a1a; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--accent); font-size: 13px; }
+        .meta-item strong { display: block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+
+        .section-heading { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+        
+        /* --- ZIP DOWNLOAD SECTION --- */
+        .zip-section { background: linear-gradient(45deg, #1a0505, #0a0a0a); padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 40px; text-align: center; }
+        .zip-title { font-size: 18px; color: #fff; margin-bottom: 15px; font-weight: bold; }
+        .zip-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        
+        /* --- EPISODE LIST SECTION --- */
+        .episode-container { display: grid; gap: 15px; }
+        .episode-card { background: #161616; padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--primary); display: flex; flex-direction: column; gap: 10px; transition: 0.3s; }
+        .episode-card:hover { background: #1f1f1f; transform: translateX(5px); }
+        
+        /* Special Style for Final Chapters */
+        .episode-card.special { border-left: 4px solid #FFD700; background: #1a1a10; }
+        
+        .ep-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 5px; }
+        .ep-title { font-size: 16px; font-weight: 600; color: #fff; }
+        .ep-number { font-size: 12px; background: var(--primary); padding: 2px 8px; border-radius: 4px; color: #fff; font-weight: 700; }
+        .episode-card.special .ep-number { background: #FFD700; color: #000; }
+
+        .links-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        
+        /* Buttons */
+        .d-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .d-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+        
+        /* Note: 480p gradient exists for Zip, but not used in episode list */
+        .btn-480 { background: linear-gradient(45deg, #5D4037, #3E2723); }
+        .btn-720 { background: linear-gradient(45deg, #546E7A, #37474F); }
+        .btn-1080 { background: linear-gradient(45deg, #D32F2F, #B71C1C); }
+        .btn-4k { background: linear-gradient(45deg, #FFD700, #FF6F00); color: #000; font-weight: 700; border: 1px solid #fff; }
+        .btn-zip { width: 200px; justify-content: center; border: 1px solid rgba(255,255,255,0.2); }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; text-align: center; } 
+            .zip-grid { flex-direction: column; }
+            .btn-zip { width: 100%; }
+            .links-row { flex-direction: column; }
+            .d-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">THE FINAL</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Anime</a>
+            <a href="#">War</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Anime / <span>Attack on Titan: The Final Season</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                <img src="images/aot_s4.jpg" alt="Attack on Titan S4 Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">Attack on Titan: The Final Season (2020-2023) Dual Audio [Hindi+Japanese] 4K</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>9.2/10</span></div>
+                    <div class="meta-item"><strong>Total Episodes</strong><span>37 (incl. Specials)</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>Hindi (Dub) + Japanese</span></div>
+                    <div class="meta-item"><strong>Studio</strong><span>MAPPA</span></div>
+                    <div class="meta-item"><strong>Genre</strong><span>Action, War, Drama</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                    The lines between good and evil blur as Eren Yeager arrives in Marley. With the power of the Founding Titan in his grasp, Eren initiates a cataclysmic event known as "The Rumbling" to protect Paradis Island. Former friends become enemies as the Survey Corps and the Warriors of Marley must band together to stop Eren from destroying the world.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Batch/Zip Downloads (Complete Season)</h3>
+        <div class="zip-section">
+            <div class="zip-title">Click below to download the entire Final Season</div>
+            <div class="zip-grid">
+                <a href="https://hubcloud.foo/drive/ruz8zfvccazci5r" class="d-btn btn-480 btn-zip">480p Pack (5.5 GB)</a>
+                <a href="https://hubcloud.foo/drive/cdyfibtc0r03rfu" class="d-btn btn-720 btn-zip">720p Pack (12.8 GB)</a>
+                <a href="https://hubcloud.foo/drive/jnnzfeiaujoambt" class="d-btn btn-1080 btn-zip">1080p Pack (28.4 GB)</a>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-list"></i> Individual Episode Links</h3>
+        <div class="episode-container">
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 1: The Other Side of the Sea</span><span class="ep-number">S04 E01</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/0pmppzzupp30z1i" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/vkqrqtv7rca9qrv" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 2: Midnight Train</span><span class="ep-number">S04 E02</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/z64nz56wuhffryn" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/q33bn7asbwo4hsc" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 3: The Door of Hope</span><span class="ep-number">S04 E03</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/iee2grhhh4yrk5z" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/sak1uiffttucxtx" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 4: From One Hand to Another</span><span class="ep-number">S04 E04</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/fzehfgejh9qhiif" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/ibigbcqt1twgdol" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 5: Declaration of War</span><span class="ep-number">S04 E05</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/vpva8uib1phkeav" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/1yzto5objxtxjbo" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 6: The War Hammer Titan</span><span class="ep-number">S04 E06</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/plkiojludpqxxd1" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/25frwizfhtoxe6d" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 7: Assault</span><span class="ep-number">S04 E07</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/jaduhtsbkguuoke" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/6av65ubyv66wuso" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 8: Assassin's Bullet</span><span class="ep-number">S04 E08</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/trydgfdufuukgmu" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/ca279bbage1ymyb" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 9: Brave Volunteers</span><span class="ep-number">S04 E09</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/onndnnafeujmoq1" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/2w00ca1nbaf0jaa" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 10: A Sound Argument</span><span class="ep-number">S04 E10</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/n1f773mdmtmp3mn" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/iuwiuaedhbewjgi" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 11: Deceiver</span><span class="ep-number">S04 E11</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/leovlvhf3ogolzg" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/iswaxaf0xscsazd" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 12: Guides</span><span class="ep-number">S04 E12</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/xx3uyuucxkcts1u" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/gau8trop8wd2qpq" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 13: Children of the Forest</span><span class="ep-number">S04 E13</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/mfj9jo1b1jcaybn" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/fffv1tfjfjpab1y" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 14: Savagery</span><span class="ep-number">S04 E14</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/f1kf3v1ggevgmhx" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/r12dvdld8ldksos" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 15: Sole Salvation</span><span class="ep-number">S04 E15</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/4wzjyyjilkijym4" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/jm2hthwkenbownc" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 16: Above and Below</span><span class="ep-number">S04 E16</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/wlvlqafhltgg1rd" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/nkd2ousensephex" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 17: Judgment</span><span class="ep-number">S04 E17</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/xskrjf1vyljxty2" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/spsnpptzd8zq0xp" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 18: Sneak Attack</span><span class="ep-number">S04 E18</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/h0vvivinxcfvvzu" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/78qq3w130ksn7nk" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 19: Two Brothers</span><span class="ep-number">S04 E19</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/dukfnxuaeqyaaky" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/0unu11d4myy4r4u" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 20: Memories of the Future</span><span class="ep-number">S04 E20</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/xag6orgrxo6vza6" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/wcvwfvfxq17bwfc" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 21: From You, 2000 Years Ago</span><span class="ep-number">S04 E21</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/pxreelbpwuyyygp" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/qikjqkq1qkcqncz" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 22: Thaw</span><span class="ep-number">S04 E22</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/apouihduomwnwul" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/3s5vj3xjccnau1c" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 23: Sunset</span><span class="ep-number">S04 E23</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/fswqylt1q1lhsj8" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/tkt79lxdxnnacex" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 24: Pride</span><span class="ep-number">S04 E24</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/frqrbjh1198hqja" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/jjnwjnwfpjnxf11" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 25: Night of the End</span><span class="ep-number">S04 E25</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/fsda93hafusuupf" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/o1dai1bgf61bkia" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 26: Traitor</span><span class="ep-number">S04 E26</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/rthhca0iim71h7s" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/qufuvx6kgnozzz5" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 27: Retrospective</span><span class="ep-number">S04 E27</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/nmzwiiy4j7mwkee" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/jzejustfslxzqqu" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 28: The Dawn of Humanity</span><span class="ep-number">S04 E28</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/5owngdjgjowomym" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/oyjyu9gicfakkxw" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 29</span><span class="ep-number">S04 E29</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/wiktyqqqqft1kvi" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/i34eris7jrrrxcr" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 30</span><span class="ep-number">S04 E30</span></div>
+                <div class="links-row"><a href="https://hubcloud.foo/drive/svoiroy8yc17y7o" class="d-btn btn-720">720p</a><a href="https://hubcloud.foo/drive/4hlf99yckuz9fwh" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 31</span><span class="ep-number">S04 E31</span></div>
+                <div class="links-row"><a href="" class="d-btn btn-720">720p</a><a href="" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 32</span><span class="ep-number">S04 E32</span></div>
+                <div class="links-row"><a href="" class="d-btn btn-720">720p</a><a href="" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 33</span><span class="ep-number">S04 E33</span></div>
+                <div class="links-row"><a href="" class="d-btn btn-720">720p</a><a href="" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 34</span><span class="ep-number">S04 E34</span></div>
+                <div class="links-row"><a href="" class="d-btn btn-720">720p</a><a href="" class="d-btn btn-1080">1080p</a>
+            </div>
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 35</span><span class="ep-number">S04 E35</span></div>
+                <div class="links-row"><a href="" class="d-btn btn-720">720p</a><a href="" class="d-btn btn-1080">1080p</a>
+            </div>
+            
+            <div class="episode-card special">
+                <div class="ep-header"><span class="ep-title">The Final Chapters: Special 1</span><span class="ep-number">S04 E36</span></div>
+                <div class="links-row"><a href="" class="d-btn btn-720">720p</a><a href="" class="d-btn btn-1080">1080p</a><a href="#" class="d-btn btn-4k">4K</a></div>
+            </div>
+            <div class="episode-card special">
+                <div class="ep-header"><span class="ep-title">The Final Chapters: Special 2 (Finale)</span><span class="ep-number">S04 E37</span></div>
+                <div class="links-row"><a href="#" class="d-btn btn-720">720p</a><a href="" class="d-btn btn-1080">1080p</a><a href="#" class="d-btn btn-4k">4K</a></div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #555; font-size: 12px; border-top: 1px solid #222;">
+        &copy; 2023 MAPPA / Kodansha. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
