@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border (1997) - Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- THEME: Battle of Longewala (Desert Sand & Gunmetal) --- */
+        :root { 
+            --primary: #D4A017; /* Desert Sand Gold */ 
+            --accent: #546E7A;  /* Gunmetal/Smoke Grey */
+            --dark-bg: #0f0c05; 
+            --card-bg: #1a160b; 
+            --text-main: #e0e0e0; 
+            --glow: 0 0 25px rgba(212, 160, 23, 0.3); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Rajdhani', sans-serif; }
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #2e2005 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header styled with Stencil font */
+        header { background: rgba(15, 12, 5, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #d4a017; position: sticky; top: 0; z-index: 100; box-shadow: 0 4px 20px rgba(0,0,0,0.6); }
+        .logo { background: linear-gradient(135deg, var(--primary), #8d6e63); color: #fff; font-family: 'Black Ops One', cursive; font-weight: 400; padding: 8px 20px; border-radius: 4px; font-size: 22px; box-shadow: var(--glow); letter-spacing: 1.5px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 20px; font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
+        
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 14px; color: #888; margin-bottom: 25px; background: #1a160b; padding: 10px 20px; border-radius: 4px; display: inline-block; border: 1px solid #d4a017; font-weight: 600; letter-spacing: 1px; }
+        .breadcrumb span { color: var(--primary); }
+
+        /* Movie Header */
+        .movie-header { display: flex; gap: 40px; background: var(--card-bg); padding: 40px; border-radius: 12px; border: 1px solid #d4a017; position: relative; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.7); align-items: center; }
+        
+        /* Poster Glow */
+        .poster-large { width: 300px; flex-shrink: 0; position: relative; }
+        .poster-large img { width: 100%; border-radius: 8px; box-shadow: 0 0 25px rgba(212, 160, 23, 0.2); border: 2px solid #333; transition: transform 0.3s; filter: sepia(0.3); }
+        .poster-large:hover img { transform: scale(1.02); border-color: var(--primary); filter: sepia(0); }
+        
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        /* Title */
+        .movie-title { font-family: 'Black Ops One', cursive; font-size: 42px; font-weight: 400; margin-bottom: 25px; background: linear-gradient(90deg, #fff, #ffca28); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; line-height: 1.2; text-shadow: 0 0 20px rgba(212, 160, 23, 0.3); }
+        
+        /* Meta Grid */
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
+        .meta-item { background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 4px; border-left: 4px solid var(--primary); font-size: 14px; }
+        .meta-item:nth-child(even) { border-left: 4px solid var(--accent); }
+        .meta-item strong { display: block; color: #aaa; font-size: 12px; text-transform: uppercase; margin-bottom: 4px; letter-spacing: 1px; }
+        .meta-item span { font-weight: 600; color: #fff; }
+
+        /* Storyline */
+        .section-heading { font-family: 'Black Ops One', cursive; font-size: 28px; font-weight: 400; margin: 50px 0 25px 0; color: #fff; border-bottom: 2px solid var(--primary); display: inline-block; padding-bottom: 5px; letter-spacing: 2px; text-transform: uppercase; }
+        .plot-section { background-color: var(--card-bg); padding: 30px; border-radius: 8px; font-size: 16px; line-height: 1.8; color: #ccc; border-left: 5px solid #5d4037; box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+
+        /* Download Box */
+        .download-box { background: #1a160b; padding: 40px; border-radius: 12px; border: 1px solid #d4a017; text-align: center; margin-bottom: 60px; margin-top: 30px; box-shadow: inset 0 0 50px rgba(0,0,0,0.8); }
+        
+        /* Stylish Buttons */
+        .d-btn { display: flex; justify-content: space-between; align-items: center; max-width: 700px; margin: 15px auto; padding: 18px 30px; color: #fff; border-radius: 4px; font-weight: 700; font-size: 16px; transition: 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.3); letter-spacing: 1px; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.1); }
+        .d-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.5); filter: brightness(1.2); }
+        
+        .d-btn span:first-child { display: flex; align-items: center; gap: 10px; }
+        
+        /* Desert Gradients */
+        .btn-480 { background: linear-gradient(90deg, #5D4037, #3E2723); }
+        .btn-720 { background: linear-gradient(90deg, #FFA000, #FF6F00); }
+        .btn-1080 { background: linear-gradient(90deg, #D4A017, #8D6E63); color: #fff; text-shadow: 0 0 2px rgba(0,0,0,0.5); }
+        
+        /* Special 4K Button */
+        .btn-4k { 
+            background: linear-gradient(90deg, #455A64, #263238); 
+            border: 1px solid #D4A017;
+            color: #D4A017;
+            font-weight: 800;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-4k::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.4), transparent);
+            transition: 0.5s;
+        }
+        .btn-4k:hover::before { left: 100%; }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; align-items: center; text-align: center; padding: 20px; } 
+            .nav-links { display: none; } 
+            .poster-large { width: 100%; max-width: 300px; margin-bottom: 20px; }
+            .d-btn { flex-direction: column; gap: 5px; text-align: center; padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fas fa-shield-alt"></i> Army</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Action</a>
+            <a href="#">War</a>
+            <a href="#">Classic</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / War / <span>Border</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                
+                <img src="images/border.jpg" alt="Border Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">Border (1997) Original Audio [Hindi] 4K Remastered</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>7.9/10</span></div>
+                    <div class="meta-item"><strong>Release Year</strong><span>1997</span></div>
+                    <div class="meta-item"><strong>Quality</strong><span>4K, 1080p, 720p</span></div>
+                    <div class="meta-item"><strong>Director</strong><span>J.P. Dutta</span></div>
+                    <div class="meta-item"><strong>Cast</strong><span>Sunny Deol, Suniel Shetty, Akshaye Khanna</span></div>
+                    <div class="meta-item"><strong>Genre</strong><span>Action, Drama, War</span></div>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-heading">Storyline</h3>
+        <div class="plot-section">
+            <p>Set during the Indo-Pakistani War of 1971, this epic war drama tells the true story of the Battle of Longewala. A small battalion of 120 Indian soldiers, led by Major Kuldip Singh Chandpuri, defends their post against a massive Pakistani tank regiment throughout the night until the Indian Air Force can arrive at dawn.</p>
+        </div>
+
+        <h3 class="section-heading">Download Links</h3>
+        <div class="download-box">
+            <a href="https://vcloud.zip/t0yifswkbcnsxsp" class="d-btn btn-480">
+                <span><i class="fas fa-download"></i> Download 480p</span> 
+                <span>500 MB</span>
+            </a>
+            <a href="https://vcloud.zip/fw_lcxugumwavmf" class="d-btn btn-720">
+                <span><i class="fas fa-download"></i> Download 720p</span> 
+                <span>1.5 GB</span>
+            </a>
+            <a href="https://vcloud.zip/cqmew_gee-geq14" class="d-btn btn-1080">
+                <span><i class="fas fa-download"></i> Download 1080p</span> 
+                <span>3.2 GB</span>
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
