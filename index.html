@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoviesHub - Ultimate Collection</title>
+    <title>MoviesHub4u </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* --- Reset & Global Styles --- */
@@ -137,7 +137,7 @@
 
     <header>
         <div class="nav-left">
-            <div class="logo"><i class="fas fa-film"></i> MoviesHub</div>
+            <div class="logo"><i class="fas fa-film"></i> MoviesHub4u</div>
             <nav class="nav-links">
                 <a href="#">Home</a>
                 <a href="#">BollyWood</a>
@@ -158,11 +158,6 @@
 </div>
 
 <div id="main-content">
-
-    <div class="warning-banner">
-        <span class="red">× Avoid FAKE Copies</span> - Always use <span class="blue">HDHub4u.Tv</span>
-    </div>
-    
 
     <main class="container">
         <div class="section-title"><i class="fas fa-fighter-jet"></i> War & Patriotic Collection</div>
@@ -722,132 +717,117 @@
     </main>
 
     <script>
-        // ==================== SEARCH FUNCTIONALITY ====================
-    const searchInput = document.querySelector('.search-container input');
-    const searchResultsContainer = document.getElementById('search-results');
-    const searchGridContent = document.getElementById('search-grid-content');
-    const mainContent = document.getElementById('main-content');
-    
-    // Collect all movie cards from the page immediately
-    // We use a Set to avoid duplicates if you have the same movie in multiple sliders
-    const allMovies = document.querySelectorAll('.movie-card');
+    // ==================== SEARCH FUNCTIONALITY ====================
+const searchInput = document.querySelector('.search-container input');
+const searchResultsContainer = document.getElementById('search-results');
+const searchGridContent = document.getElementById('search-grid-content');
+const mainContent = document.getElementById('main-content');
 
-    searchInput.addEventListener('keyup', function(e) {
-        const term = e.target.value.toLowerCase().trim();
+// Collect all movie cards from the page immediately
+const allMovies = document.querySelectorAll('.movie-card');
 
-        if (term.length > 0) {
-            // 1. Hide the main sliders
-            mainContent.style.display = 'none';
-            
-            // 2. Show the search results container
-            searchResultsContainer.style.display = 'block';
-            
-            // 3. Clear previous results
-            searchGridContent.innerHTML = '';
+searchInput.addEventListener('keyup', function(e) {
+    const term = e.target.value.toLowerCase().trim();
 
-            let found = false;
+    if (term.length > 0) {
+        // 1. Hide the main sliders
+        mainContent.style.display = 'none';
+        
+        // 2. Show the search results container
+        searchResultsContainer.style.display = 'block';
+        
+        // 3. Clear previous results
+        searchGridContent.innerHTML = '';
 
-            // 4. Loop through all movies and check for matches
-            allMovies.forEach(card => {
-                const titleElement = card.querySelector('.card-details strong');
-                if (titleElement) {
-                    const title = titleElement.innerText.toLowerCase();
-                    
-                    if (title.includes(term)) {
-                        // Clone the card so we don't remove it from the slider
-                        const clonedCard = card.cloneNode(true);
-                        searchGridContent.appendChild(clonedCard);
-                        found = true;
-                    }
+        let found = false;
+
+        // 4. Loop through all movies and check for matches
+        allMovies.forEach(card => {
+            const titleElement = card.querySelector('.card-details strong');
+            if (titleElement) {
+                const title = titleElement.innerText.toLowerCase();
+                
+                if (title.includes(term)) {
+                    // Clone the card so we don't remove it from the slider
+                    const clonedCard = card.cloneNode(true);
+                    searchGridContent.appendChild(clonedCard);
+                    found = true;
                 }
-            });
-
-            if (!found) {
-                searchGridContent.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666;">No movies found matching "' + term + '"</p>';
             }
-
-        } else {
-            // If search is empty, show main content and hide results
-            mainContent.style.display = 'block';
-            searchResultsContainer.style.display = 'none';
-        }
-    });
-        const sliderUpdateFunctions = [];
-
-        function initSlider(wrapperId, trackId, delay) {
-            const wrapper = document.getElementById(wrapperId);
-            const track = document.getElementById(trackId);
-            
-            if (!wrapper || !track) {
-                console.error(`Slider missing: ${wrapperId}`);
-                return;
-            }
-
-            const items = track.children;
-            const totalItems = items.length;
-            
-            let currentIndex = 0;
-            let autoSlideInterval;
-
-            function moveSlide(direction) {
-                let itemsPerScreen = 5;
-                if (window.innerWidth <= 600) itemsPerScreen = 2;
-                else if (window.innerWidth <= 1000) itemsPerScreen = 3;
-
-                const maxIndex = totalItems - itemsPerScreen;
-                currentIndex += direction;
-
-                if (currentIndex > maxIndex) { currentIndex = 0; } 
-                else if (currentIndex < 0) { currentIndex = maxIndex; }
-
-                const percentage = (100 / itemsPerScreen);
-                track.style.transform = `translateX(-${currentIndex * percentage}%)`;
-            }
-
-            function startAutoSlide() {
-                stopAutoSlide(); 
-                autoSlideInterval = setInterval(() => { moveSlide(1); }, delay);
-            }
-
-            function stopAutoSlide() { clearInterval(autoSlideInterval); }
-
-            const prevBtn = wrapper.querySelector('.prev-btn');
-            const nextBtn = wrapper.querySelector('.next-btn');
-
-            if(prevBtn) prevBtn.onclick = () => moveSlide(-1);
-            if(nextBtn) nextBtn.onclick = () => moveSlide(1);
-
-            wrapper.addEventListener('mouseenter', stopAutoSlide);
-            wrapper.addEventListener('mouseleave', startAutoSlide);
-
-            sliderUpdateFunctions.push(() => moveSlide(0));
-            startAutoSlide();
-        }
-
-        window.addEventListener('resize', () => {
-            sliderUpdateFunctions.forEach(updateFn => updateFn());
         });
 
-        // Initialize All Sliders (900ms speed)
-        initSlider('marvelWrapper', 'marvelTrack', 900);
-        initSlider('mhcuWrapper', 'mhcuTrack', 900);
-        initSlider('transformersWrapper', 'transformersTrack', 900);
-        initSlider('miWrapper', 'miTrack', 900);
-        initSlider('hpWrapper', 'hpTrack', 900);
-        initSlider('potcWrapper', 'potcTrack', 900);
-        initSlider('boysWrapper', 'boysTrack', 900);
-        initSlider('southWrapper', 'southTrack', 900);
-        initSlider('southSpyWrapper', 'southSpyTrack', 900);
-        initSlider('spiderVerseWrapper', 'spiderVerseTrack', 900);
-        initSlider('dcWrapper', 'dcTrack', 900);       
-        initSlider('comedyWrapper', 'comedyTrack', 900);
-        initSlider('animeWrapper', 'animeTrack', 900);
-        initSlider('upcomingWrapper', 'upcomingTrack', 900);
-        initSlider('romanceWrapper', 'romanceTrack', 900);
-        initSlider('panIndiaWrapper', 'panIndiaTrack', 900);
-        initSlider('indianHeroWrapper', 'indianHeroTrack', 900);
-        initSlider('warWrapper', 'warTrack', 900);
+        if (!found) {
+            searchGridContent.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #666;">No movies found matching "' + term + '"</p>';
+        }
 
+    } else {
+        // If search is empty, show main content and hide results
+        mainContent.style.display = 'block';
+        searchResultsContainer.style.display = 'none';
+    }
+});
+
+// ==================== SLIDER FUNCTIONALITY (MANUAL ONLY) ====================
+const sliderUpdateFunctions = [];
+
+function initSlider(wrapperId, trackId) {
+    const wrapper = document.getElementById(wrapperId);
+    const track = document.getElementById(trackId);
+    
+    if (!wrapper || !track) return;
+
+    const items = track.children;
+    const totalItems = items.length;
+    
+    let currentIndex = 0;
+
+    function moveSlide(direction) {
+        let itemsPerScreen = 5;
+        if (window.innerWidth <= 600) itemsPerScreen = 2;
+        else if (window.innerWidth <= 1000) itemsPerScreen = 3;
+
+        const maxIndex = totalItems - itemsPerScreen;
+        currentIndex += direction;
+
+        if (currentIndex > maxIndex) { currentIndex = 0; } 
+        else if (currentIndex < 0) { currentIndex = maxIndex; }
+
+        const percentage = (100 / itemsPerScreen);
+        track.style.transform = `translateX(-${currentIndex * percentage}%)`;
+    }
+
+    const prevBtn = wrapper.querySelector('.prev-btn');
+    const nextBtn = wrapper.querySelector('.next-btn');
+
+    if (prevBtn) prevBtn.onclick = () => moveSlide(-1);
+    if (nextBtn) nextBtn.onclick = () => moveSlide(1);
+
+    sliderUpdateFunctions.push(() => moveSlide(0));
+}
+
+window.addEventListener('resize', () => {
+    sliderUpdateFunctions.forEach(updateFn => updateFn());
+});
+
+// Initialize All Sliders without auto-slide
+initSlider('marvelWrapper', 'marvelTrack');
+initSlider('mhcuWrapper', 'mhcuTrack');
+initSlider('transformersWrapper', 'transformersTrack');
+initSlider('miWrapper', 'miTrack');
+initSlider('hpWrapper', 'hpTrack');
+initSlider('potcWrapper', 'potcTrack');
+initSlider('boysWrapper', 'boysTrack');
+initSlider('southWrapper', 'southTrack');
+initSlider('southSpyWrapper', 'southSpyTrack');
+initSlider('spiderVerseWrapper', 'spiderVerseTrack');
+initSlider('dcWrapper', 'dcTrack');       
+initSlider('comedyWrapper', 'comedyTrack');
+initSlider('animeWrapper', 'animeTrack');
+initSlider('upcomingWrapper', 'upcomingTrack');
+initSlider('romanceWrapper', 'romanceTrack');
+initSlider('panIndiaWrapper', 'panIndiaTrack');
+initSlider('indianHeroWrapper', 'indianHeroTrack');
+initSlider('warWrapper', 'warTrack');
     </script>
 
 </body> 
