@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Bad: Season 3 (2010) - Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- THEME: Heisenberg (Meth Blue & Hazmat Yellow) --- */
+        :root { 
+            --primary: #069b56; /* Crystal Blue */ 
+            --accent: #e9c46a;  /* Hazmat Yellow */
+            --dark-bg: #070d0d; 
+            --card-bg: #111a19; 
+            --text-main: #e0e0e0; 
+            --glow: 0 0 25px rgba(0, 180, 216, 0.3); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #0a1f1d 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { background: rgba(10, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1c2d2a; position: sticky; top: 0; z-index: 100; }
+        .logo { background: linear-gradient(135deg, var(--primary), #0077b6); color: #fff; font-family: 'Cinzel', serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 18px; box-shadow: var(--glow); letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #0e1716; padding: 10px 15px; border-radius: 4px; display: inline-block; border: 1px solid #1c2d2a; }
+        .breadcrumb span { color: var(--primary); font-weight: 600; }
+
+        /* Movie/Show Header */
+        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #1c2d2a; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #2a403c; }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        .movie-title { font-family: 'Cinzel', serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #90e0ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; text-transform: uppercase; }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        .meta-item { background: #162422; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--primary); font-size: 13px; }
+        .meta-item strong { display: block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+
+        .section-heading { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
+        
+        /* --- ZIP DOWNLOAD SECTION --- */
+        .zip-section { background: linear-gradient(45deg, #0e1716, #1b2612); padding: 20px; border-radius: 10px; border: 1px solid #2a403c; margin-bottom: 40px; text-align: center; }
+        .zip-title { font-size: 18px; color: #fff; margin-bottom: 15px; font-weight: bold; }
+        .zip-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        
+        /* --- EPISODE LIST SECTION --- */
+        .episode-container { display: grid; gap: 15px; }
+        .episode-card { background: var(--card-bg); padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--primary); display: flex; flex-direction: column; gap: 10px; transition: 0.3s; border: 1px solid #162422; }
+        .episode-card:hover { background: #182825; transform: translateX(5px); }
+        
+        .ep-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #233834; padding-bottom: 8px; margin-bottom: 5px; }
+        .ep-title { font-size: 16px; font-weight: 600; color: #fff; }
+        .ep-number { font-size: 12px; background: var(--primary); padding: 2px 8px; border-radius: 4px; color: #000; font-weight: 700; }
+
+        .links-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        
+        /* Buttons */
+        .d-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .d-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+        
+        .btn-480 { background: linear-gradient(45deg, #2b3a42, #182227); }
+        .btn-720 { background: linear-gradient(45deg, #0077b6, #005f73); }
+        .btn-1080 { background: linear-gradient(45deg, #ca6702, #9b2226); }
+        .btn-zip { width: 200px; justify-content: center; border: 1px solid rgba(255,255,255,0.2); }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; text-align: center; } 
+            .zip-grid { flex-direction: column; }
+            .btn-zip { width: 100%; }
+            .links-row { flex-direction: column; }
+            .d-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">The Superlab</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Crime Drama</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / TV Shows / <span>Breaking Bad Season 3</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                <img src="images/bb_s3.jpg" alt="Breaking Bad Season 3 Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">Breaking Bad: Season 3 (2010) Dual Audio [English+Hindi]</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>9.6/10</span></div>
+                    <div class="meta-item"><strong>Total Episodes</strong><span>13 Episodes</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>English + Hindi (Dub)</span></div>
+                    <div class="meta-item"><strong>Network</strong><span>AMC</span></div>
+                    <div class="meta-item"><strong>Genre</strong><span>Crime, Drama, Thriller</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                    Following the tragic mid-air collision above Albuquerque, Walter White attempts to pull back from the meth trade to heal his fractured family. However, kingpin Gus Fring makes Walt an offer too lucrative to refuse: $3 million for three months of work in a state-of-the-art superlab, setting off a dangerous chain reaction with the Mexican cartel and his partner Jesse.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Batch/Zip Downloads (All 13 Episodes)</h3>
+        <div class="zip-section">
+            <div class="zip-title">Click below to download the entire Season 3 in one click</div>
+            <div class="zip-grid">
+                <a href="https://hubcloud.cx/drive/lplvnncnldmdchd" class="d-btn btn-720 btn-zip">720p Pack (6.0 GB)</a>
+                <a href="https://hubcloud.cx/drive/jkz5lf_bifzzlab" class="d-btn btn-1080 btn-zip">1080p Pack (14.2 GB)</a>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-list"></i> Individual Episode Links</h3>
+        <div class="episode-container">
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 1: No Más</span><span class="ep-number">E01</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/xc1_cw2bb1y1oyk" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/br7xq7blix1pbsb" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 2: Caballo sin Nombre</span><span class="ep-number">E02</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/eqiqwftsfkukmsm" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/fzpk1nwfrkwxo3g" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 3: I.F.T.</span><span class="ep-number">E03</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/_xwxiliwiox2xdw" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/dkuhqo1liraajda" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 4: Green Light</span><span class="ep-number">E04</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/8ktzbmttobtr0l6" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/flcvleyqyle3cpc" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 5: Más</span><span class="ep-number">E05</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/1ybycox8bkfx_kx" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/0w4ysaa4kvj01eo" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 6: Sunset</span><span class="ep-number">E06</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/arvda4pklbxku4z" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/1qt1pzubjpuujbt" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 7: One Minute</span><span class="ep-number">E07</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/37ekm8zyx7azmxi" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/cswesnihdxwjowo" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 8: I See You</span><span class="ep-number">E08</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/entnnhwis1c4_11" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/o8ujj97julmwu1u" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 9: Kafkaesque</span><span class="ep-number">E09</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/fqrtfrwufmwtd_r" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/gjljfkj9pfnxbro" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 10: Fly</span><span class="ep-number">E10</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/mo1dk1gigcglnio" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/yzkds5wz15c1zsu" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 11: Abiquiu</span><span class="ep-number">E11</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/wkfsfcm1fq4vsgs" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/lll9pn4c6lca9lb" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 12: Half Measures</span><span class="ep-number">E12</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/6bssdtazl6ks6lr" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/ecn1zel1nnn23qz" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 13: Full Measure</span><span class="ep-number">E13</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/uq1nsz0m11rmr0z" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/b1srrw1obrab1wz" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #555; font-size: 12px; border-top: 1px solid #1c2d2a;">
+        &copy; 2010 AMC Networks / Sony Pictures Television. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

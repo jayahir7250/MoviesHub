@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking Bad: Season 1 (2008) - Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- THEME: Heisenberg (Meth Blue & Hazmat Yellow) --- */
+        :root { 
+            --primary: #79db01; /* Crystal Blue */ 
+            --accent: #e9c46a;  /* Hazmat Yellow */
+            --dark-bg: #070d0d; 
+            --card-bg: #111a19; 
+            --text-main: #e0e0e0; 
+            --glow: 0 0 25px rgba(0, 180, 216, 0.3); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #0a1f1d 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { background: rgba(10, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1c2d2a; position: sticky; top: 0; z-index: 100; }
+        .logo { background: linear-gradient(135deg, var(--primary), #0077b6); color: #fff; font-family: 'Cinzel', serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 18px; box-shadow: var(--glow); letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #0e1716; padding: 10px 15px; border-radius: 4px; display: inline-block; border: 1px solid #1c2d2a; }
+        .breadcrumb span { color: var(--primary); font-weight: 600; }
+
+        /* Movie/Show Header */
+        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #1c2d2a; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #2a403c; }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        .movie-title { font-family: 'Cinzel', serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #90e0ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; text-transform: uppercase; }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        .meta-item { background: #162422; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--primary); font-size: 13px; }
+        .meta-item strong { display: block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+
+        .section-heading { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
+        
+        /* --- ZIP DOWNLOAD SECTION --- */
+        .zip-section { background: linear-gradient(45deg, #0e1716, #1b2612); padding: 20px; border-radius: 10px; border: 1px solid #2a403c; margin-bottom: 40px; text-align: center; }
+        .zip-title { font-size: 18px; color: #fff; margin-bottom: 15px; font-weight: bold; }
+        .zip-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        
+        /* --- EPISODE LIST SECTION --- */
+        .episode-container { display: grid; gap: 15px; }
+        .episode-card { background: var(--card-bg); padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--primary); display: flex; flex-direction: column; gap: 10px; transition: 0.3s; border: 1px solid #162422; }
+        .episode-card:hover { background: #182825; transform: translateX(5px); }
+        
+        .ep-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #233834; padding-bottom: 8px; margin-bottom: 5px; }
+        .ep-title { font-size: 16px; font-weight: 600; color: #fff; }
+        .ep-number { font-size: 12px; background: var(--primary); padding: 2px 8px; border-radius: 4px; color: #000; font-weight: 700; }
+
+        .links-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        
+        /* Buttons */
+        .d-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .d-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+        
+        .btn-480 { background: linear-gradient(45deg, #2b3a42, #182227); }
+        .btn-720 { background: linear-gradient(45deg, #0077b6, #005f73); }
+        .btn-1080 { background: linear-gradient(45deg, #ca6702, #9b2226); }
+        .btn-zip { width: 200px; justify-content: center; border: 1px solid rgba(255,255,255,0.2); }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; text-align: center; } 
+            .zip-grid { flex-direction: column; }
+            .btn-zip { width: 100%; }
+            .links-row { flex-direction: column; }
+            .d-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">The Decent</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">Crime Drama</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / TV Shows / <span>Breaking Bad Season 1</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                <img src="images/bb_s1.jpg" alt="Breaking Bad Season 1 Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">Breaking Bad: Season 1 (2008) Dual Audio [English+Hindi]</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>9.5/10</span></div>
+                    <div class="meta-item"><strong>Total Episodes</strong><span>7 Episodes</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>English + Hindi (Dub)</span></div>
+                    <div class="meta-item"><strong>Network</strong><span>AMC</span></div>
+                    <div class="meta-item"><strong>Genre</strong><span>Crime, Drama, Thriller</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                    Diagnosed with terminal lung cancer, brilliant high school chemistry teacher Walter White turns to manufacturing crystal methamphetamine alongside former student Jesse Pinkman to secure his family's financial future before he dies.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Batch/Zip Downloads (All 7 Episodes)</h3>
+        <div class="zip-section">
+            <div class="zip-title">Click below to download the entire Season 1 in one click</div>
+            <div class="zip-grid">
+                <a href="https://hubcloud.cx/drive/u4z900zpmmsquoz" class="d-btn btn-720 btn-zip">720p Pack (3.1 GB)</a>
+                <a href="https://hubcloud.cx/drive/66ufrj9c1g4qluq" class="d-btn btn-1080 btn-zip">1080p Pack (7.5 GB)</a>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-list"></i> Individual Episode Links</h3>
+        <div class="episode-container">
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 1: Pilot</span><span class="ep-number">E01</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/u1ueqaahe19gpet" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/wwazvebnrwvrnvl" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 2: Cat's in the Bag...</span><span class="ep-number">E02</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/ljin18kw3bvqujz" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/xszhi18fngsl8zl" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 3: ...And the Bag's in the River</span><span class="ep-number">E03</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/qdgkbqkmrdhgk1k" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/rshndhzhnddnt1r" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 4: Cancer Man</span><span class="ep-number">E04</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/pegat2jsrrm7_mu" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/esjhaylfjff9f1l" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 5: Gray Matter</span><span class="ep-number">E05</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/c_q_jd_tdui9uh_" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/ffak5wa5skwwnxa" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 6: Crazy Handful of Nothin'</span><span class="ep-number">E06</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/1hnxozzcxzu6b18" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/0vg8jkt0lapka7p" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+            <div class="episode-card">
+                <div class="ep-header"><span class="ep-title">Episode 7: A No-Rough-Stuff-Type Deal</span><span class="ep-number">E07</span></div>
+                <div class="links-row">
+                    <a href="https://hubcloud.cx/drive/fxnyni3_dwmcv3z" class="d-btn btn-720">720p</a> <a href="https://hubcloud.cx/drive/ms7r1kksbmy7ayv" class="d-btn btn-1080">1080p</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #555; font-size: 12px; border-top: 1px solid #1c2d2a;">
+        &copy; 2008 AMC Networks / Sony Pictures Television. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
