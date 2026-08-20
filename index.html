@@ -160,6 +160,20 @@
 <div id="main-content">
 
     <main class="container">
+        <!-- Breaking Bad Universe Slider -->
+    <div class="section-title"><i class="fas fa-flask"></i> Breaking Bad Universe</div>
+    <div class="slider-wrapper" id="bbWrapper">
+        <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-track" id="bbTrack">
+            <div class="movie-card"><div class="poster"><a href="bb_s1.html"><img src="images/bb_s1.jpg" alt="Breaking Bad S1"></a></div><div class="card-details"><a href="bb_s1.html"><strong>Breaking Bad: Season 1</strong></a>1080p [Dual Audio]</div></div>
+            <div class="movie-card"><div class="poster"><a href="bb_s2.html"><img src="images/bb_s2.jpg" alt="Breaking Bad S2"></a></div><div class="card-details"><a href="bb_s2.html"><strong>Breaking Bad: Season 2</strong></a>1080p [Dual Audio]</div></div>
+            <div class="movie-card"><div class="poster"><a href="bb_s3.html"><img src="images/bb_s3.jpg" alt="Breaking Bad S3"></a></div><div class="card-details"><a href="bb_s3.html"><strong>Breaking Bad: Season 3</strong></a>1080p [Dual Audio]</div></div>
+            <div class="movie-card"><div class="poster"><a href="bb_s4.html"><img src="images/bb_s4.jpg" alt="Breaking Bad S4"></a></div><div class="card-details"><a href="bb_s4.html"><strong>Breaking Bad: Season 4</strong></a>1080p [Dual Audio]</div></div>
+            <div class="movie-card"><div class="poster"><a href="bb_s5.html"><img src="images/bb_s5.jpg" alt="Breaking Bad S5"></a></div><div class="card-details"><a href="bb_s5.html"><strong>Breaking Bad: Season 5</strong></a>1080p [Dual Audio]</div></div>
+        </div>
+    </div>
+</div>
         <div class="section-title"><i class="fas fa-fighter-jet"></i> War & Patriotic Collection</div>
         <div class="slider-wrapper" id="warWrapper">
             <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
@@ -812,6 +826,7 @@ window.addEventListener('resize', () => {
 });
 
 // Initialize All Sliders without auto-slide
+initSlider('bbWrapper', 'bbTrack');
 initSlider('marvelWrapper', 'marvelTrack');
 initSlider('mhcuWrapper', 'mhcuTrack');
 initSlider('transformersWrapper', 'transformersTrack');
