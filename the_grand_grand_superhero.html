@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grand Grand Superhero (2026) - Movie Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #ffcc00; 
+            --accent: #ff0055; 
+            --dark-bg: #090a12; 
+            --card-bg: #121526; 
+            --text-main: #e2e8f0; 
+            --glow: 0 0 25px rgba(255, 204, 0, 0.4); 
+            --hero-blue: #00d2ff;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { 
+            background-color: var(--dark-bg); 
+            color: var(--text-main); 
+            background-image: radial-gradient(circle at top center, #1a1c38 0%, #05060a 100%); 
+            min-height: 100vh; 
+        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { 
+            background: rgba(14, 16, 30, 0.95); 
+            backdrop-filter: blur(10px); 
+            padding: 15px 30px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            border-bottom: 2px solid #232946; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+        }
+        .logo { 
+            background: linear-gradient(135deg, var(--accent), var(--primary)); 
+            color: #fff; 
+            font-family: 'Cinzel', serif; 
+            font-weight: 800; 
+            padding: 8px 18px; 
+            border-radius: 6px; 
+            font-size: 18px; 
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.5); 
+            letter-spacing: 1.5px; 
+            text-transform: uppercase; 
+        }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--primary); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a5c0; margin-bottom: 25px; background: #121526; padding: 10px 15px; border-radius: 6px; display: inline-block; border: 1px solid #232946; }
+        .breadcrumb span { color: var(--primary); font-weight: 600; }
+
+        /* Superhero Movie Header */
+        .movie-header { 
+            display: flex; 
+            gap: 30px; 
+            background: var(--card-bg); 
+            padding: 30px; 
+            border-radius: 16px; 
+            border: 1px solid #2b3252; 
+            position: relative; 
+            overflow: hidden; 
+            box-shadow: 0 10px 35px rgba(0,0,0,0.7); 
+            margin-bottom: 40px; 
+        }
+        .movie-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 210, 255, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { 
+            width: 100%; 
+            border-radius: 12px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8), 0 0 15px rgba(0, 210, 255, 0.3); 
+            border: 2px solid #ffcc00; 
+        }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; z-index: 1; }
+        
+        .movie-title { 
+            font-family: 'Cinzel', serif; 
+            font-size: 34px; 
+            font-weight: 800; 
+            margin-bottom: 20px; 
+            background: linear-gradient(90deg, #fff, #ffcc00, #ff0055); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            letter-spacing: 1px; 
+            line-height: 1.2; 
+            text-transform: uppercase; 
+            text-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+        }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        .meta-item { background: #1a1f38; padding: 10px 15px; border-radius: 6px; border-left: 4px solid var(--accent); font-size: 13px; }
+        .meta-item strong { display: block; color: var(--hero-blue); font-size: 11px; text-transform: uppercase; margin-bottom: 4px; letter-spacing: 0.5px; }
+
+        .section-heading { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 3px solid var(--primary); display: inline-block; padding-bottom: 5px; }
+        
+        /* --- DOWNLOAD LINKS SECTION --- */
+        .download-box { background: var(--card-bg); padding: 25px; border-radius: 16px; border: 1px solid #2b3252; margin-bottom: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
+        .download-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        
+        .download-card { background: #1a1f38; padding: 22px; border-radius: 10px; border: 1px solid #2b355e; text-align: center; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; gap: 15px; }
+        .download-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: var(--glow); }
+        .quality-title { font-size: 18px; font-weight: 700; color: #fff; }
+        .quality-size { font-size: 13px; color: var(--hero-blue); font-weight: 600; }
+
+        /* Buttons */
+        .d-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; border-radius: 8px; font-weight: 700; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.4); text-transform: uppercase; }
+        .d-btn:hover { filter: brightness(1.25); transform: scale(1.02); }
+        
+        .btn-480 { background: linear-gradient(45deg, #4b1248, #f0c27b); }
+        .btn-720 { background: linear-gradient(45deg, #00d2ff, #0083b0); }
+        .btn-1080 { background: linear-gradient(45deg, #ff0055, #7a00ff); }
+        .btn-4k { background: linear-gradient(45deg, #ffcc00, #ff5500); color: #000; }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; text-align: center; } 
+            .download-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fas fa-mask"></i> SUPERHERO BLOCKBUSTER</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Superhero / Sci-Fi</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Movies / <span>The Grand Grand Superhero (2026)</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                <img src="images/the_grand_grand_superhero.jpg" alt="The Grand Grand Superhero Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">The Grand Grand Superhero (2026)</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>8.5/10</span></div>
+                    <div class="meta-item"><strong>Release Year</strong><span>2026</span></div>
+                    <div class="meta-item"><strong>Runtime</strong><span>2h 28m</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>English / Multi</span></div>
+                    <div class="meta-item"><strong>Genre</strong><span>Action, Sci-Fi, Comedy</span></div>
+                    <div class="meta-item"><strong>Format</strong><span>MKV / WEBRip</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6;">
+                    When an everyday guy unexpectedly gains cosmic powers beyond comprehension, he is thrust into an epic battle across dimensions to stop an intergalactic warlord and save the multiverse.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-bolt"></i> Download Links</h3>
+        <div class="download-box">
+            <div class="download-grid">
+
+                <div class="download-card">
+                    <div>
+                        <div class="quality-title">480p SD</div>
+                        <div class="quality-size">Size: 480 MB</div>
+                    </div>
+                    <a href="https://hubcdn.sbs/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2l0d_FlcEsSnUz7Z7SWWlGR1pPeCaW_u3z6z_Vf1JMkrKaZEfwxfNFE_yUM_A2Om6fnzj1mX0wHPE1Xq0-yDd5EGOZtk8-7MXRhtYlsvNxw7Ci4yLpuxM5PF33jsSba1aecvhe3sgrIrLG4vwlA_deLoqiX6BsJuAQi6tfpOuVvenq9nxDKgeawiE_mCxvb-xVz0O0B1je3nm2AkPCvPGPMXd08LIG5mqTTeVihf7gbgsuCJuk" class="d-btn btn-480"><i class="fas fa-download"></i> Download 480p</a>
+                </div>
+
+                <div class="download-card">
+                    <div>
+                        <div class="quality-title">720p HD</div>
+                        <div class="quality-size">Size: 1.3 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/1pnfgnoijunygf1" class="d-btn btn-720"><i class="fas fa-download"></i> Download 720p</a>
+                </div>
+
+                <div class="download-card">
+                    <div>
+                        <div class="quality-title">1080p Full HD</div>
+                        <div class="quality-size">Size: 2.8 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/aaxvrgxf4djbbya" class="d-btn btn-1080"><i class="fas fa-download"></i> Download 1080p</a>
+                </div>
+
+                <div class="download-card">
+                    <div>
+                        <div class="quality-title">4K Ultra HD</div>
+                        <div class="quality-size">Size: 6.5 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/9oo1dqvzxoouvgu" class="d-btn btn-4k"><i class="fas fa-download"></i> Download 4K UHD</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #64748b; font-size: 12px; border-top: 1px solid #232946;">
+        &copy; 2026 STREAMFLIX Media. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
