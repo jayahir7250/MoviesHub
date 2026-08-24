@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyabhama (2024) - Movie Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary: #21c429; 
+            --accent: #c22aac; 
+            --dark-bg: #070d0d; 
+            --card-bg: #111a19; 
+            --text-main: #e0e0e0; 
+            --glow: 0 0 25px rgba(0, 180, 216, 0.3); 
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #0a1f1d 0%, #000000 100%); min-height: 100vh; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { background: rgba(10, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #1c2d2a; position: sticky; top: 0; z-index: 100; }
+        .logo { background: linear-gradient(135deg, var(--primary), #0077b6); color: #fff; font-family: 'Cinzel', serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 18px; box-shadow: var(--glow); letter-spacing: 1px; text-transform: uppercase; }
+        .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #0e1716; padding: 10px 15px; border-radius: 4px; display: inline-block; border: 1px solid #1c2d2a; }
+        .breadcrumb span { color: var(--primary); font-weight: 600; }
+
+        /* Movie Header */
+        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #1c2d2a; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; }
+        .poster-large { width: 280px; flex-shrink: 0; }
+        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #2a403c; }
+        .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        .movie-title { font-family: 'Cinzel', serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #90e0ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; text-transform: uppercase; }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
+        .meta-item { background: #162422; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--primary); font-size: 13px; }
+        .meta-item strong { display block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+
+        .section-heading { font-family: 'Cinzel', serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; }
+        
+        /* --- DOWNLOAD LINKS SECTION --- */
+        .download-box { background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px solid #1c2d2a; margin-bottom: 40px; }
+        .download-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        
+        .download-card { background: #162422; padding: 20px; border-radius: 8px; border: 1px solid #233834; text-align: center; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; gap: 15px; }
+        .download-card:hover { transform: translateY(-4px); border-color: var(--primary); box-shadow: var(--glow); }
+        .quality-title { font-size: 18px; font-weight: 700; color: #fff; }
+        .quality-size { font-size: 12px; color: var(--accent); font-weight: 600; }
+
+        /* Buttons */
+        .d-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; border-radius: 6px; font-weight: 600; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        .d-btn:hover { filter: brightness(1.2); }
+        
+        .btn-720 { background: linear-gradient(45deg, #0077b6, #c943be); }
+        .btn-1080 { background: linear-gradient(45deg, #5e0859, #9b2226); }
+        .btn-4k { background: linear-gradient(45deg, #8a0c45, #007200); }
+
+        @media (max-width: 768px) { 
+            .movie-header { flex-direction: column; text-align: center; } 
+            .download-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">MYSTERY CRIME THRILLER</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Drama / Thriller</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Movies / <span>Satyabhama (2024)</span></div>
+
+        <div class="movie-header">
+            <div class="poster-large">
+                <img src="images/satyabhama.jpg" alt="Satyabhama Movie Poster">
+            </div>
+            <div class="movie-info">
+                <h1 class="movie-title">Satyabhama (2024)</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>6.8/10</span></div>
+                    <div class="meta-item"><strong>Release Year</strong><span>2024</span></div>
+                    <div class="meta-item"><strong>Runtime</strong><span>2h 21m</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>Telugu</span></div>
+                    <div class="meta-item"><strong>Genre</strong><span>Action, Crime, Thriller</span></div>
+                    <div class="meta-item"><strong>Format</strong><span>MKV / WEBRip</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                    Determined ACP Satyabhama takes on a high-stakes investigation to solve a missing person case. As dark secrets, betrayal, and high-tech crime unravel, she fights against time and powerful forces to uncover the truth.
+                </p>
+            </div>
+        </div>
+
+        <h3 class="section-heading"><i class="fas fa-download"></i> Download Links</h3>
+        <div class="download-box">
+            <div class="download-grid">
+
+                <div class="download-card">
+                    <div>
+                        <div class="quality-title">720p HD</div>
+                        <div class="quality-size">Size: 1.2 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/yhc9lic4zihi6jv" class="d-btn btn-720"><i class="fas fa-download"></i> Download 720p</a>
+                </div>
+
+                <div class="download-card">
+                    <div>
+                        <div class="quality-title">1080p Full HD</div>
+                        <div class="quality-size">Size: 2.5 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/e81a4caezk1t4gc" class="d-btn btn-1080"><i class="fas fa-download"></i> Download 1080p</a>
+                </div>
+
+                <div class="download-card">
+                    <div>
+                        <div class="quality-title">4K Ultra HD</div>
+                        <div class="quality-size">Size: 6.2 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/102i1pecg3l0w3c" class="d-btn btn-4k"><i class="fas fa-download"></i> Download 4K UHD</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #555; font-size: 12px; border-top: 1px solid #1c2d2a;">
+        &copy; 2026 STREAMFLIX Media. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
