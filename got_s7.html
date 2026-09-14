@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones - Season 7 (2017) Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary-fire: #ea580c; 
+            --bright-flame: #f97316;
+            --accent-ice: #38bdf8;
+            --dark-bg: #090609; 
+            --card-bg: #180d12; 
+            --card-border: #33151c;
+            --text-main: #ffedd5; 
+            --glow-fire: 0 0 22px rgba(234, 88, 12, 0.45);
+            --glow-ice: 0 0 20px rgba(56, 189, 248, 0.35);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { 
+            background-color: var(--dark-bg); 
+            color: var(--text-main); 
+            background-image: radial-gradient(circle at 50% 0%, #2a0e14 0%, #090609 100%); 
+            min-height: 100vh; 
+        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { 
+            background: rgba(9, 6, 9, 0.95); 
+            backdrop-filter: blur(12px); 
+            padding: 18px 30px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            border-bottom: 2px solid var(--card-border); 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+        }
+        .logo { 
+            background: linear-gradient(135deg, var(--bright-flame), var(--accent-ice)); 
+            color: #000; 
+            font-family: 'Cinzel', serif; 
+            font-weight: 900; 
+            padding: 8px 18px; 
+            border-radius: 4px; 
+            font-size: 18px; 
+            box-shadow: var(--glow-fire); 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+        }
+        .nav-links { display: flex; gap: 24px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--bright-flame); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #fdba74; margin-bottom: 25px; background: var(--card-bg); padding: 10px 18px; border-radius: 6px; display: inline-block; border: 1px solid var(--card-border); }
+        .breadcrumb span { color: var(--bright-flame); font-weight: 600; }
+
+        /* GOT Season 7 Ice & Fire Theme Header */
+        .show-header { 
+            display: flex; 
+            gap: 35px; 
+            background: var(--card-bg); 
+            padding: 30px; 
+            border-radius: 12px; 
+            border: 1px solid var(--card-border); 
+            position: relative; 
+            overflow: hidden; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.85); 
+            margin-bottom: 40px; 
+        }
+        .show-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.18) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .poster-container { width: 280px; flex-shrink: 0; }
+        .poster-container img { 
+            width: 100%; 
+            border-radius: 8px; 
+            box-shadow: 0 12px 30px rgba(0,0,0,0.95), var(--glow-fire); 
+            border: 2px solid var(--primary-fire); 
+        }
+        .show-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; z-index: 1; }
+        
+        .show-title { 
+            font-family: 'Cinzel', serif; 
+            font-size: 34px; 
+            font-weight: 700; 
+            margin-bottom: 15px; 
+            background: linear-gradient(90deg, #ffffff, var(--bright-flame), var(--accent-ice)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            letter-spacing: 2px; 
+            line-height: 1.2; 
+            text-transform: uppercase; 
+        }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 15px; }
+        .meta-item { background: #11070a; padding: 10px 14px; border-radius: 6px; border-left: 3px solid var(--primary-fire); font-size: 13px; }
+        .meta-item strong { display: block; color: var(--bright-flame); font-size: 11px; text-transform: uppercase; margin-bottom: 2px; letter-spacing: 1px; font-family: 'Cinzel', serif; }
+
+        .section-heading { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--primary-fire); display: inline-block; padding-bottom: 6px; letter-spacing: 1px; }
+        
+        /* Cast Section */
+        .cast-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px; }
+        .cast-card { background: var(--card-bg); padding: 15px; border-radius: 8px; border: 1px solid var(--card-border); transition: 0.3s; }
+        .cast-card:hover { border-color: var(--bright-flame); transform: translateY(-3px); }
+        .cast-actor { font-weight: 700; color: #fff; font-size: 14px; }
+        .cast-character { font-size: 12px; color: var(--bright-flame); margin-top: 2px; }
+
+        /* Zip Download Section */
+        .download-box { background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px solid var(--card-border); margin-bottom: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
+        .zip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .zip-card { background: #11070a; padding: 20px; border-radius: 8px; border: 1px solid var(--card-border); text-align: center; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; gap: 15px; }
+        .zip-card:hover { border-color: var(--bright-flame); box-shadow: var(--glow-fire); transform: translateY(-4px); }
+        
+        /* Episode Download Section */
+        .episode-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; }
+        .episode-row { background: var(--card-bg); padding: 16px 20px; border-radius: 8px; border: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; transition: 0.3s; }
+        .episode-row:hover { border-color: var(--accent-ice); }
+        .ep-title { font-weight: 600; font-size: 15px; color: #fff; display: flex; align-items: center; gap: 10px; }
+        .ep-title span { color: var(--bright-flame); font-family: 'Cinzel', serif; font-size: 13px; }
+        .ep-buttons { display: flex; gap: 10px; }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 18px; border-radius: 6px; font-weight: 700; font-size: 12px; transition: 0.3s; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; }
+        .btn:hover { filter: brightness(1.25); transform: scale(1.02); }
+        
+        .btn-zip { background: linear-gradient(45deg, #ea580c, #f97316); color: #000; font-weight: 800; }
+        .btn-720 { background: linear-gradient(45deg, #0284c7, #38bdf8); color: #000; }
+        .btn-1080 { background: linear-gradient(45deg, #4f46e5, #818cf8); }
+
+        @media (max-width: 768px) { 
+            .show-header { flex-direction: column; text-align: center; } 
+            .poster-container { margin: 0 auto; }
+            .episode-row { flex-direction: column; align-items: flex-start; }
+            .ep-buttons { width: 100%; justify-content: space-between; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fas fa-fire-alt"></i> Chaos</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">HBO Series</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Series / <span>Game of Thrones (Season 7)</span></div>
+
+        <!-- Main Banner Header -->
+        <div class="show-header">
+            <div class="poster-container">
+                <img src="images/got_s7.jpg" alt="Game of Thrones Season 7 Poster">
+            </div>
+            <div class="show-info">
+                <h1 class="show-title">Game of Thrones - Season 7</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>8.9 / 10</span></div>
+                    <div class="meta-item"><strong>Release Year</strong><span>2017</span></div>
+                    <div class="meta-item"><strong>Episodes</strong><span>7 Episodes</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>Dual Audio [Eng + Hin]</span></div>
+                    <div class="meta-item"><strong>Genre</strong><span>Action, Adventure, Drama</span></div>
+                    <div class="meta-item"><strong>Network</strong><span>HBO Originals</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #ffedd5e6; line-height: 1.6;">
+                    Daenerys Targaryen finally sets sail for Westeros with her formidable armies and dragons. Jon Snow consolidates power in the North to face the true threat from Beyond the Wall, while Cersei Lannister prepares to defend her throne against all enemies in a world where Fire meets Ice.
+                </p>
+            </div>
+        </div>
+
+        <!-- Cast Section -->
+        <h3 class="section-heading"><i class="fas fa-users"></i> Season 7 Main Cast</h3>
+        <div class="cast-grid">
+            <div class="cast-card">
+                <div class="cast-actor">Emilia Clarke</div>
+                <div class="cast-character">as Daenerys Targaryen</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Kit Harington</div>
+                <div class="cast-character">as Jon Snow</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Lena Headey</div>
+                <div class="cast-character">as Queen Cersei Lannister</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Peter Dinklage</div>
+                <div class="cast-character">as Tyrion Lannister</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Nikolaj Coster-Waldau</div>
+                <div class="cast-character">as Ser Jaime Lannister</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Sophie Turner</div>
+                <div class="cast-character">as Sansa Stark</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Maisie Williams</div>
+                <div class="cast-character">as Arya Stark</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Liam Cunningham</div>
+                <div class="cast-character">as Davos Seaworth</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Aidan Gillen</div>
+                <div class="cast-character">as Petyr 'Littlefinger' Baelish</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Gwendoline Christie</div>
+                <div class="cast-character">as Brienne of Tarth</div>
+            </div>
+        </div>
+
+        <!-- Full Season Zip Downloads -->
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Full Season Zip Pack</h3>
+        <div class="download-box">
+            <div class="zip-grid">
+                <div class="zip-card">
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #fff;">480p Zip Pack</div>
+                        <div style="font-size: 13px; color: var(--bright-flame); margin-top: 4px;">Size: 1.4 GB</div>
+                    </div>
+                    <a href="https://hubcloud.ist/drive/1d515yslddssuwe" class="btn btn-zip"><i class="fas fa-download"></i> Download Zip (480p)</a>
+                </div>
+
+                <div class="zip-card">
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #fff;">720p Zip Pack</div>
+                        <div style="font-size: 13px; color: var(--bright-flame); margin-top: 4px;">Size: 3.6 GB</div>
+                    </div>
+                    <a href="https://hubcloud.ist/drive/hpzgqliva1dvkv1" class="btn btn-zip"><i class="fas fa-download"></i> Download Zip (720p)</a>
+                </div>
+
+                <div class="zip-card">
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #fff;">1080p Zip Pack</div>
+                        <div style="font-size: 13px; color: var(--bright-flame); margin-top: 4px;">Size: 8.2 GB</div>
+                    </div>
+                    <a href="https://hubcloud.ist/drive/_bn1st8xn8b3xh_" class="btn btn-zip"><i class="fas fa-download"></i> Download Zip (1080p)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Episode Downloads -->
+        <h3 class="section-heading"><i class="fas fa-list-ol"></i> Single Episode Downloads</h3>
+        <div class="episode-list">
+
+            <!-- Episode 1 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E01</span> Dragonstone</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.ist/drive/rsdl41wsjjvjl1r" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.ist/drive/_r3diqvopp931_r" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 2 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E02</span> Stormborn</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.ist/drive/eevhnez_2zh1xe_" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.ist/drive/ldxfna11xa0xdqp" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 3 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E03</span> The Queen's Justice</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.ist/drive/nxxhgblngw66bxv" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.ist/drive/1vcdsjjj90x6x1j" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 4 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E04</span> The Spoils of War</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.ist/drive/mxjonvtbhbjxdbj" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.ist/drive/a8opaar0wd0bqat" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 5 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E05</span> Eastwatch</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.ist/drive/x1pgjrnj6xz6xkg" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.ist/drive/emu3baslbkwe5ym" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 6 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E06</span> Beyond the Wall</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.ist/drive/ntgkkbq9i9pbiek" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.ist/drive/irr2rar2lxasxx2" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 7 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E07</span> The Dragon and the Wolf</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.ist/drive/kem9s_tyejkr8v_" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.ist/drive/yngnkkxgwh6zhkx" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #c2410c; font-size: 12px; border-top: 1px solid var(--card-border);">
+        &copy; 2026 GOT ARCHIVES. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

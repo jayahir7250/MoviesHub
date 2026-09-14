@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones - Season 3 (2013) Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary-crimson: #dc2626; 
+            --bright-gold: #facc15;
+            --accent-blood: #991b1b;
+            --dark-bg: #09090b; 
+            --card-bg: #18181b; 
+            --card-border: #27272a;
+            --text-main: #f4f4f5; 
+            --glow-crimson: 0 0 20px rgba(220, 38, 38, 0.35);
+            --glow-gold: 0 0 20px rgba(250, 204, 21, 0.25);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { 
+            background-color: var(--dark-bg); 
+            color: var(--text-main); 
+            background-image: radial-gradient(circle at 50% 0%, #200f14 0%, #09090b 100%); 
+            min-height: 100vh; 
+        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { 
+            background: rgba(9, 9, 11, 0.95); 
+            backdrop-filter: blur(12px); 
+            padding: 18px 30px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            border-bottom: 2px solid var(--card-border); 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+        }
+        .logo { 
+            background: linear-gradient(135deg, var(--bright-gold), var(--primary-crimson)); 
+            color: #000; 
+            font-family: 'Cinzel', serif; 
+            font-weight: 900; 
+            padding: 8px 18px; 
+            border-radius: 4px; 
+            font-size: 18px; 
+            box-shadow: var(--glow-crimson); 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+        }
+        .nav-links { display: flex; gap: 24px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--primary-crimson); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a1a1aa; margin-bottom: 25px; background: var(--card-bg); padding: 10px 18px; border-radius: 6px; display: inline-block; border: 1px solid var(--card-border); }
+        .breadcrumb span { color: var(--primary-crimson); font-weight: 600; }
+
+        /* GOT Season 3 Poster Theme Header */
+        .show-header { 
+            display: flex; 
+            gap: 35px; 
+            background: var(--card-bg); 
+            padding: 30px; 
+            border-radius: 12px; 
+            border: 1px solid var(--card-border); 
+            position: relative; 
+            overflow: hidden; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.85); 
+            margin-bottom: 40px; 
+        }
+        .show-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(220, 38, 38, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .poster-container { width: 280px; flex-shrink: 0; }
+        .poster-container img { 
+            width: 100%; 
+            border-radius: 8px; 
+            box-shadow: 0 12px 30px rgba(0,0,0,0.95), var(--glow-crimson); 
+            border: 2px solid var(--primary-crimson); 
+        }
+        .show-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; z-index: 1; }
+        
+        .show-title { 
+            font-family: 'Cinzel', serif; 
+            font-size: 34px; 
+            font-weight: 700; 
+            margin-bottom: 15px; 
+            background: linear-gradient(90deg, #ffffff, var(--bright-gold), var(--primary-crimson)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            letter-spacing: 2px; 
+            line-height: 1.2; 
+            text-transform: uppercase; 
+        }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 15px; }
+        .meta-item { background: #0f0f11; padding: 10px 14px; border-radius: 6px; border-left: 3px solid var(--primary-crimson); font-size: 13px; }
+        .meta-item strong { display: block; color: var(--bright-gold); font-size: 11px; text-transform: uppercase; margin-bottom: 2px; letter-spacing: 1px; font-family: 'Cinzel', serif; }
+
+        .section-heading { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--primary-crimson); display: inline-block; padding-bottom: 6px; letter-spacing: 1px; }
+        
+        /* Cast Section */
+        .cast-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px; }
+        .cast-card { background: var(--card-bg); padding: 15px; border-radius: 8px; border: 1px solid var(--card-border); transition: 0.3s; }
+        .cast-card:hover { border-color: var(--primary-crimson); transform: translateY(-3px); }
+        .cast-actor { font-weight: 700; color: #fff; font-size: 14px; }
+        .cast-character { font-size: 12px; color: var(--bright-gold); margin-top: 2px; }
+
+        /* Zip Download Section */
+        .download-box { background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px solid var(--card-border); margin-bottom: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
+        .zip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .zip-card { background: #0f0f11; padding: 20px; border-radius: 8px; border: 1px solid var(--card-border); text-align: center; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; gap: 15px; }
+        .zip-card:hover { border-color: var(--primary-crimson); box-shadow: var(--glow-crimson); transform: translateY(-4px); }
+        
+        /* Episode Download Section */
+        .episode-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; }
+        .episode-row { background: var(--card-bg); padding: 16px 20px; border-radius: 8px; border: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; transition: 0.3s; }
+        .episode-row:hover { border-color: var(--primary-crimson); }
+        .ep-title { font-weight: 600; font-size: 15px; color: #fff; display: flex; align-items: center; gap: 10px; }
+        .ep-title span { color: var(--bright-gold); font-family: 'Cinzel', serif; font-size: 13px; }
+        .ep-buttons { display: flex; gap: 10px; }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 18px; border-radius: 6px; font-weight: 700; font-size: 12px; transition: 0.3s; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; }
+        .btn:hover { filter: brightness(1.25); transform: scale(1.02); }
+        
+        .btn-zip { background: linear-gradient(45deg, #b91c1c, #ef4444); color: #fff; font-weight: 800; }
+        .btn-720 { background: linear-gradient(45deg, #d97706, #fbbf24); color: #000; }
+        .btn-1080 { background: linear-gradient(45deg, #4f46e5, #6366f1); }
+
+        @media (max-width: 768px) { 
+            .show-header { flex-direction: column; text-align: center; } 
+            .poster-container { margin: 0 auto; }
+            .episode-row { flex-direction: column; align-items: flex-start; }
+            .ep-buttons { width: 100%; justify-content: space-between; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fas fa-shield-halved"></i> Betrayal</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">HBO Series</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Series / <span>Game of Thrones (Season 3)</span></div>
+
+        <!-- Main Banner Header -->
+        <div class="show-header">
+            <div class="poster-container">
+                <img src="images/got_s3.jpg" alt="Game of Thrones Season 3 Poster">
+            </div>
+            <div class="show-info">
+                <h1 class="show-title">Game of Thrones - Season 3</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>9.4 / 10</span></div>
+                    <div class="meta-item"><strong>Release Year</strong><span>2013</span></div>
+                    <div class="meta-item"><strong>Episodes</strong><span>10 Episodes</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>Dual Audio [Eng + Hin]</span></div>
+                    <div class="meta-item"><strong>Genre</strong><span>Action, Adventure, Drama</span></div>
+                    <div class="meta-item"><strong>Network</strong><span>HBO Originals</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #d4d4d8; line-height: 1.6;">
+                    The Lannisters hold King's Landing while alliances break and betrayals multiply. Robb Stark marches south toward a fateful wedding, Daenerys Targaryen builds an army of Unsullied in Slaver's Bay, and Jon Snow ventures deep beyond the Wall with the Wildlings.
+                </p>
+            </div>
+        </div>
+
+        <!-- Cast Section -->
+        <h3 class="section-heading"><i class="fas fa-users"></i> Season 3 Main Cast</h3>
+        <div class="cast-grid">
+            <div class="cast-card">
+                <div class="cast-actor">Peter Dinklage</div>
+                <div class="cast-character">as Tyrion Lannister</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Nikolaj Coster-Waldau</div>
+                <div class="cast-character">as Ser Jaime Lannister</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Lena Headey</div>
+                <div class="cast-character">as Queen Cersei Lannister</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Emilia Clarke</div>
+                <div class="cast-character">as Daenerys Targaryen</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Kit Harington</div>
+                <div class="cast-character">as Jon Snow</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Richard Madden</div>
+                <div class="cast-character">as Robb Stark</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Michelle Fairley</div>
+                <div class="cast-character">as Catelyn Stark</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Charles Dance</div>
+                <div class="cast-character">as Tywin Lannister</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Sophie Turner</div>
+                <div class="cast-character">as Sansa Stark</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Maisie Williams</div>
+                <div class="cast-character">as Arya Stark</div>
+            </div>
+        </div>
+
+        <!-- Full Season Zip Downloads -->
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Full Season Zip Pack</h3>
+        <div class="download-box">
+            <div class="zip-grid">
+                <div class="zip-card">
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #fff;">480p Zip Pack</div>
+                        <div style="font-size: 13px; color: var(--bright-gold); margin-top: 4px;">Size: 1.6 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/mrmx8xxahe7sz8b" class="btn btn-zip"><i class="fas fa-download"></i> Download Zip (480p)</a>
+                </div>
+
+                <div class="zip-card">
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #fff;">720p Zip Pack</div>
+                        <div style="font-size: 13px; color: var(--bright-gold); margin-top: 4px;">Size: 4.1 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/p_chr1xhhep12ez" class="btn btn-zip"><i class="fas fa-download"></i> Download Zip (720p)</a>
+                </div>
+
+                <div class="zip-card">
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #fff;">1080p Zip Pack</div>
+                        <div style="font-size: 13px; color: var(--bright-gold); margin-top: 4px;">Size: 9.2 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/7ggvvzyug7vuou4" class="btn btn-zip"><i class="fas fa-download"></i> Download Zip (1080p)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Episode Downloads -->
+        <h3 class="section-heading"><i class="fas fa-list-ol"></i> Single Episode Downloads</h3>
+        <div class="episode-list">
+
+            <!-- Episode 1 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E01</span> Valar Dohaeris</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/mg11x1jul1quojq" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/wwswms5motopezo" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 2 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E02</span> Dark Wings, Dark Words</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/4nnna1yxoykofkn" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/oo47dv4hr_dqdax" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 3 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E03</span> Walk of Punishment</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/rjfrgri91cr5rb5" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/scadps22dc2aka7" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 4 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E04</span> And Now His Watch Is Ended</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/1p19p1mppg3np0p" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/9nw1sj7oz2uf2sk" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 5 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E05</span> Kissed by Fire</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/0hdl1d5nqwaw1vw" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/ukqw1i1mk_icoyh" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 6 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E06</span> The Climb</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/jaxafxthzq8hqqm" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/xhhv01ih1ovh_0d" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 7 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E07</span> The Bear and the Maiden Fair</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/txngavx1hh1vlcl" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/m4jq1hdxsxcgxj5" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 8 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E08</span> Second Sons</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/wdvf5dgxid0xvif" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/er5u1mxpkb0wkd_" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 9 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E09</span> The Rains of Castamere</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/ldraq0lo5bdhqax" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/ppk5ialx8vc8j88" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 10 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E10</span> Mhysa</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/11bddiulislniba" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/7zz091brofdmsdf" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #71717a; font-size: 12px; border-top: 1px solid var(--card-border);">
+        &copy; 2026 GOT ARCHIVES. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

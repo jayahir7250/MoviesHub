@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Thrones - Season 4 (2014) Download</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --primary-purple: #9333ea; 
+            --bright-gold: #fbbf24;
+            --accent-violet: #c084fc;
+            --dark-bg: #0b0712; 
+            --card-bg: #171026; 
+            --card-border: #2e1d4d;
+            --text-main: #f3e8ff; 
+            --glow-purple: 0 0 22px rgba(147, 51, 234, 0.4);
+            --glow-gold: 0 0 20px rgba(251, 191, 36, 0.25);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { 
+            background-color: var(--dark-bg); 
+            color: var(--text-main); 
+            background-image: radial-gradient(circle at 50% 0%, #25123d 0%, #0b0712 100%); 
+            min-height: 100vh; 
+        }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* Header */
+        header { 
+            background: rgba(11, 7, 18, 0.95); 
+            backdrop-filter: blur(12px); 
+            padding: 18px 30px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            border-bottom: 2px solid var(--card-border); 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+        }
+        .logo { 
+            background: linear-gradient(135deg, var(--bright-gold), var(--primary-purple)); 
+            color: #fff; 
+            font-family: 'Cinzel', serif; 
+            font-weight: 900; 
+            padding: 8px 18px; 
+            border-radius: 4px; 
+            font-size: 18px; 
+            box-shadow: var(--glow-purple); 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+        }
+        .nav-links { display: flex; gap: 24px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--accent-violet); }
+        
+        .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+        .breadcrumb { font-size: 13px; color: #a78bfa; margin-bottom: 25px; background: var(--card-bg); padding: 10px 18px; border-radius: 6px; display: inline-block; border: 1px solid var(--card-border); }
+        .breadcrumb span { color: var(--bright-gold); font-weight: 600; }
+
+        /* GOT Season 4 Regal Royal Purple Theme Header */
+        .show-header { 
+            display: flex; 
+            gap: 35px; 
+            background: var(--card-bg); 
+            padding: 30px; 
+            border-radius: 12px; 
+            border: 1px solid var(--card-border); 
+            position: relative; 
+            overflow: hidden; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.85); 
+            margin-bottom: 40px; 
+        }
+        .show-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(147, 51, 234, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .poster-container { width: 280px; flex-shrink: 0; }
+        .poster-container img { 
+            width: 100%; 
+            border-radius: 8px; 
+            box-shadow: 0 12px 30px rgba(0,0,0,0.95), var(--glow-purple); 
+            border: 2px solid var(--primary-purple); 
+        }
+        .show-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; z-index: 1; }
+        
+        .show-title { 
+            font-family: 'Cinzel', serif; 
+            font-size: 34px; 
+            font-weight: 700; 
+            margin-bottom: 15px; 
+            background: linear-gradient(90deg, #ffffff, var(--accent-violet), var(--bright-gold)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            letter-spacing: 2px; 
+            line-height: 1.2; 
+            text-transform: uppercase; 
+        }
+        
+        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; margin-top: 15px; }
+        .meta-item { background: #110b1f; padding: 10px 14px; border-radius: 6px; border-left: 3px solid var(--primary-purple); font-size: 13px; }
+        .meta-item strong { display: block; color: var(--bright-gold); font-size: 11px; text-transform: uppercase; margin-bottom: 2px; letter-spacing: 1px; font-family: 'Cinzel', serif; }
+
+        .section-heading { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--primary-purple); display: inline-block; padding-bottom: 6px; letter-spacing: 1px; }
+        
+        /* Cast Section */
+        .cast-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-bottom: 40px; }
+        .cast-card { background: var(--card-bg); padding: 15px; border-radius: 8px; border: 1px solid var(--card-border); transition: 0.3s; }
+        .cast-card:hover { border-color: var(--primary-purple); transform: translateY(-3px); }
+        .cast-actor { font-weight: 700; color: #fff; font-size: 14px; }
+        .cast-character { font-size: 12px; color: var(--accent-violet); margin-top: 2px; }
+
+        /* Zip Download Section */
+        .download-box { background: var(--card-bg); padding: 25px; border-radius: 12px; border: 1px solid var(--card-border); margin-bottom: 40px; box-shadow: 0 8px 25px rgba(0,0,0,0.5); }
+        .zip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .zip-card { background: #110b1f; padding: 20px; border-radius: 8px; border: 1px solid var(--card-border); text-align: center; transition: 0.3s; display: flex; flex-direction: column; justify-content: space-between; gap: 15px; }
+        .zip-card:hover { border-color: var(--primary-purple); box-shadow: var(--glow-purple); transform: translateY(-4px); }
+        
+        /* Episode Download Section */
+        .episode-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 40px; }
+        .episode-row { background: var(--card-bg); padding: 16px 20px; border-radius: 8px; border: 1px solid var(--card-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; transition: 0.3s; }
+        .episode-row:hover { border-color: var(--accent-violet); }
+        .ep-title { font-weight: 600; font-size: 15px; color: #fff; display: flex; align-items: center; gap: 10px; }
+        .ep-title span { color: var(--bright-gold); font-family: 'Cinzel', serif; font-size: 13px; }
+        .ep-buttons { display: flex; gap: 10px; }
+
+        /* Buttons */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px 18px; border-radius: 6px; font-weight: 700; font-size: 12px; transition: 0.3s; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; }
+        .btn:hover { filter: brightness(1.25); transform: scale(1.02); }
+        
+        .btn-zip { background: linear-gradient(45deg, #7e22ce, #a855f7); color: #fff; font-weight: 800; }
+        .btn-720 { background: linear-gradient(45deg, #d97706, #fbbf24); color: #000; }
+        .btn-1080 { background: linear-gradient(45deg, #4f46e5, #6366f1); }
+
+        @media (max-width: 768px) { 
+            .show-header { flex-direction: column; text-align: center; } 
+            .poster-container { margin: 0 auto; }
+            .episode-row { flex-direction: column; align-items: flex-start; }
+            .ep-buttons { width: 100%; justify-content: space-between; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><i class="fas fa-gem"></i> Corruption</div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#">TV Shows</a>
+            <a href="#">HBO Series</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="breadcrumb">Home / Series / <span>Game of Thrones (Season 4)</span></div>
+
+        <!-- Main Banner Header -->
+        <div class="show-header">
+            <div class="poster-container">
+                <img src="images/got_s4.jpg" alt="Game of Thrones Season 4 Poster">
+            </div>
+            <div class="show-info">
+                <h1 class="show-title">Game of Thrones - Season 4</h1>
+                
+                <div class="meta-grid">
+                    <div class="meta-item"><strong>IMDb Rating</strong><span>9.7 / 10</span></div>
+                    <div class="meta-item"><strong>Release Year</strong><span>2014</span></div>
+                    <div class="meta-item"><strong>Episodes</strong><span>10 Episodes</span></div>
+                    <div class="meta-item"><strong>Language</strong><span>Dual Audio [Eng + Hin]</span></div>
+                    <div class="meta-item"><strong>Genre</strong><span>Action, Adventure, Drama</span></div>
+                    <div class="meta-item"><strong>Network</strong><span>HBO Originals</span></div>
+                </div>
+                <br>
+                <p style="font-size: 14px; color: #e9d5ff; line-height: 1.6;">
+                    The Lannister hold on the Iron Throne seems absolute, but shockwaves ripple through King's Landing following a royal tragedy. Prince Oberyn Martell seeks vengeance, Tyrion faces trial for his life, Daenerys rules Meereen, and the Night's Watch prepares for the massive Wildling army at the Wall.
+                </p>
+            </div>
+        </div>
+
+        <!-- Cast Section -->
+        <h3 class="section-heading"><i class="fas fa-users"></i> Season 4 Main Cast</h3>
+        <div class="cast-grid">
+            <div class="cast-card">
+                <div class="cast-actor">Peter Dinklage</div>
+                <div class="cast-character">as Tyrion Lannister</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Pedro Pascal</div>
+                <div class="cast-character">as Prince Oberyn Martell</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Lena Headey</div>
+                <div class="cast-character">as Queen Cersei Lannister</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Nikolaj Coster-Waldau</div>
+                <div class="cast-character">as Ser Jaime Lannister</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Emilia Clarke</div>
+                <div class="cast-character">as Daenerys Targaryen</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Kit Harington</div>
+                <div class="cast-character">as Jon Snow</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Charles Dance</div>
+                <div class="cast-character">as Lord Tywin Lannister</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Jack Gleeson</div>
+                <div class="cast-character">as King Joffrey Baratheon</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Natalie Dormer</div>
+                <div class="cast-character">as Margaery Tyrell</div>
+            </div>
+            <div class="cast-card">
+                <div class="cast-actor">Maisie Williams</div>
+                <div class="cast-character">as Arya Stark</div>
+            </div>
+        </div>
+
+        <!-- Full Season Zip Downloads -->
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Full Season Zip Pack</h3>
+        <div class="download-box">
+            <div class="zip-grid">
+                <div class="zip-card">
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #fff;">480p Zip Pack</div>
+                        <div style="font-size: 13px; color: var(--bright-gold); margin-top: 4px;">Size: 1.6 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/xeenmw5jm0vmvex" class="btn btn-zip"><i class="fas fa-download"></i> Download Zip (480p)</a>
+                </div>
+
+                <div class="zip-card">
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #fff;">720p Zip Pack</div>
+                        <div style="font-size: 13px; color: var(--bright-gold); margin-top: 4px;">Size: 4.2 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/kowoutgoyokdttv" class="btn btn-zip"><i class="fas fa-download"></i> Download Zip (720p)</a>
+                </div>
+
+                <div class="zip-card">
+                    <div>
+                        <div style="font-size: 16px; font-weight: 700; color: #fff;">1080p Zip Pack</div>
+                        <div style="font-size: 13px; color: var(--bright-gold); margin-top: 4px;">Size: 9.5 GB</div>
+                    </div>
+                    <a href="https://hubcloud.cx/drive/z1jwatkct55cs5m" class="btn btn-zip"><i class="fas fa-download"></i> Download Zip (1080p)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Single Episode Downloads -->
+        <h3 class="section-heading"><i class="fas fa-list-ol"></i> Single Episode Downloads</h3>
+        <div class="episode-list">
+
+            <!-- Episode 1 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E01</span> Two Swords</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/7shserh7lbacaqf" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/aafd5159v8uan15" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 2 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E02</span> The Lion and the Rose</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/pr8lmkhekyrqvpo" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/ojoxvryvv2vev2n" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 3 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E03</span> Breaker of Chains</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/7osrtg5bre775zg" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/x4vvpnfoupvztup" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 4 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E04</span> Oathkeeper</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/tp44gpdgjgjh7d4" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/1mle7y2lmrmrfsp" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 5 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E05</span> First of His Name</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/uu1lffoi1l4qrer" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/nqzcfhskrvzqrva" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 6 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E06</span> The Laws of Gods and Men</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/l1r9mmzztkecezf" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/7uf8lo6uc71uqx7" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 7 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E07</span> Mockingbird</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/nneklaalxlzir18" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/jwcggk8a4xfj1c4" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 8 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E08</span> The Mountain and the Viper</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/yryemeay4jdttht" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/e1j41yyth54yyh2" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 9 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E09</span> The Watchers on the Wall</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/ly2llyffz1rlkeb" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/tycjx3zxnntxznj" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+            <!-- Episode 10 -->
+            <div class="episode-row">
+                <div class="ep-title"><span>E10</span> The Children</div>
+                <div class="ep-buttons">
+                    <a href="https://hubcloud.cx/drive/oqnzgvq87881nkl" class="btn btn-720"><i class="fas fa-download"></i> 720p</a>
+                    <a href="https://hubcloud.cx/drive/ecil4nj1zfzg6j0" class="btn btn-1080"><i class="fas fa-download"></i> 1080p</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 30px; color: #6b21a8; font-size: 12px; border-top: 1px solid var(--card-border);">
+        &copy; 2026 GOT ARCHIVES. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
