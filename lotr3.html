@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lord of the Rings: The Return of the King (2003) - Download</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Steel Silver & Royal Amber Gold Theme derived from The Return of the King poster */
+        body {
+            background-color: #0b0d12;
+            color: #dbe4f0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Breadcrumb */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #1f293d;
+            padding-bottom: 15px;
+        }
+
+        .page-header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .page-header h1 span {
+            color: #e5b048;
+        }
+
+        /* Movie Details Layout */
+        .movie-card {
+            background: #121620;
+            border: 1px solid #1f293d;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .poster-wrapper {
+            flex: 1 1 250px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #2f3e5c;
+            box-shadow: 0 5px 20px rgba(229, 176, 72, 0.25);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .movie-title {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e5b048;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .movie-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #1a2233;
+            color: #e5b048;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #293854;
+        }
+
+        .meta-rating {
+            background: #e5b048;
+            color: #0b0d12;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+
+        .movie-info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .movie-info-list li {
+            margin-bottom: 8px;
+            color: #b9c7de;
+        }
+
+        .movie-info-list strong {
+            color: #fff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #93a4c0;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: #121620;
+            border: 1px solid #1f293d;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .section-title i {
+            color: #e5b048;
+            margin-right: 8px;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .dl-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #1a2233 0%, #121620 100%);
+            border: 1px solid #e5b048;
+            color: #fff;
+            padding: 14px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        .dl-btn:hover {
+            background: #e5b048;
+            color: #0b0d12;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(229, 176, 72, 0.4);
+        }
+
+        .dl-btn i {
+            font-size: 16px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .movie-card {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .movie-title {
+                font-size: 20px;
+            }
+
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <h1>Epic Fantasy</h1>
+        </header>
+
+        <!-- Movie Main Card -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="images/lotr3.jpg" alt="The Lord of the Rings: The Return of the King Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="movie-title">The Lord of the Rings: The Return of the King</h2>
+                    
+                    <div class="movie-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 9.0/10</span>
+                        <span class="meta-badge">2003</span>
+                        <span class="meta-badge">PG-13</span>
+                        <span class="meta-badge">3h 21m</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="movie-info-list">
+                        <li><strong>Genre:</strong> Action, Adventure, Drama, Fantasy</li>
+                        <li><strong>Director:</strong> Peter Jackson</li>
+                        <li><strong>Stars:</strong> Elijah Wood, Viggo Mortensen, Ian McKellen, Orlando Bloom, Sean Astin</li>
+                        <li><strong>Quality:</strong> 720p | 1080p Bluray</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring, bringing the epic saga of Middle-earth to its ultimate climax.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Buttons Section -->
+        <div class="download-section">
+            <h3 class="section-title"><i class="fas fa-download"></i> Download Links</h3>
+            
+            <div class="download-grid">
+                <!-- 720p Link -->
+                <a href="https://hubcloud.ist/drive/atovgos2tsuvsbe" target="_blank" class="dl-btn">
+                    <i class="fas fa-video"></i> Download 720p HD
+                </a>
+
+                <!-- 1080p Link -->
+                <a href="https://hubcloud.ist/drive/wezkd1jpza187q7" target="_blank" class="dl-btn">
+                    <i class="fas fa-tv"></i> Download 1080p Full HD
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

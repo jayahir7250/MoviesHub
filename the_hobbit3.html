@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hobbit: The Battle of the Five Armies (2014) - Download</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Stormy Battlefield Slate & Fiery Ember Theme derived from The Battle of the Five Armies poster */
+        body {
+            background-color: #0c1017;
+            color: #d3dbe6;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Breadcrumb */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #202c3d;
+            padding-bottom: 15px;
+        }
+
+        .page-header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .page-header h1 span {
+            color: #e88d30;
+        }
+
+        /* Movie Details Layout */
+        .movie-card {
+            background: #121822;
+            border: 1px solid #202c3d;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .poster-wrapper {
+            flex: 1 1 250px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #2e3e57;
+            box-shadow: 0 5px 20px rgba(232, 141, 48, 0.25);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .movie-title {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e88d30;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .movie-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #1a2433;
+            color: #e88d30;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #2b3b54;
+        }
+
+        .meta-rating {
+            background: #e88d30;
+            color: #0c1017;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+
+        .movie-info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .movie-info-list li {
+            margin-bottom: 8px;
+            color: #b0c0d4;
+        }
+
+        .movie-info-list strong {
+            color: #fff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #8a9bb0;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: #121822;
+            border: 1px solid #202c3d;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .section-title i {
+            color: #e88d30;
+            margin-right: 8px;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .dl-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #1a2433 0%, #121822 100%);
+            border: 1px solid #e88d30;
+            color: #fff;
+            padding: 14px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        .dl-btn:hover {
+            background: #e88d30;
+            color: #0c1017;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(232, 141, 48, 0.4);
+        }
+
+        .dl-btn i {
+            font-size: 16px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .movie-card {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .movie-title {
+                font-size: 20px;
+            }
+
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <h1>Fantasy Adventure & Action</h1>
+        </header>
+
+        <!-- Movie Main Card -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="images/the_hobbit3.jpg" alt="The Hobbit: The Battle of the Five Armies Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="movie-title">The Hobbit: The Battle of the Five Armies</h2>
+                    
+                    <div class="movie-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 7.4/10</span>
+                        <span class="meta-badge">2014</span>
+                        <span class="meta-badge">PG-13</span>
+                        <span class="meta-badge">2h 24m</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="movie-info-list">
+                        <li><strong>Genre:</strong> Action, Adventure, Fantasy</li>
+                        <li><strong>Director:</strong> Peter Jackson</li>
+                        <li><strong>Stars:</strong> Ian McKellen, Martin Freeman, Richard Armitage, Evangeline Lilly, Luke Evans, Benedict Cumberbatch</li>
+                        <li><strong>Quality:</strong> 480p | 720p | 1080p Bluray</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        Bilbo and Company are forced to engage in a war against an array of combatants to prevent the Lonely Mountain from falling into the hands of a rising darkness, as five armies clash in an epic final battle for Middle-earth.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Buttons Section -->
+        <div class="download-section">
+            <h3 class="section-title"><i class="fas fa-download"></i> Download Links</h3>
+            
+            <div class="download-grid">
+                <!-- 480p Link -->
+                <a href="https://hubcloud.ist/drive/doohievswuwqeti" target="_blank" class="dl-btn">
+                    <i class="fas fa-film"></i> Download 480p SD
+                </a>
+
+                <!-- 720p Link -->
+                <a href="https://hubcloud.ist/drive/nbtw2xnstp2ll72" target="_blank" class="dl-btn">
+                    <i class="fas fa-video"></i> Download 720p HD
+                </a>
+
+                <!-- 1080p Link -->
+                <a href="https://hubcloud.ist/drive/3khpg33_kngkk8u" target="_blank" class="dl-btn">
+                    <i class="fas fa-tv"></i> Download 1080p Full HD
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

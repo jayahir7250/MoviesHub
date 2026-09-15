@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hobbit: The Desolation of Smaug (2013) - Download</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Mystic Emerald & Golden Ember Theme derived from The Desolation of Smaug poster */
+        body {
+            background-color: #06120d;
+            color: #d5e5db;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Breadcrumb */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #18382b;
+            padding-bottom: 15px;
+        }
+
+        .page-header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+
+        .page-header h1 span {
+            color: #e5a43b;
+        }
+
+        /* Movie Details Layout */
+        .movie-card {
+            background: #0d1e16;
+            border: 1px solid #18382b;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .poster-wrapper {
+            flex: 1 1 250px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #275440;
+            box-shadow: 0 5px 20px rgba(229, 164, 59, 0.25);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .movie-title {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e5a43b;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .movie-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #152e22;
+            color: #e5a43b;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-weight: 600;
+            border: 1px solid #244a39;
+        }
+
+        .meta-rating {
+            background: #e5a43b;
+            color: #06120d;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+
+        .movie-info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .movie-info-list li {
+            margin-bottom: 8px;
+            color: #b0cdbe;
+        }
+
+        .movie-info-list strong {
+            color: #fff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #8fb8a4;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Download Section */
+        .download-section {
+            background: #0d1e16;
+            border: 1px solid #18382b;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .section-title i {
+            color: #e5a43b;
+            margin-right: 8px;
+        }
+
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .dl-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #152e22 0%, #0d1e16 100%);
+            border: 1px solid #e5a43b;
+            color: #fff;
+            padding: 14px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+        }
+
+        .dl-btn:hover {
+            background: #e5a43b;
+            color: #06120d;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(229, 164, 59, 0.4);
+        }
+
+        .dl-btn i {
+            font-size: 16px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .movie-card {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .movie-title {
+                font-size: 20px;
+            }
+
+            .download-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <h1>Action-Feature</h1>
+        </header>
+
+        <!-- Movie Main Card -->
+        <div class="movie-card">
+            <div class="poster-wrapper">
+                <img src="images/the_hobbit2.jpg" alt="The Hobbit: The Desolation of Smaug Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="movie-title">The Hobbit: The Desolation of Smaug</h2>
+                    
+                    <div class="movie-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 7.8/10</span>
+                        <span class="meta-badge">2013</span>
+                        <span class="meta-badge">PG-13</span>
+                        <span class="meta-badge">2h 41m</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="movie-info-list">
+                        <li><strong>Genre:</strong> Action, Adventure, Fantasy</li>
+                        <li><strong>Director:</strong> Peter Jackson</li>
+                        <li><strong>Stars:</strong> Ian McKellen, Martin Freeman, Richard Armitage, Evangeline Lilly, Orlando Bloom, Benedict Cumberbatch</li>
+                        <li><strong>Quality:</strong> 480p | 720p | 1080p Bluray</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        The dwarves, along with Bilbo Baggins and Gandalf the Grey, continue their quest to reclaim Erebor, their homeland, from Smaug. Bilbo Baggins continues his journey into the heart of the mountain to retrieve the Arkenstone while facing the deadly dragon Smaug.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Buttons Section -->
+        <div class="download-section">
+            <h3 class="section-title"><i class="fas fa-download"></i> Download Links</h3>
+            
+            <div class="download-grid">
+                <!-- 480p Link -->
+                <a href="https://hubcloud.ist/drive/rggxkgbftkj0lcr" target="_blank" class="dl-btn">
+                    <i class="fas fa-film"></i> Download 480p SD
+                </a>
+
+                <!-- 720p Link -->
+                <a href="https://hubcloud.ist/drive/vrw222rwf8gmlrd" target="_blank" class="dl-btn">
+                    <i class="fas fa-video"></i> Download 720p HD
+                </a>
+
+                <!-- 1080p Link -->
+                <a href="https://hubcloud.ist/drive/ffkacmjcsrlswul" target="_blank" class="dl-btn">
+                    <i class="fas fa-tv"></i> Download 1080p Full HD
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
