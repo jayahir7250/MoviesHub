@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1899 (Season 1) - Download All Episodes & Zip Packs</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 1899 Theme: Deep Oceanic Dark Abyss, Stormy Triangle Cloud Teal & Crimson Accents */
+        body {
+            background-color: #040912;
+            background-image: 
+                radial-gradient(circle at 50% 12%, rgba(40, 95, 125, 0.25) 0%, transparent 50%),
+                radial-gradient(circle at 50% 65%, rgba(140, 30, 45, 0.12) 0%, transparent 55%);
+            color: #d0e2ec;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1050px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #122a3d;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .page-header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 26px;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-shadow: 0 0 12px rgba(65, 160, 195, 0.5);
+        }
+
+        .page-header h1 span {
+            color: #4fbcdb;
+            text-shadow: 0 0 15px rgba(79, 188, 219, 0.7);
+        }
+
+        /* Series Main Card */
+        .series-card {
+            background: linear-gradient(165deg, #091726 0%, #050f1a 100%);
+            border: 1px solid #143652;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95), 0 0 25px rgba(65, 160, 195, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #a82333, #4fbcdb, #a82333);
+        }
+
+        .poster-wrapper {
+            flex: 1 1 260px;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #1e4a6d;
+            box-shadow: 0 8px 25px rgba(79, 188, 219, 0.25), 0 0 15px rgba(168, 35, 51, 0.25);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .series-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #4fbcdb;
+            display: inline-block;
+            padding-bottom: 6px;
+            letter-spacing: 0.8px;
+            text-shadow: 0 0 10px rgba(79, 188, 219, 0.5);
+        }
+
+        .series-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #0f273d;
+            color: #4fbcdb;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #1c476b;
+        }
+
+        .meta-rating {
+            background: linear-gradient(135deg, #a82333, #781824);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 10px rgba(168, 35, 51, 0.5);
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            color: #a3c7dd;
+        }
+
+        .info-list strong {
+            color: #fff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #8bb2cb;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Section Containers */
+        .section-box {
+            background: linear-gradient(180deg, #091726 0%, #050f1a 100%);
+            border: 1px solid #143652;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #4fbcdb;
+            filter: drop-shadow(0 0 6px rgba(79, 188, 219, 0.7));
+        }
+
+        /* Zip Pack Grid */
+        .zip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+        }
+
+        .zip-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: linear-gradient(145deg, #0f2942 0%, #071728 100%);
+            border: 1px solid #4fbcdb;
+            color: #fff;
+            padding: 16px 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zip-btn:hover {
+            background: linear-gradient(135deg, #4fbcdb, #1d718a);
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(79, 188, 219, 0.5);
+            border-color: #81d8f0;
+        }
+
+        .zip-btn span {
+            font-size: 11px;
+            opacity: 0.85;
+            font-weight: 400;
+        }
+
+        /* Episode List Section */
+        .episode-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .episode-card {
+            background: #081624;
+            border: 1px solid #12334f;
+            border-radius: 10px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            border-color: #4fbcdb;
+            box-shadow: 0 0 18px rgba(79, 188, 219, 0.25);
+            transform: translateX(4px);
+        }
+
+        .ep-info {
+            flex: 1 1 250px;
+        }
+
+        .ep-number {
+            font-family: 'Orbitron', sans-serif;
+            color: #4fbcdb;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .ep-title {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .ep-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ep-dl-btn {
+            background: #0f2840;
+            color: #4fbcdb;
+            border: 1px solid #1d496e;
+            padding: 8px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s ease;
+        }
+
+        .ep-dl-btn:hover {
+            background: #4fbcdb;
+            color: #040912;
+            border-color: #4fbcdb;
+            box-shadow: 0 0 12px rgba(79, 188, 219, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .series-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .series-title {
+                font-size: 20px;
+            }
+
+            .zip-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .episode-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .ep-links {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .zip-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <h1>Mystery &<span> Science Fiction</span></h1>
+        </header>
+
+        <!-- Series Main Card -->
+        <div class="series-card">
+            <div class="poster-wrapper">
+                <img src="images/1899.jpg" alt="1899 Season 1 Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="series-title">1899 (Season 1)</h2>
+                    
+                    <div class="series-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 7.3/10</span>
+                        <span class="meta-badge">2022</span>
+                        <span class="meta-badge">TV-MA</span>
+                        <span class="meta-badge">8 Episodes</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="info-list">
+                        <li><strong>Genre:</strong> Drama, History, Horror, Mystery, Sci-Fi</li>
+                        <li><strong>Creators:</strong> Baran bo Odar, Jantje Friese</li>
+                        <li><strong>Stars:</strong> Emily Beecham, Aneurin Barnard, Andreas Pietschmann, Miguel Bernardeau, José Pimentão, Isabella Wei</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        A multinational group of immigrants traveling from London to New York on a steamship encounters a mysterious second vessel adrift on the open sea. What they discover on board transforms their journey to the promised land into a horrifying riddle of dark secrets and mind-bending simulation.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Season Zip Links Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-file-archive"></i> Season 1 Full Batch Zip Links</h3>
+            
+            <div class="zip-grid">
+                <!-- 480p Zip -->
+                <a href="https://hubcloud.ist/drive/kvzyyoiv9ykimzz" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    480p Batch Zip
+                    <span>~1.9 GB Complete Pack</span>
+                </a>
+
+                <!-- 720p Zip -->
+                <a href="https://hubcloud.ist/drive/nwjtbe3iid2wtrw" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    720p Batch Zip
+                    <span>~4.2 GB Complete Pack</span>
+                </a>
+
+                <!-- 1080p Zip -->
+                <a href="https://hubcloud.ist/drive/xirur3j8kyjkprn" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    1080p Batch Zip
+                    <span>~9.5 GB Complete Pack</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Individual Episodes Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-list-ol"></i> Season 1 Episode Download Links</h3>
+            
+            <div class="episode-list">
+
+                <!-- Episode 1 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 01</div>
+                        <div class="ep-title">The Ship</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/xamyniaaclw08sl" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/a6aRRWSB" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 02</div>
+                        <div class="ep-title">The Boy</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/1rleeodlurx32x2" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/oyskFdb8" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 03</div>
+                        <div class="ep-title">The Fog</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/ovaee9azhe1a3is" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/61VgrG5s" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 4 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 04</div>
+                        <div class="ep-title">The Fight</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/1pzbjbj2d4ddi4r" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/Mh6kBnAk" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 5 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 05</div>
+                        <div class="ep-title">The Calling</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/quvwuhuvchu9rkr" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/QMuek6rC" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 6 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 06</div>
+                        <div class="ep-title">The Pyramid</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/ly1lgl2__lg5kyp" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/g6fXPtap" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 7 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 07</div>
+                        <div class="ep-title">The Storm</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/4ztknemzrur6n7z" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/jGCGKSuH" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 8 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 08</div>
+                        <div class="ep-title">The Key</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/u3ciusmafrcttfu" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/eiAfMrUJ" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

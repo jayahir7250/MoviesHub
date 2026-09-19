@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost in Space (Season 2) - Download All Episodes & Zip Packs</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Season 2 Theme: Cold Icy Cavern Blue with Fiery Solar Orange Core */
+        body {
+            background-color: #030810;
+            background-image: 
+                radial-gradient(circle at 50% 12%, rgba(255, 136, 0, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 50% 60%, rgba(0, 210, 255, 0.08) 0%, transparent 60%);
+            color: #d2e6f8;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1050px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #102a45;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .page-header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 26px;
+            color: #ffffff;
+            letter-spacing: 1px;
+            text-shadow: 0 0 12px rgba(0, 210, 255, 0.4);
+        }
+
+        .page-header h1 span {
+            color: #ff8a00;
+            text-shadow: 0 0 15px rgba(255, 138, 0, 0.6);
+        }
+
+        /* Series Main Card */
+        .series-card {
+            background: linear-gradient(165deg, #091526 0%, #050d18 100%);
+            border: 1px solid #133256;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.9), 0 0 25px rgba(0, 210, 255, 0.12);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00d2ff, #ff8a00, #00d2ff);
+        }
+
+        .poster-wrapper {
+            flex: 1 1 260px;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #1e4573;
+            box-shadow: 0 8px 25px rgba(0, 210, 255, 0.25), 0 0 15px rgba(255, 138, 0, 0.2);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .series-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #ff8a00;
+            display: inline-block;
+            padding-bottom: 6px;
+            letter-spacing: 0.8px;
+            text-shadow: 0 0 8px rgba(255, 138, 0, 0.3);
+        }
+
+        .series-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #0d223d;
+            color: #00d2ff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #1a3e6b;
+        }
+
+        .meta-rating {
+            background: linear-gradient(135deg, #ff8a00, #ff5500);
+            color: #030810;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            color: #a2c4e6;
+        }
+
+        .info-list strong {
+            color: #fff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #8bb3db;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Section Containers */
+        .section-box {
+            background: linear-gradient(180deg, #091526 0%, #050e1a 100%);
+            border: 1px solid #133256;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: #ff8a00;
+            filter: drop-shadow(0 0 6px rgba(255, 138, 0, 0.6));
+        }
+
+        /* Zip Pack Grid */
+        .zip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+        }
+
+        .zip-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: linear-gradient(145deg, #0e223d 0%, #071322 100%);
+            border: 1px solid #ff8a00;
+            color: #fff;
+            padding: 16px 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zip-btn:hover {
+            background: linear-gradient(135deg, #ff8a00, #ff5500);
+            color: #030810;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(255, 138, 0, 0.5);
+            border-color: #ffaa33;
+        }
+
+        .zip-btn span {
+            font-size: 11px;
+            opacity: 0.85;
+            font-weight: 400;
+        }
+
+        /* Episode List Section */
+        .episode-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .episode-card {
+            background: #081424;
+            border: 1px solid #122e50;
+            border-radius: 10px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            border-color: #00d2ff;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.2);
+            transform: translateX(4px);
+        }
+
+        .ep-info {
+            flex: 1 1 250px;
+        }
+
+        .ep-number {
+            font-family: 'Orbitron', sans-serif;
+            color: #ff8a00;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 2px;
+        }
+
+        .ep-title {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .ep-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ep-dl-btn {
+            background: #0d223c;
+            color: #00d2ff;
+            border: 1px solid #1a4270;
+            padding: 8px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s ease;
+        }
+
+        .ep-dl-btn:hover {
+            background: #00d2ff;
+            color: #030810;
+            border-color: #00d2ff;
+            box-shadow: 0 0 12px rgba(0, 210, 255, 0.5);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .series-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .series-title {
+                font-size: 20px;
+            }
+
+            .zip-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .episode-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .ep-links {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .zip-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <h1> <span>Family</span> Adventure</h1>
+        </header>
+
+        <!-- Series Main Card -->
+        <div class="series-card">
+            <div class="poster-wrapper">
+                <img src="images/lis2.jpg" alt="Lost in Space Season 2 Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="series-title">Lost in Space (Season 2)</h2>
+                    
+                    <div class="series-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 7.3/10</span>
+                        <span class="meta-badge">2019</span>
+                        <span class="meta-badge">TV-PG</span>
+                        <span class="meta-badge">10 Episodes</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="info-list">
+                        <li><strong>Genre:</strong> Action, Adventure, Drama, Sci-Fi</li>
+                        <li><strong>Creators:</strong> Matt Sazama, Burk Sharpless</li>
+                        <li><strong>Stars:</strong> Molly Parker, Toby Stephens, Maxwell Jenkins, Taylor Russell, Mina Sundwall, Ignacio Serricchio, Parker Posey</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p | 4K Ultra HD</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        Marooned seven months later on a mysterious water world, the Robinson family builds a makeshift sail on the Jupiter 2 to navigate hazardous storms. As they search for the Resolute and Will's beloved Robot, new secrets and lethal alien threats emerge across icy alien caverns and unfamiliar solar systems.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Season Zip Links Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-file-archive"></i> Season 2 Full Batch Zip Links</h3>
+            
+            <div class="zip-grid">
+                <!-- 480p Zip -->
+                <a href="https://hubcloud.ist/drive/d6gumzdwd2lw7ma" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    480p Batch Zip
+                    <span>~2.1 GB Complete Pack</span>
+                </a>
+
+                <!-- 720p Zip -->
+                <a href="https://hubcloud.ist/drive/wrt9rpqrprwwwrr" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    720p Batch Zip
+                    <span>~4.8 GB Complete Pack</span>
+                </a>
+
+                <!-- 1080p Zip -->
+                <a href="https://hubcloud.ist/drive/jyxx7wqpjayjjxj" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    1080p Batch Zip
+                    <span>~10.5 GB Complete Pack</span>
+                </a>
+
+                <!-- 4K Zip -->
+                <a href="https://hubcloud.ist/drive/red1ky1duvpokop" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    4K UHD Batch Zip
+                    <span>~24.5 GB Complete Pack</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Individual Episodes Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-list-ol"></i> Season 2 Episode Download Links</h3>
+            
+            <div class="episode-list">
+
+                <!-- Episode 1 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 01</div>
+                        <div class="ep-title">Shipwrecked</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/1cm6aibaammabri" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/szyy8ewr07zceso" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/4z8xpoeqb06pked" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 02</div>
+                        <div class="ep-title">Precipice</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/cremwgexczmdde5" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/cityhrufl30fccg" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/kk5q2xnvsuwvzwl" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 03</div>
+                        <div class="ep-title">Echoes</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/truemmue1d77ekm" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/cfo2bclhih41jgp" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/ngs6n11yksgdwyl" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 4 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 04</div>
+                        <div class="ep-title">Scarecrow</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/mqnjjvmdop4vboo" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/vecff5rcfvrqkjx" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/ba2ni1e6v4gkpha" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 5 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 05</div>
+                        <div class="ep-title">Run</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/yyepstl111l4plq" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/31jfa1yi8116oja" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/rnic2cchaptk1jr" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 6 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 06</div>
+                        <div class="ep-title">Severed</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/tkl2stqa03ks3k2" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/7wsf71ovkfvkhzp" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/9yzc7ydolqfknct" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 7 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 07</div>
+                        <div class="ep-title">Evolution</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/vkqqghmy8y6evo4" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/vw5vhwnxjwkvmhw" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/n8qrnvreweqrvvf" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 8 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 08</div>
+                        <div class="ep-title">Unknown</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/jbjks4ybjg4j0ku" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/ffxfsxw6e6cxgif" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/676gvs16g8447gf" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 9 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 09</div>
+                        <div class="ep-title">Shell Game</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/9slygttabprzutt" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/inm4nefdsresifv" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/edklqhzzhd0qkuu" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 10 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 10</div>
+                        <div class="ep-title">Ninety-Seven</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/slficmwoaqsc4ee" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/kebmi11yyi2dnr2" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/tdtvt33mmm3i220" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
