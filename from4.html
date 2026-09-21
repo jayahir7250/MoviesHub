@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FROM (Season 4) - Download All Episodes & Zip Packs (480p, 720p, 1080p, 4K)</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* FROM Season 4 Theme: Distressed Ochre Gold, Sepia Canvas & Chalk White Horror */
+        body {
+            background-color: #0b0a06;
+            background-image: 
+                radial-gradient(circle at 50% 12%, rgba(202, 138, 4, 0.28) 0%, transparent 60%),
+                radial-gradient(circle at 85% 75%, rgba(217, 119, 6, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 15% 85%, rgba(161, 98, 7, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 50% 90%, rgba(20, 17, 10, 0.95) 0%, transparent 100%);
+            color: #e2e8f0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1080px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #3d2f0f;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .page-header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .page-header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(234, 179, 8, 0.6);
+        }
+
+        .page-header h1 span {
+            color: #eab308;
+            text-shadow: 0 0 15px rgba(234, 179, 8, 0.8);
+        }
+
+        /* Series / Media Type Badge */
+        .media-type-tag {
+            background: linear-gradient(135deg, #ca8a04, #a16207);
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 14px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            box-shadow: 0 0 14px rgba(234, 179, 8, 0.5);
+        }
+
+        /* Series Main Card */
+        .series-card {
+            background: linear-gradient(165deg, #18150c 0%, #080704 100%);
+            border: 1px solid #4a3811;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95), 0 0 25px rgba(234, 179, 8, 0.18);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ca8a04, #facc15, #fef08a, #ca8a04);
+        }
+
+        .poster-wrapper {
+            flex: 1 1 260px;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #eab308;
+            box-shadow: 0 8px 25px rgba(234, 179, 8, 0.35), 0 0 15px rgba(0, 0, 0, 0.9);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .series-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #eab308;
+            display: inline-block;
+            padding-bottom: 4px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(234, 179, 8, 0.6);
+        }
+
+        .series-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #231c0e;
+            color: #fde047;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #544015;
+        }
+
+        .meta-rating {
+            background: linear-gradient(135deg, #ca8a04, #a16207);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(234, 179, 8, 0.6);
+        }
+
+        .meta-4k-badge {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(220, 38, 38, 0.6);
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        .info-list strong {
+            color: #ffffff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #a1a1aa;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Section Containers */
+        .section-box {
+            background: linear-gradient(180deg, #18140a 0%, #090704 100%);
+            border: 1px solid #423210;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.85);
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title i {
+            color: #eab308;
+            filter: drop-shadow(0 0 6px rgba(234, 179, 8, 0.8));
+        }
+
+        /* Zip Pack Grid - 4 Columns for 480, 720, 1080, 4K */
+        .zip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .zip-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: linear-gradient(145deg, #261d0d 0%, #120e06 100%);
+            border: 1px solid #eab308;
+            color: #ffffff;
+            padding: 16px 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .zip-btn:hover {
+            background: linear-gradient(135deg, #ca8a04, #a16207);
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(234, 179, 8, 0.6);
+            border-color: #facc15;
+        }
+
+        .zip-btn span {
+            font-size: 11px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* Episode List Section */
+        .episode-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .episode-card {
+            background: #100d07;
+            border: 1px solid #3d2f0f;
+            border-radius: 10px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            border-color: #eab308;
+            box-shadow: 0 0 18px rgba(234, 179, 8, 0.35);
+            transform: translateX(4px);
+        }
+
+        .ep-info {
+            flex: 1 1 180px;
+        }
+
+        .ep-number {
+            font-family: 'Oswald', sans-serif;
+            color: #eab308;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        .ep-title {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .ep-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .ep-dl-btn {
+            background: #231c0e;
+            color: #fde047;
+            border: 1px solid #544015;
+            padding: 8px 11px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.25s ease;
+        }
+
+        .ep-dl-btn:hover {
+            background: linear-gradient(135deg, #ca8a04, #a16207);
+            color: #ffffff;
+            border-color: #fef08a;
+            box-shadow: 0 0 12px rgba(234, 179, 8, 0.6);
+        }
+
+        .ep-dl-btn.btn-4k {
+            background: #3b1010;
+            color: #fca5a5;
+            border-color: #7f1d1d;
+        }
+
+        .ep-dl-btn.btn-4k:hover {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            color: #ffffff;
+            border-color: #fecaca;
+            box-shadow: 0 0 12px rgba(220, 38, 38, 0.7);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .zip-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .series-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .series-title {
+                font-size: 26px;
+            }
+
+            .episode-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .ep-links {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .zip-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ep-dl-btn {
+                padding: 6px 9px;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <div class="page-header-title">
+                <h1><span>Horror</span> Mystery</h1>
+                <span class="media-type-tag"><i class="fas fa-tv"></i> Web Series</span>
+            </div>
+        </header>
+
+        <!-- Series Main Card -->
+        <div class="series-card">
+            <div class="poster-wrapper">
+                <img src="images/from4.jpg" alt="FROM Season 4 Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="series-title">FROM (Season 4)</h2>
+                    
+                    <div class="series-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 8.1/10</span>
+                        <span class="meta-badge">2025-2026</span>
+                        <span class="meta-badge">TV-MA</span>
+                        <span class="meta-badge">10 Episodes</span>
+                        <span class="meta-4k-badge">4K Ultra HD</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="info-list">
+                        <li><strong>Type:</strong> Web Series</li>
+                        <li><strong>Genre:</strong> Horror, Mystery, Sci-Fi, Psychological Drama</li>
+                        <li><strong>Creator:</strong> John Griffin</li>
+                        <li><strong>Stars:</strong> Harold Perrineau, Catalina Sandino Moreno, Eion Bailey, David Alpay, Elizabeth Saunders</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p | 2160p (4K HDR)</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        In Season 4, as the yellow chalk entities and ancient guardians make their presence inescapable, Boyd and the surviving townspeople must confront the true originators of the nightmare realm. With boundaries dissolving between past and present, escaping the forest requires facing horrors far older and darker than the night creatures.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Season Zip Links Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-file-archive"></i> Season 4 Full Batch Zip Links</h3>
+            
+            <div class="zip-grid">
+                <!-- 480p Zip -->
+                <a href="https://hubcloud.ist/drive/oftklaffk4f2po4" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    480p Batch Zip
+                    <span>~2.2 GB Complete Pack</span>
+                </a>
+
+                <!-- 720p Zip -->
+                <a href="https://hubcloud.ist/drive/xmlnmmd5h1hnuqn" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    720p Batch Zip
+                    <span>~5.2 GB Complete Pack</span>
+                </a>
+
+                <!-- 1080p Zip -->
+                <a href="https://hubcloud.ist/drive/dglr5eazzjdj77b" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    1080p Batch Zip
+                    <span>~11.5 GB Complete Pack</span>
+                </a>
+
+                <!-- 4K Zip -->
+                <a href="https://hubcloud.ist/drive/5fzt6ffs5h1404v" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    4K Ultra HD Zip
+                    <span>~24.0 GB Complete Pack</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Individual Episodes Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-list-ol"></i> Season 4 Episode Download Links</h3>
+            
+            <div class="episode-list">
+
+                <!-- Episode 1 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 01</div>
+                        <div class="ep-title">The Ochre Canvas</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/wo13czfce1tzlvn" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/i6dz42zskks2els" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/j9qfxh5xo5ouotg" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/2mxyvbki5rk923d" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 02</div>
+                        <div class="ep-title">Painted Figures</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/3lahhp3c30xanic" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/hbhqhb8tgbgbh6p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/kl0l3btjltghtzd" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/yzy3oow7erlclzj" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 03</div>
+                        <div class="ep-title">Echoes of the Children</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/xigsextotwid1xi" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/odseadt8i889yz7" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/cdyy2p4s5dyzzei" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/904pii4cgjqt212" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 4 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 04</div>
+                        <div class="ep-title">Chalk and Blood</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/eztgatepkdmjntk" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/1cemhe9hotle4ku" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/gpilll8ppngtguq" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/8xdsrg1iaf7vizs" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 5 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 05</div>
+                        <div class="ep-title">Unspoken Compact</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/5icqxaksquguxnq" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/5kkwmwaxw1ywrha" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/hbe1bk1mqcwthil" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/29fvfa9f1cupvnu" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 6 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 06</div>
+                        <div class="ep-title">Shadows in the Sunlight</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/6iy6z1jbiebyjbi" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/deymv1xnl2tfcmr" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/wfcoocekggrtck2" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/i16fq7qmqmqwn1q" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 7 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 07</div>
+                        <div class="ep-title">The Keeper's Legacy</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/h8nbkhnttql1bot" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/wg71wnnvlqxxkh4" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/8pp4k4opoyqnqdq" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/l1ryjt5t6vpvzst" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 8 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 08</div>
+                        <div class="ep-title">Golden Sanctuary</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/1ywowwoe5zkdox7" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/oqqty07ytqglyly" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/np1vpa0vwixvjvm" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/bu78udybuvy8ypb" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 9 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 09</div>
+                        <div class="ep-title">The First Veil</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/x8aj777gjj4axlj" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/v2wpwbbpb811pxn" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/7dwcbna77qd2hrj" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/p5gqx6smv6vr0i5" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 10 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 10</div>
+                        <div class="ep-title">Beyond the Canvas</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/htrgzpr15r5r1i1" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/0ax8d4uhlzlmlvu" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/pbtbscttz1al6be" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/uevwtumv1zpmzp1" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

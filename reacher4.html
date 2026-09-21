@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reacher (Season 4) - Download All Episodes & Zip Packs</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Reacher Season 4 Theme: Dual-Tone Neon Crimson Red & Electric Blue Ambient Lighting */
+        body {
+            background-color: #06070c;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(239, 68, 68, 0.22) 0%, transparent 55%),
+                radial-gradient(circle at 85% 85%, rgba(37, 99, 235, 0.22) 0%, transparent 55%),
+                radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.8) 0%, transparent 100%);
+            color: #e2e8f0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1050px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .page-header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .page-header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(239, 68, 68, 0.5);
+        }
+
+        .page-header h1 span {
+            background: linear-gradient(135deg, #ef4444, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.6));
+        }
+
+        /* Series / Media Type Badge */
+        .media-type-tag {
+            background: linear-gradient(135deg, #ef4444, #3b82f6);
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 14px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            box-shadow: 0 0 14px rgba(239, 68, 68, 0.5);
+        }
+
+        /* Series Main Card */
+        .series-card {
+            background: linear-gradient(165deg, #0f121d 0%, #080a10 100%);
+            border: 1px solid #1e2640;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95), 0 0 25px rgba(239, 68, 68, 0.15), 0 0 25px rgba(59, 130, 246, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ef4444, #a855f7, #3b82f6);
+        }
+
+        .poster-wrapper {
+            flex: 1 1 260px;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #ef4444;
+            box-shadow: -8px 8px 25px rgba(239, 68, 68, 0.35), 8px -8px 25px rgba(59, 130, 246, 0.35);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .series-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #ef4444;
+            display: inline-block;
+            padding-bottom: 4px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+        }
+
+        .series-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #141b2d;
+            color: #93c5fd;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #253352;
+        }
+
+        .meta-rating {
+            background: linear-gradient(135deg, #ef4444, #b91c1c);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(239, 68, 68, 0.6);
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        .info-list strong {
+            color: #ffffff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Section Containers */
+        .section-box {
+            background: linear-gradient(180deg, #101422 0%, #090b12 100%);
+            border: 1px solid #1d273e;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title i {
+            color: #ef4444;
+            filter: drop-shadow(0 0 6px rgba(239, 68, 68, 0.8));
+        }
+
+        /* Zip Pack Grid */
+        .zip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+        }
+
+        .zip-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: linear-gradient(145deg, #1a1e30 0%, #0d101c 100%);
+            border: 1px solid #ef4444;
+            color: #ffffff;
+            padding: 16px 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zip-btn:hover {
+            background: linear-gradient(135deg, #ef4444, #3b82f6);
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(239, 68, 68, 0.6), 0 0 15px rgba(59, 130, 246, 0.5);
+            border-color: #3b82f6;
+        }
+
+        .zip-btn span {
+            font-size: 11px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* Episode List Section */
+        .episode-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .episode-card {
+            background: #0d111c;
+            border: 1px solid #1c263c;
+            border-radius: 10px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 0 18px rgba(59, 130, 246, 0.35);
+            transform: translateX(4px);
+        }
+
+        .ep-info {
+            flex: 1 1 220px;
+        }
+
+        .ep-number {
+            font-family: 'Oswald', sans-serif;
+            color: #ef4444;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        .ep-title {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .ep-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .ep-dl-btn {
+            background: #141c2e;
+            color: #60a5fa;
+            border: 1px solid #233554;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.25s ease;
+        }
+
+        .ep-dl-btn:hover {
+            background: linear-gradient(135deg, #ef4444, #3b82f6);
+            color: #ffffff;
+            border-color: #60a5fa;
+            box-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .series-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .series-title {
+                font-size: 26px;
+            }
+
+            .zip-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .episode-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .ep-links {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .zip-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ep-dl-btn {
+                padding: 6px 10px;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <div class="page-header-title">
+                <h1>Action <span>Packed</span> Thriller</h1>
+                <span class="media-type-tag"><i class="fas fa-tv"></i> Web Series</span>
+            </div>
+        </header>
+
+        <!-- Series Main Card -->
+        <div class="series-card">
+            <div class="poster-wrapper">
+                <img src="images/reacher4.jpg" alt="Reacher Season 4 Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="series-title">Reacher (Season 4)</h2>
+                    
+                    <div class="series-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 8.4/10</span>
+                        <span class="meta-badge">2026</span>
+                        <span class="meta-badge">TV-MA</span>
+                        <span class="meta-badge">8 Episodes</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="info-list">
+                        <li><strong>Type:</strong> Web Series</li>
+                        <li><strong>Genre:</strong> Action, Crime, Drama, Thriller</li>
+                        <li><strong>Creator:</strong> Nick Santora (Based on Lee Child's Best-Selling Novels)</li>
+                        <li><strong>Stars:</strong> Alan Ritchson, Maria Sten, Sonya Cassidy, Anthony Michael Hall</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p | 4K Ultra HD</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        In an explosive new chapter, Jack Reacher finds himself thrust into a high-stakes urban conspiracy when a fatal mistake forces him to confront a rogue syndicate operating in the shadows of power.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Season Zip Links Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-file-archive"></i> Season 4 Full Batch Zip Links</h3>
+            
+            <div class="zip-grid">
+                <!-- 480p Zip -->
+                <a href="https://hubcloud.ist/drive/a5knfnpyx14zl5z" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    480p Batch Zip
+                    <span>~2.3 GB Complete Pack</span>
+                </a>
+
+                <!-- 720p Zip -->
+                <a href="https://hubcloud.ist/drive/qacl1aaeloax4gs" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    720p Batch Zip
+                    <span>~5.0 GB Complete Pack</span>
+                </a>
+
+                <!-- 1080p Zip -->
+                <a href="https://hubcloud.ist/drive/awle8cgwo2tl2pm" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    1080p Batch Zip
+                    <span>~11.5 GB Complete Pack</span>
+                </a>
+
+                <!-- 4K Zip -->
+                <a href="https://hubcloud.ist/drive/u6fxyu36y6gyy3b" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    4K UHD Batch Zip
+                    <span>~24.0 GB Complete Pack</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Individual Episodes Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-list-ol"></i> Season 4 Episode Download Links</h3>
+            
+            <div class="episode-list">
+
+                <!-- Episode 1 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 01</div>
+                        <div class="ep-title">Gone Tomorrow</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://pixeldrain.dev/u/EAxSeSnn" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://pixeldrain.dev/u/pkx2VjcW" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/BYmCiWsd" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://pixeldrain.dev/u/Z8XZanDp" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 02</div>
+                        <div class="ep-title">Enemy Territory</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://pixeldrain.dev/u/MGmS4okx" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://pixeldrain.dev/u/4Ly7F8bA" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/jJ3FM5h9" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://pixeldrain.dev/u/XZD5viZq" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 03</div>
+                        <div class="ep-title">Red Line</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://pixeldrain.dev/u/cPfeDGiH" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://pixeldrain.dev/u/T3tudBd7" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/Lbxwi6wH" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://pixeldrain.dev/u/SHUZJyRv" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 4 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 04</div>
+                        <div class="ep-title">Shadow Protocol</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://pixeldrain.dev/u/bbvQP25D" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://pixeldrain.dev/u/aao6yfQs" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/kgc1HMWL" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://pixeldrain.dev/u/9yW3Quwg" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 5 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 05</div>
+                        <div class="ep-title">Midnight Express</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://pixeldrain.dev/u/ekjMYuJJ" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://pixeldrain.dev/u/A6iToyYp" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/kHch8Z73" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://pixeldrain.dev/u/hLBNPA6n" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 6 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 06</div>
+                        <div class="ep-title">Zero Hour</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://pixeldrain.dev/u/bTisoJzd" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://pixeldrain.dev/u/qHyPP24n" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/9QQRmE9J" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://pixeldrain.dev/u/XdPj74XN" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 7 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 07</div>
+                        <div class="ep-title">Crossfire</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://pixeldrain.dev/u/c48zD2n9" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://pixeldrain.dev/u/3z2E6L2k" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/XEFdamEC" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://pixeldrain.dev/u/NvfhcWME" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 8 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 08</div>
+                        <div class="ep-title">End Game</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://pixeldrain.dev/u/aosEqg9C" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://pixeldrain.dev/u/cecgL8y7" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/JwR64Goa" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://pixeldrain.dev/u/fNbSkZrz" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

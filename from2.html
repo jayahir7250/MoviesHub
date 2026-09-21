@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FROM (Season 2) - Download All Episodes & Zip Packs</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* FROM Season 2 Theme: Icy Fog & Cold Midnight Cyan Horror */
+        body {
+            background-color: #03080c;
+            background-image: 
+                radial-gradient(circle at 50% 15%, rgba(16, 78, 91, 0.35) 0%, transparent 60%),
+                radial-gradient(circle at 15% 75%, rgba(6, 182, 212, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 85% 85%, rgba(15, 23, 42, 0.95) 0%, transparent 100%);
+            color: #e2e8f0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1050px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #0f303a;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .page-header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .page-header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
+        }
+
+        .page-header h1 span {
+            color: #06b6d4;
+            text-shadow: 0 0 15px rgba(6, 182, 212, 0.8);
+        }
+
+        /* Series / Media Type Badge */
+        .media-type-tag {
+            background: linear-gradient(135deg, #0891b2, #0e7490);
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 14px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            box-shadow: 0 0 14px rgba(6, 182, 212, 0.5);
+        }
+
+        /* Series Main Card */
+        .series-card {
+            background: linear-gradient(165deg, #07131a 0%, #02070a 100%);
+            border: 1px solid #103444;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95), 0 0 25px rgba(6, 182, 212, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #06b6d4, #22d3ee, #06b6d4);
+        }
+
+        .poster-wrapper {
+            flex: 1 1 260px;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #06b6d4;
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.35), 0 0 15px rgba(0, 0, 0, 0.9);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .series-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #06b6d4;
+            display: inline-block;
+            padding-bottom: 4px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
+        }
+
+        .series-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #0a212d;
+            color: #67e8f9;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #144359;
+        }
+
+        .meta-rating {
+            background: linear-gradient(135deg, #0891b2, #0e7490);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        .info-list strong {
+            color: #ffffff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Section Containers */
+        .section-box {
+            background: linear-gradient(180deg, #071621 0%, #030a0f 100%);
+            border: 1px solid #0f3345;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title i {
+            color: #06b6d4;
+            filter: drop-shadow(0 0 6px rgba(6, 182, 212, 0.8));
+        }
+
+        /* Zip Pack Grid */
+        .zip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+        }
+
+        .zip-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: linear-gradient(145deg, #0a202c 0%, #05131b 100%);
+            border: 1px solid #06b6d4;
+            color: #ffffff;
+            padding: 16px 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zip-btn:hover {
+            background: linear-gradient(135deg, #0891b2, #0284c7);
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(6, 182, 212, 0.6);
+            border-color: #38bdf8;
+        }
+
+        .zip-btn span {
+            font-size: 11px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* Episode List Section */
+        .episode-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .episode-card {
+            background: #051118;
+            border: 1px solid #0e2d3d;
+            border-radius: 10px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            border-color: #06b6d4;
+            box-shadow: 0 0 18px rgba(6, 182, 212, 0.35);
+            transform: translateX(4px);
+        }
+
+        .ep-info {
+            flex: 1 1 220px;
+        }
+
+        .ep-number {
+            font-family: 'Oswald', sans-serif;
+            color: #06b6d4;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        .ep-title {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .ep-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .ep-dl-btn {
+            background: #0a212d;
+            color: #38bdf8;
+            border: 1px solid #144359;
+            padding: 8px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.25s ease;
+        }
+
+        .ep-dl-btn:hover {
+            background: linear-gradient(135deg, #0891b2, #0284c7);
+            color: #ffffff;
+            border-color: #7dd3fc;
+            box-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .series-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .series-title {
+                font-size: 26px;
+            }
+
+            .zip-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .episode-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .ep-links {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .zip-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ep-dl-btn {
+                padding: 6px 10px;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <div class="page-header-title">
+                <h1> <span>Supernatural</span> Horror</h1>
+                <span class="media-type-tag"><i class="fas fa-tv"></i> Web Series</span>
+            </div>
+        </header>
+
+        <!-- Series Main Card -->
+        <div class="series-card">
+            <div class="poster-wrapper">
+                <img src="images/from2.jpg" alt="FROM Season 2 Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="series-title">FROM (Season 2)</h2>
+                    
+                    <div class="series-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 7.7/10</span>
+                        <span class="meta-badge">2023</span>
+                        <span class="meta-badge">TV-MA</span>
+                        <span class="meta-badge">10 Episodes</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="info-list">
+                        <li><strong>Type:</strong> Web Series</li>
+                        <li><strong>Genre:</strong> Horror, Mystery, Sci-Fi, Drama</li>
+                        <li><strong>Creator:</strong> John Griffin</li>
+                        <li><strong>Stars:</strong> Harold Perrineau, Catalina Sandino Moreno, Eion Bailey, David Alpay, Elizabeth Saunders</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        In Season 2, hidden truths about the nature and terrifying origins of the town begin to emerge, even as the arrival of a bus full of mysterious newcomers threatens to plunge the fragile community into chaos and nightmare.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Season Zip Links Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-file-archive"></i> Season 2 Full Batch Zip Links</h3>
+            
+            <div class="zip-grid">
+                <!-- 480p Zip -->
+                <a href="https://hubcloud.ist/drive/6zpsop558aa1azz" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    480p Batch Zip
+                    <span>~1.9 GB Complete Pack</span>
+                </a>
+
+                <!-- 720p Zip -->
+                <a href="https://hubcloud.ist/drive/ddbniiufgnoygir" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    720p Batch Zip
+                    <span>~4.5 GB Complete Pack</span>
+                </a>
+
+                <!-- 1080p Zip -->
+                <a href="https://hubcloud.ist/drive/edwcw9e1_tm_npl" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    1080p Batch Zip
+                    <span>~10.2 GB Complete Pack</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Individual Episodes Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-list-ol"></i> Season 2 Episode Download Links</h3>
+            
+            <div class="episode-list">
+
+                <!-- Episode 1 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 01</div>
+                        <div class="ep-title">Strangers in a Strange Land</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/5n7y788pwly7y0n" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/63dpg1dw82cwpbp" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 02</div>
+                        <div class="ep-title">The Ball of Magic String</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/ovzuibk1i7uondu" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/7dl5fggf5l5yagz" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 03</div>
+                        <div class="ep-title">Tether</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/kgmugw5953e1h7f" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/ro3y3vqqqv0k0kq" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 4 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 04</div>
+                        <div class="ep-title">This Way Out</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/f29_vkb89qv99bp" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/r0145bdxa4bax4d" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 5 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 05</div>
+                        <div class="ep-title">Lullaby</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/4bccxwzumcydyz_" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/em11kayaveokjfe" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 6 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 06</div>
+                        <div class="ep-title">Pas de Deux</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/sjr7jceceswcbw_" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/rfrr7rfad9ticd1" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 7 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 07</div>
+                        <div class="ep-title">Belly of the Beast</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/kdlyrmsdrddfzrt" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/pcwnccahcahwc1c" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 8 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 08</div>
+                        <div class="ep-title">Forest for the Trees</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/yexmfmvyq1qyjxo" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/jmyzmqssbshsqbf" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 9 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 09</div>
+                        <div class="ep-title">Ball of Magic String</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/krww1oyc8k8z18h" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/ycengpkyuyfb1pe" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 10 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 10</div>
+                        <div class="ep-title">Once Upon a Time...</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/d4y7uogrukrvj6r" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/1pp0ulpsggjd0r1" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

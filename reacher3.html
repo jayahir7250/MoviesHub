@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reacher (Season 3) - Download All Episodes & Zip Packs</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Reacher Season 3 Theme: Ocean Slate Teal & Energetic Orange Accents */
+        body {
+            background-color: #081017;
+            background-image: 
+                radial-gradient(circle at 50% 8%, rgba(249, 115, 22, 0.22) 0%, transparent 55%),
+                radial-gradient(circle at 50% 68%, rgba(14, 116, 144, 0.2) 0%, transparent 60%);
+            color: #e2e8f0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1050px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #1a2f3d;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .page-header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .page-header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
+        }
+
+        .page-header h1 span {
+            color: #f97316;
+            text-shadow: 0 0 15px rgba(249, 115, 22, 0.7);
+        }
+
+        /* Series / Media Type Badge */
+        .media-type-tag {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            box-shadow: 0 0 12px rgba(249, 115, 22, 0.5);
+        }
+
+        /* Series Main Card */
+        .series-card {
+            background: linear-gradient(165deg, #0e1d27 0%, #081119 100%);
+            border: 1px solid #1d394a;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95), 0 0 25px rgba(249, 115, 22, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #f97316, #06b6d4, #f97316);
+        }
+
+        .poster-wrapper {
+            flex: 1 1 260px;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #f97316;
+            box-shadow: 0 8px 25px rgba(249, 115, 22, 0.35), 0 0 15px rgba(0, 0, 0, 0.9);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .series-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #f97316;
+            display: inline-block;
+            padding-bottom: 4px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(249, 115, 22, 0.5);
+        }
+
+        .series-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #132736;
+            color: #38bdf8;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #1f425b;
+        }
+
+        .meta-rating {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 10px rgba(249, 115, 22, 0.5);
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        .info-list strong {
+            color: #ffffff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Section Containers */
+        .section-box {
+            background: linear-gradient(180deg, #0f1f2a 0%, #09131c 100%);
+            border: 1px solid #1a3547;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title i {
+            color: #f97316;
+            filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.7));
+        }
+
+        /* Zip Pack Grid */
+        .zip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+        }
+
+        .zip-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: linear-gradient(145deg, #172c3b 0%, #0d1b26 100%);
+            border: 1px solid #f97316;
+            color: #ffffff;
+            padding: 16px 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zip-btn:hover {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(249, 115, 22, 0.6);
+            border-color: #fb923c;
+        }
+
+        .zip-btn span {
+            font-size: 11px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* Episode List Section */
+        .episode-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .episode-card {
+            background: #0c1822;
+            border: 1px solid #1a3345;
+            border-radius: 10px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            border-color: #f97316;
+            box-shadow: 0 0 18px rgba(249, 115, 22, 0.3);
+            transform: translateX(4px);
+        }
+
+        .ep-info {
+            flex: 1 1 220px;
+        }
+
+        .ep-number {
+            font-family: 'Oswald', sans-serif;
+            color: #f97316;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        .ep-title {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .ep-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .ep-dl-btn {
+            background: #142836;
+            color: #f97316;
+            border: 1px solid #234861;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.25s ease;
+        }
+
+        .ep-dl-btn:hover {
+            background: #f97316;
+            color: #ffffff;
+            border-color: #fb923c;
+            box-shadow: 0 0 12px rgba(249, 115, 22, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .series-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .series-title {
+                font-size: 26px;
+            }
+
+            .zip-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .episode-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .ep-links {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .zip-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ep-dl-btn {
+                padding: 6px 10px;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <div class="page-header-title">
+                <h1>Undercover <span>Crime</span> Drama</h1>
+                <span class="media-type-tag"><i class="fas fa-tv"></i> Web Series</span>
+            </div>
+        </header>
+
+        <!-- Series Main Card -->
+        <div class="series-card">
+            <div class="poster-wrapper">
+                <img src="images/reacher3.jpg" alt="Reacher Season 3 Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="series-title">Reacher (Season 3)</h2>
+                    
+                    <div class="series-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 8.3/10</span>
+                        <span class="meta-badge">2025</span>
+                        <span class="meta-badge">TV-MA</span>
+                        <span class="meta-badge">8 Episodes</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="info-list">
+                        <li><strong>Type:</strong> Web Series</li>
+                        <li><strong>Genre:</strong> Action, Crime, Drama, Thriller</li>
+                        <li><strong>Creator:</strong> Nick Santora (Based on <em>Persuader</em> by Lee Child)</li>
+                        <li><strong>Stars:</strong> Alan Ritchson, Maria Sten, Anthony Michael Hall, Sonya Cassidy, Brian Tee, Johnny Berchtold</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p | 4K Ultra HD</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        Based on Lee Child's acclaimed 7th Jack Reacher novel <em>Persuader</em>, Reacher must go deep undercover into a dark coastal empire to rescue an informant trapped by a formidable enemy from his haunting past.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Season Zip Links Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-file-archive"></i> Season 3 Full Batch Zip Links</h3>
+            
+            <div class="zip-grid">
+                <!-- 480p Zip -->
+                <a href="https://hubcloud.ist/drive/5kgx6hidvpkpd1d" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    480p Batch Zip
+                    <span>~2.2 GB Complete Pack</span>
+                </a>
+
+                <!-- 720p Zip -->
+                <a href="https://hubcloud.ist/drive/1j55isz5jy91qmj" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    720p Batch Zip
+                    <span>~4.8 GB Complete Pack</span>
+                </a>
+
+                <!-- 1080p Zip -->
+                <a href="https://hubcloud.ist/drive/xar2uwxooxxpop5" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    1080p Batch Zip
+                    <span>~11.0 GB Complete Pack</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Individual Episodes Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-list-ol"></i> Season 3 Episode Download Links</h3>
+            
+            <div class="episode-list">
+
+                <!-- Episode 1 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 01</div>
+                        <div class="ep-title">Persuader</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/anqnq9qb9j9y9ni" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/syxc31evbcjcukj" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/kk12yw7ykml5k2y" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/ic1cicce1k11olo" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 02</div>
+                        <div class="ep-title">Undercover</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/cump0y1cxtv1k1g" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/uqumeajodomxjmn" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/wmoksyw6uxcqr1v" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/bt1iqdvrfzsvo9a" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 03</div>
+                        <div class="ep-title">Maine Stronghold</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/b378nbbbbb8f2cb" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/tgwszevekp5qqes" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/i7ijemcjmjci6q7" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/z0zlm9lqdlkolzo" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 4 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 04</div>
+                        <div class="ep-title">The Warehouse</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/i8ks2kk5grddk0o" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/qlmxhz9ca19gjij" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/zm7uj9rkztbvtb7" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/qmrbrm0pqnidmyg" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 5 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 05</div>
+                        <div class="ep-title">Cold Water</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/t9onk9jkaptp91t" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/qtxuxbeqsnsb1pe" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/y281am1pn32y1fc" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/rhwwvtv1kr12gvi" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 6 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 06</div>
+                        <div class="ep-title">Ghosts of Quinn</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/y7mj7umfa7mzyjz" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/eqsq8bss1cscaag" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/tlcqcqq6x1lctq1" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/vfuxvf1y8p5xxg1" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 7 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 07</div>
+                        <div class="ep-title">Breaking Point</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/q1edeuuu44frq1k" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://hubcloud.ist/drive/f9l161lc9e1xiiz" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/1jbi0bq11jt8muy" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/pmmaf75we3ad9od" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 4K UHD</a>
+                    </div>
+                </div>
+
+                <!-- Episode 8 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 08</div>
+                        <div class="ep-title">Reckoning</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://pixeldrain.dev/u/KssXum8H" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
+                        <a href="https://pixeldrain.dev/u/NsNNDR9G" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://pixeldrain.dev/u/CRDJbKWe" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

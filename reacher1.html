@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reacher (Season 1) - Download All Episodes & Zip Packs</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Reacher Theme: Dark Industrial Olive, Tactical Slate & Metallic Amber Accents */
+        body {
+            background-color: #0b0f0c;
+            background-image: 
+                radial-gradient(circle at 50% 10%, rgba(217, 119, 6, 0.18) 0%, transparent 55%),
+                radial-gradient(circle at 50% 70%, rgba(45, 65, 45, 0.25) 0%, transparent 60%);
+            color: #d1d8d1;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1050px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #1f2e21;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .page-header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            color: #ffffff;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(217, 119, 6, 0.4);
+        }
+
+        .page-header h1 span {
+            color: #d97706;
+            text-shadow: 0 0 15px rgba(217, 119, 6, 0.7);
+        }
+
+        /* Series Main Card */
+        .series-card {
+            background: linear-gradient(165deg, #121a13 0%, #0a0e0a 100%);
+            border: 1px solid #233624;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95), 0 0 20px rgba(217, 119, 6, 0.12);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #d97706, #3b533c, #d97706);
+        }
+
+        .poster-wrapper {
+            flex: 1 1 260px;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #2e452f;
+            box-shadow: 0 8px 25px rgba(217, 119, 6, 0.25), 0 0 15px rgba(0, 0, 0, 0.8);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .series-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #d97706;
+            display: inline-block;
+            padding-bottom: 4px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(217, 119, 6, 0.5);
+        }
+
+        .series-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #182419;
+            color: #9cb89d;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #2e452f;
+        }
+
+        .meta-rating {
+            background: linear-gradient(135deg, #d97706, #b45309);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 10px rgba(217, 119, 6, 0.5);
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            color: #a7b8a8;
+        }
+
+        .info-list strong {
+            color: #ffffff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #8fa390;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Section Containers */
+        .section-box {
+            background: linear-gradient(180deg, #111712 0%, #090d0a 100%);
+            border: 1px solid #203322;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title i {
+            color: #d97706;
+            filter: drop-shadow(0 0 6px rgba(217, 119, 6, 0.7));
+        }
+
+        /* Zip Pack Grid */
+        .zip-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 15px;
+        }
+
+        .zip-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            background: linear-gradient(145deg, #1a271c 0%, #0f1810 100%);
+            border: 1px solid #d97706;
+            color: #ffffff;
+            padding: 16px 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .zip-btn:hover {
+            background: linear-gradient(135deg, #d97706, #b45309);
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(217, 119, 6, 0.5);
+            border-color: #f59e0b;
+        }
+
+        .zip-btn span {
+            font-size: 11px;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        /* Episode List Section */
+        .episode-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .episode-card {
+            background: #0f1610;
+            border: 1px solid #1e2e1f;
+            border-radius: 10px;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .episode-card:hover {
+            border-color: #d97706;
+            box-shadow: 0 0 18px rgba(217, 119, 6, 0.25);
+            transform: translateX(4px);
+        }
+
+        .ep-info {
+            flex: 1 1 250px;
+        }
+
+        .ep-number {
+            font-family: 'Oswald', sans-serif;
+            color: #d97706;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+        }
+
+        .ep-title {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .ep-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .ep-dl-btn {
+            background: #18261a;
+            color: #d97706;
+            border: 1px solid #2e4730;
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.25s ease;
+        }
+
+        .ep-dl-btn:hover {
+            background: #d97706;
+            color: #0b0f0c;
+            border-color: #f59e0b;
+            box-shadow: 0 0 12px rgba(217, 119, 6, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .series-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .series-title {
+                font-size: 26px;
+            }
+
+            .zip-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .episode-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .ep-links {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .zip-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <h1>Action<span> Crime</span> Thriller</h1>
+            <span class="media-type-tag"><i class="fas fa-tv"></i> Web Series</span>
+
+        </header>
+
+        <!-- Series Main Card -->
+        <div class="series-card">
+            <div class="poster-wrapper">
+                <img src="images/reacher1.jpg" alt="Reacher Season 1 Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="series-title">Reacher (Season 1)</h2>
+                    
+                    <div class="series-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 8.1/10</span>
+                        <span class="meta-badge">2022</span>
+                        <span class="meta-badge">TV-MA</span>
+                        <span class="meta-badge">8 Episodes</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="info-list">
+                        <li><strong>Genre:</strong> Action, Crime, Drama, Thriller</li>
+                        <li><strong>Creator:</strong> Nick Santora (Based on <em>Killing Floor</em> by Lee Child)</li>
+                        <li><strong>Stars:</strong> Alan Ritchson, Malcolm Goodwin, Willa Fitzgerald, Chris Webster, Bruce McGill</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        When retired Military Police Officer Jack Reacher is arrested for a murder he didn't commit in the small town of Margrave, Georgia, he finds himself caught in the middle of a deadly conspiracy involving dirty cops, shady businessmen, and corrupt politicians.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Season Zip Links Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-file-archive"></i> Season 1 Full Batch Zip Links</h3>
+            
+            <div class="zip-grid">
+                <!-- 480p Zip -->
+                <a href="https://hubcloud.ist/drive/lways0wjpynmngu" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    480p Batch Zip
+                    <span>~1.8 GB Complete Pack</span>
+                </a>
+
+                <!-- 720p Zip -->
+                <a href="https://hubcloud.ist/drive/jth5jww2y2hjaet" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    720p Batch Zip
+                    <span>~4.1 GB Complete Pack</span>
+                </a>
+
+                <!-- 1080p Zip -->
+                <a href="https://hubcloud.ist/drive/kxpsrkxshzpstq6" target="_blank" class="zip-btn">
+                    <i class="fas fa-download fa-lg"></i>
+                    1080p Batch Zip
+                    <span>~9.8 GB Complete Pack</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Individual Episodes Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-list-ol"></i> Season 1 Episode Download Links</h3>
+            
+            <div class="episode-list">
+
+                <!-- Episode 1 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 01</div>
+                        <div class="ep-title">Welcome to Margrave</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/nzxgtg3tqpthlye" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/d7ys8lve1bbjxlp" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 2 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 02</div>
+                        <div class="ep-title">First Dance</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/p8pk_vote8bv4vo" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/puxmwvvh_guxcv_" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 3 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 03</div>
+                        <div class="ep-title">Spoonful</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/iymytyp2m9v9rfb" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/am4911txyaykmap" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 4 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 04</div>
+                        <div class="ep-title">In a Tree</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/jywedhs1odedjds" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/xolpoapldojjaoo" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 5 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 05</div>
+                        <div class="ep-title">No Apologies</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/ddobeovdad2acw5" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/wtybyzu3tub8tcz" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 6 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 06</div>
+                        <div class="ep-title">Papier</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/hrhstvzs4s1jrsy" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/k3wklygc1gcv7nw" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 7 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 07</div>
+                        <div class="ep-title">Reacher Said Nothing</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/ehytettthhrd8oo" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/kqdrp0rmqrukrzd" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+                <!-- Episode 8 -->
+                <div class="episode-card">
+                    <div class="ep-info">
+                        <div class="ep-number">EPISODE 08</div>
+                        <div class="ep-title">Pie</div>
+                    </div>
+                    <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/rh_1yvko1qakev_" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
+                        <a href="https://hubcloud.ist/drive/21mitvsvumd0g1w" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
