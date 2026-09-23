@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uncharted (2022) - Download Movie (480p, 720p, 1080p, 4K UHD)</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Uncharted Theme: High-Altitude Atmospheric Sky Blue, Cargo Steel Navy & Fiery Ember Sparks */
+        body {
+            background-color: #060b11;
+            background-image: 
+                radial-gradient(circle at 50% 12%, rgba(56, 189, 248, 0.22) 0%, transparent 55%),
+                radial-gradient(circle at 80% 65%, rgba(249, 115, 22, 0.22) 0%, transparent 50%),
+                radial-gradient(circle at 15% 85%, rgba(234, 179, 8, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 50% 95%, rgba(6, 11, 17, 0.98) 0%, transparent 100%);
+            color: #e2e8f0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1080px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .page-header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .page-header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            color: #f8fafc;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+        }
+
+        .page-header h1 span {
+            color: #f97316;
+            text-shadow: 0 0 15px rgba(249, 115, 22, 0.8);
+        }
+
+        /* Media Type Tag */
+        .media-type-tag {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 14px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            box-shadow: 0 0 14px rgba(249, 115, 22, 0.6);
+        }
+
+        /* Movie Main Card */
+        .series-card {
+            background: linear-gradient(165deg, #0f172a 0%, #080d1a 100%);
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95), 0 0 25px rgba(249, 115, 22, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #38bdf8, #f97316, #eab308, #38bdf8);
+        }
+
+        .poster-wrapper {
+            flex: 1 1 260px;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #38bdf8;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9), 0 0 20px rgba(249, 115, 22, 0.4);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .series-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 34px;
+            color: #f8fafc;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #f97316;
+            display: inline-block;
+            padding-bottom: 4px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px rgba(249, 115, 22, 0.5);
+        }
+
+        .series-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #1e293b;
+            color: #bae6fd;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #334155;
+        }
+
+        .meta-rating {
+            background: linear-gradient(135deg, #eab308, #ca8a04);
+            color: #0f172a;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(234, 179, 8, 0.5);
+        }
+
+        .meta-4k-badge {
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(234, 88, 12, 0.6);
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        .info-list strong {
+            color: #ffffff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Section Containers */
+        .section-box {
+            background: linear-gradient(180deg, #0f172a 0%, #060b11 100%);
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.85);
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #f8fafc;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title i {
+            color: #f97316;
+            filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.8));
+        }
+
+        /* Download Grid - Strictly 480p, 720p, 1080p, 4K */
+        .movie-dl-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .movie-dl-card {
+            background: #0b1322;
+            border: 1px solid #1e293b;
+            border-radius: 12px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-dl-card:hover {
+            border-color: #f97316;
+            box-shadow: 0 0 20px rgba(249, 115, 22, 0.4);
+            transform: translateY(-4px);
+        }
+
+        .quality-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+        }
+
+        .quality-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: #f8fafc;
+            letter-spacing: 1px;
+        }
+
+        .quality-tag {
+            background: #1e293b;
+            color: #bae6fd;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid #334155;
+        }
+
+        .tag-4k {
+            background: #450a0a;
+            color: #fca5a5;
+            border-color: #7f1d1d;
+        }
+
+        .dl-details {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        .dl-details p {
+            margin-bottom: 5px;
+        }
+
+        .dl-details strong {
+            color: #e2e8f0;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+            border: 1px solid #f97316;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-download:hover {
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            color: #ffffff;
+            box-shadow: 0 0 16px rgba(249, 115, 22, 0.7);
+            border-color: #fed7aa;
+        }
+
+        .btn-download.btn-4k-special {
+            border-color: #f87171;
+            background: linear-gradient(145deg, #3d1212, #1f0808);
+        }
+
+        .btn-download.btn-4k-special:hover {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            box-shadow: 0 0 18px rgba(220, 38, 38, 0.8);
+            border-color: #fecaca;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .movie-dl-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .series-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .series-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .movie-dl-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-download {
+                padding: 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <div class="page-header-title">
+                <h1>Action <span>Adventure</span> Treasure-Hunt</h1>
+                <span class="media-type-tag"><i class="fas fa-film"></i> Movie</span>
+            </div>
+        </header>
+
+        <!-- Movie Main Card -->
+        <div class="series-card">
+            <div class="poster-wrapper">
+                <img src="images/uncharted.jpg" alt="Uncharted Movie Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="series-title">Uncharted (2022)</h2>
+                    
+                    <div class="series-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 6.3/10</span>
+                        <span class="meta-badge">2022</span>
+                        <span class="meta-badge">PG-13</span>
+                        <span class="meta-badge">1h 56m</span>
+                        <span class="meta-4k-badge">4K Ultra HD</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="info-list">
+                        <li><strong>Type:</strong> Feature Film</li>
+                        <li><strong>Genre:</strong> Action, Adventure, Treasure Hunt</li>
+                        <li><strong>Director:</strong> Ruben Fleischer</li>
+                        <li><strong>Stars:</strong> Tom Holland, Mark Wahlberg, Antonio Banderas, Sophia Ali, Tati Gabrielle</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p | 2160p (4K UHD)</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        Street-smart Nathan Drake is recruited by seasoned treasure hunter Victor "Sully" Sullivan to recover a 500-year-old fortune lost by Ferdinand Magellan. What starts as a heist becomes a globe-trotting, high-stakes race to reach the prize before the ruthless Santiago Moncada and his mercenaries.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie Download Links Section (Only 480p, 720p, 1080p, 4K) -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-download"></i> Download Links</h3>
+            
+            <div class="movie-dl-grid">
+
+                <!-- 480p Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">480p SD</span>
+                            <span class="quality-tag">x264</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~450 MB</p>
+                            <p><strong>Audio:</strong> Hindi + English [Stereo]</p>
+                            <p><strong>Subtitles:</strong> English Subtitles</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/kkyd59fxorl0l0d" target="_blank" class="btn-download">
+                            <i class="fas fa-download"></i> Download 480p
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 720p Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">720p HD</span>
+                            <span class="quality-tag">x264 / HEVC</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~1.2 GB</p>
+                            <p><strong>Audio:</strong> Hindi + English [DD 5.1]</p>
+                            <p><strong>Subtitles:</strong> English Subtitles</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/wjwwj4wdmw4igyw" target="_blank" class="btn-download">
+                            <i class="fas fa-download"></i> Download 720p HD
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 1080p Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">1080p Full HD</span>
+                            <span class="quality-tag">x264 10-bit</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~2.6 GB</p>
+                            <p><strong>Audio:</strong> Hindi + English [Dolby Digital 5.1]</p>
+                            <p><strong>Subtitles:</strong> English ESub</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/nxs8hdknib0ku40" target="_blank" class="btn-download">
+                            <i class="fas fa-download"></i> Download 1080p FHD
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4K Ultra HD Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">2160p 4K UHD</span>
+                            <span class="quality-tag tag-4k">4K HDR10</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~8.8 GB</p>
+                            <p><strong>Audio:</strong> Hindi + English [Atmos 5.1]</p>
+                            <p><strong>Subtitles:</strong> English MSub</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/lvlvtv1ngn01kxv" target="_blank" class="btn-download btn-4k-special">
+                            <i class="fas fa-download"></i> Download 4K Ultra HD
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

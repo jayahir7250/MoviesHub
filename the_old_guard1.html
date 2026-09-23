@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Old Guard (2020) - Download Movie (480p, 720p, 1080p, 4K UHD)</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* The Old Guard Theme: High-Contrast Stark Fog White, Tactical Charcoal Slate & Crimson Accent */
+        body {
+            background-color: #090a0f;
+            background-image: 
+                radial-gradient(circle at 50% 10%, rgba(226, 232, 240, 0.25) 0%, transparent 60%),
+                radial-gradient(circle at 80% 60%, rgba(229, 9, 20, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(100, 116, 139, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 50% 95%, rgba(9, 10, 15, 0.98) 0%, transparent 100%);
+            color: #f1f5f9;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1080px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #27272a;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .page-header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .page-header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            color: #ffffff;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            text-shadow: 0 0 14px rgba(255, 255, 255, 0.3);
+        }
+
+        .page-header h1 span {
+            color: #e50914;
+            text-shadow: 0 0 16px rgba(229, 9, 20, 0.85);
+        }
+
+        /* Media Type Tag */
+        .media-type-tag {
+            background: linear-gradient(135deg, #e50914, #b91c1c);
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 14px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            box-shadow: 0 0 14px rgba(229, 9, 20, 0.6);
+        }
+
+        /* Movie Main Card */
+        .series-card {
+            background: linear-gradient(165deg, #141821 0%, #0a0d13 100%);
+            border: 1px solid #27272a;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95), 0 0 25px rgba(229, 9, 20, 0.15);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #e2e8f0, #e50914, #94a3b8, #e50914);
+        }
+
+        .poster-wrapper {
+            flex: 1 1 260px;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9), 0 0 20px rgba(229, 9, 20, 0.35);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .series-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 34px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #e50914;
+            display: inline-block;
+            padding-bottom: 4px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+        }
+
+        .series-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #27272a;
+            color: #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #3f3f46;
+        }
+
+        .meta-rating {
+            background: linear-gradient(135deg, #e50914, #b91c1c);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(229, 9, 20, 0.5);
+        }
+
+        .meta-4k-badge {
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        .info-list strong {
+            color: #ffffff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Section Containers */
+        .section-box {
+            background: linear-gradient(180deg, #121620 0%, #090a0f 100%);
+            border: 1px solid #27272a;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.85);
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title i {
+            color: #e50914;
+            filter: drop-shadow(0 0 6px rgba(229, 9, 20, 0.8));
+        }
+
+        /* Download Grid - Exactly 480p, 720p, 1080p, 4K */
+        .movie-dl-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .movie-dl-card {
+            background: #0d1118;
+            border: 1px solid #27272a;
+            border-radius: 12px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-dl-card:hover {
+            border-color: #e50914;
+            box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+            transform: translateY(-4px);
+        }
+
+        .quality-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #27272a;
+            padding-bottom: 10px;
+        }
+
+        .quality-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .quality-tag {
+            background: #18181b;
+            color: #e2e8f0;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid #3f3f46;
+        }
+
+        .tag-4k {
+            background: #450a0a;
+            color: #fca5a5;
+            border-color: #7f1d1d;
+        }
+
+        .dl-details {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        .dl-details p {
+            margin-bottom: 5px;
+        }
+
+        .dl-details strong {
+            color: #e2e8f0;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(145deg, #1f2937, #111827);
+            border: 1px solid #e50914;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-download:hover {
+            background: linear-gradient(135deg, #e50914, #b91c1c);
+            color: #ffffff;
+            box-shadow: 0 0 16px rgba(229, 9, 20, 0.7);
+            border-color: #fca5a5;
+        }
+
+        .btn-download.btn-4k-special {
+            border-color: #38bdf8;
+            background: linear-gradient(145deg, #0c2a3a, #061724);
+        }
+
+        .btn-download.btn-4k-special:hover {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            box-shadow: 0 0 18px rgba(56, 189, 248, 0.7);
+            border-color: #bae6fd;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+            .movie-dl-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .series-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .series-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .movie-dl-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-download {
+                padding: 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <div class="page-header-title">
+                <h1><span>Superhero</span> Fantasy</h1>
+                <span class="media-type-tag"><i class="fas fa-film"></i> Movie</span>
+            </div>
+        </header>
+
+        <!-- Movie Main Card -->
+        <div class="series-card">
+            <div class="poster-wrapper">
+                <img src="images/the_old_guard1.jpg" alt="The Old Guard Movie Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="series-title">The Old Guard (2020)</h2>
+                    
+                    <div class="series-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 6.7/10</span>
+                        <span class="meta-badge">2020</span>
+                        <span class="meta-badge">R</span>
+                        <span class="meta-badge">2h 05m</span>
+                        <span class="meta-4k-badge">4K Ultra HD</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="info-list">
+                        <li><strong>Type:</strong> Feature Film</li>
+                        <li><strong>Genre:</strong> Action, Adventure, Fantasy, Superhero</li>
+                        <li><strong>Director:</strong> Gina Prince-Bythewood</li>
+                        <li><strong>Stars:</strong> Charlize Theron, KiKi Layne, Matthias Schoenaerts, Marwan Kenzari, Luca Marinelli, Chiwetel Ejiofor</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p | 2160p (4K UHD)</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        Led by a warrior named Andy, a covert group of tight-knit mercenaries with a mysterious inability to die have fought to protect the mortal world for centuries. But when the team is recruited to take on an emergency mission and their extraordinary abilities are suddenly exposed, it's up to Andy and Nile, the newest soldier to join their ranks, to help the group eliminate the threat of those who seek to replicate and monetize their power by any means necessary.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie Download Links Section (Only 480p, 720p, 1080p, 4K) -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-download"></i> Download Links</h3>
+            
+            <div class="movie-dl-grid">
+
+                <!-- 720p Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">720p HD</span>
+                            <span class="quality-tag">x264 / HEVC</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~1.2 GB</p>
+                            <p><strong>Audio:</strong> Hindi + English [DD 5.1]</p>
+                            <p><strong>Subtitles:</strong> English Subtitles</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/czmwcpomhmkbbm0" target="_blank" class="btn-download">
+                            <i class="fas fa-download"></i> Download 720p HD
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 1080p Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">1080p Full HD</span>
+                            <span class="quality-tag">x264 10-bit</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~2.5 GB</p>
+                            <p><strong>Audio:</strong> Hindi + English [Dolby Digital 5.1]</p>
+                            <p><strong>Subtitles:</strong> English ESub</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/vnvcfdenlnn8vnu" target="_blank" class="btn-download">
+                            <i class="fas fa-download"></i> Download 1080p FHD
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4K Ultra HD Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">2160p 4K UHD</span>
+                            <span class="quality-tag tag-4k">4K HDR10</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~8.5 GB</p>
+                            <p><strong>Audio:</strong> Hindi + English [Atmos 5.1]</p>
+                            <p><strong>Subtitles:</strong> English MSub</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/maw9nokxzuuymmr" target="_blank" class="btn-download btn-4k-special">
+                            <i class="fas fa-download"></i> Download 4K Ultra HD
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

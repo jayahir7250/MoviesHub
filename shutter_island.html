@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shutter Island (2010) - Download Movie (720p, 1080p, 4K UHD)</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Shutter Island Theme: Vintage Parchment Canvas, Deep Charcoal Sepia & Rust Oxide Accents */
+        body {
+            background-color: #0f0d0b;
+            background-image: 
+                radial-gradient(circle at 50% 15%, rgba(180, 140, 100, 0.18) 0%, transparent 60%),
+                radial-gradient(circle at 85% 75%, rgba(194, 65, 12, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 15% 85%, rgba(120, 110, 95, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 50% 90%, rgba(15, 13, 11, 0.98) 0%, transparent 100%);
+            color: #e5e0d8;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1080px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #362d24;
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .page-header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .page-header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            color: #f5f2eb;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(234, 224, 208, 0.4);
+        }
+
+        .page-header h1 span {
+            color: #ea580c;
+            text-shadow: 0 0 15px rgba(234, 88, 12, 0.7);
+        }
+
+        /* Media Type Tag */
+        .media-type-tag {
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 14px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            box-shadow: 0 0 14px rgba(234, 88, 12, 0.5);
+        }
+
+        /* Series Main Card */
+        .series-card {
+            background: linear-gradient(165deg, #1d1814 0%, #0c0a08 100%);
+            border: 1px solid #42362b;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95), 0 0 25px rgba(234, 224, 208, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #d97706, #ea580c, #f5f2eb, #ea580c);
+        }
+
+        .poster-wrapper {
+            flex: 1 1 260px;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #d4c5b3;
+            box-shadow: 0 8px 25px rgba(245, 242, 235, 0.25), 0 0 20px rgba(0, 0, 0, 0.9);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .series-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 34px;
+            color: #f5f2eb;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #ea580c;
+            display: inline-block;
+            padding-bottom: 4px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 0px #1f1915, 0 0 10px rgba(245, 242, 235, 0.3);
+        }
+
+        .series-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #28211b;
+            color: #f5e6d3;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #544436;
+        }
+
+        .meta-rating {
+            background: linear-gradient(135deg, #d97706, #b45309);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(217, 119, 6, 0.5);
+        }
+
+        .meta-4k-badge {
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(234, 88, 12, 0.6);
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            color: #d4ceb8;
+        }
+
+        .info-list strong {
+            color: #ffffff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #a8a29e;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Section Containers */
+        .section-box {
+            background: linear-gradient(180deg, #1b1612 0%, #0c0907 100%);
+            border: 1px solid #3d3024;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.85);
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #f5f2eb;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title i {
+            color: #ea580c;
+            filter: drop-shadow(0 0 6px rgba(234, 88, 12, 0.8));
+        }
+
+        /* Movie Download Cards Grid */
+        .movie-dl-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .movie-dl-card {
+            background: #14100c;
+            border: 1px solid #3d3024;
+            border-radius: 12px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-dl-card:hover {
+            border-color: #ea580c;
+            box-shadow: 0 0 20px rgba(234, 88, 12, 0.35);
+            transform: translateY(-4px);
+        }
+
+        .quality-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #2d231a;
+            padding-bottom: 10px;
+        }
+
+        .quality-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: #f5f2eb;
+            letter-spacing: 1px;
+        }
+
+        .quality-tag {
+            background: #28211b;
+            color: #f5e6d3;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid #544436;
+        }
+
+        .tag-4k {
+            background: #450a0a;
+            color: #fca5a5;
+            border-color: #7f1d1d;
+        }
+
+        .dl-details {
+            font-size: 13px;
+            color: #a8a29e;
+        }
+
+        .dl-details p {
+            margin-bottom: 5px;
+        }
+
+        .dl-details strong {
+            color: #e5e0d8;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(145deg, #2b2016, #150f0a);
+            border: 1px solid #ea580c;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-download:hover {
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            color: #ffffff;
+            box-shadow: 0 0 16px rgba(234, 88, 12, 0.6);
+            border-color: #fdba74;
+        }
+
+        .btn-download.btn-4k-special {
+            border-color: #f87171;
+            background: linear-gradient(145deg, #3d1212, #1f0808);
+        }
+
+        .btn-download.btn-4k-special:hover {
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            box-shadow: 0 0 18px rgba(220, 38, 38, 0.7);
+            border-color: #fecaca;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .series-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .series-title {
+                font-size: 28px;
+            }
+
+            .movie-dl-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .btn-download {
+                padding: 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header class="page-header">
+            <div class="page-header-title">
+                <h1><span>Psychological</span> Thriller</h1>
+                <span class="media-type-tag"><i class="fas fa-film"></i> Movie</span>
+            </div>
+        </header>
+
+        <!-- Series / Movie Main Card -->
+        <div class="series-card">
+            <div class="poster-wrapper">
+                <img src="images/shutter_island.jpg" alt="Shutter Island Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="series-title">Shutter Island (2010)</h2>
+                    
+                    <div class="series-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 8.2/10</span>
+                        <span class="meta-badge">2010</span>
+                        <span class="meta-badge">R</span>
+                        <span class="meta-badge">2h 18m</span>
+                        <span class="meta-4k-badge">4K Ultra HD</span>
+                        <span class="meta-badge">Dual Audio [Eng + Hin]</span>
+                    </div>
+
+                    <ul class="info-list">
+                        <li><strong>Type:</strong> Feature Film</li>
+                        <li><strong>Genre:</strong> Mystery, Psychological Thriller, Drama</li>
+                        <li><strong>Director:</strong> Martin Scorsese</li>
+                        <li><strong>Stars:</strong> Leonardo DiCaprio, Mark Ruffalo, Ben Kingsley, Michelle Williams, Emily Mortimer</li>
+                        <li><strong>Available Quality:</strong> 720p | 1080p | 2160p (4K UHD)</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        In 1954, U.S. Marshal Teddy Daniels and his new partner Chuck Aule travel to Ashecliffe Hospital for the criminally insane on Shutter Island to investigate the inexplicable disappearance of a patient. As a fierce hurricane cuts off communication with the mainland, cryptic clues and terrifying revelations blur the boundary between sanity and madness.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie Download Links Section -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-download"></i> Movie Download Links (Dual Audio)</h3>
+            
+            <div class="movie-dl-grid">
+
+                <!-- 720p Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">720p HD</span>
+                            <span class="quality-tag">x264 / HEVC</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~1.2 GB</p>
+                            <p><strong>Audio:</strong> Hindi + English [DD 5.1]</p>
+                            <p><strong>Subtitles:</strong> English Subtitles Included</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/izdwvzpfwmsww19" target="_blank" class="btn-download">
+                            <i class="fas fa-download"></i> Download 720p HD
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 1080p Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">1080p Full HD</span>
+                            <span class="quality-tag">x264 10-bit</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~2.8 GB</p>
+                            <p><strong>Audio:</strong> Hindi + English [Dolby Digital 5.1]</p>
+                            <p><strong>Subtitles:</strong> English ESub</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/9vtsrsx01n01nn1" target="_blank" class="btn-download">
+                            <i class="fas fa-download"></i> Download 1080p FHD
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4K Ultra HD Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">2160p 4K UHD</span>
+                            <span class="quality-tag tag-4k">4K HDR10</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~8.5 GB</p>
+                            <p><strong>Audio:</strong> Hindi + English [Atmos / DD 5.1]</p>
+                            <p><strong>Subtitles:</strong> English MSub</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/1g0uogj6jljslpd" target="_blank" class="btn-download btn-4k-special">
+                            <i class="fas fa-download"></i> Download 4K Ultra HD
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
