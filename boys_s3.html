@@ -3,92 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Boys: Season 3 (2022) - Download All Episodes</title>
+    <title>The Boys: Season 3 (2022) - Download All Episodes (480p, 720p, 1080p, 4K UHD)</title>
+    <!-- FontAwesome & Google Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* --- THEME: Vought Gold & Toxic Yellow --- */
+        /* --- THEME: Season 3 Toxic Yellow & Gritty Charcoal Black (Matching Poster) --- */
         :root { 
-            --primary: #FFC107; /* Amber/Gold */ 
-            --accent: #FFD600;  /* Bright Toxic Yellow */
-            --dark-bg: #0a0a0a; 
-            --card-bg: #161616; 
-            --text-main: #e0e0e0; 
-            /* Updated glow to yellow */
-            --glow: 0 0 25px rgba(255, 214, 0, 0.4); 
+            --primary-yellow: #ffd700; /* Vibrant Stencil Yellow */ 
+            --accent-yellow: #ffee00;  /* High Voltage Neon Yellow */
+            --dark-gold: #b38f00; 
+            --dark-bg: #080806; 
+            --card-bg: #13120d; 
+            --border-color: #2b2612;
+            --text-main: #f5f5f5; 
+            --text-muted: #a1a1aa;
+            --yellow-glow: 0 0 25px rgba(255, 215, 0, 0.45);
+            --neon-glow: 0 0 20px rgba(255, 238, 0, 0.6);
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        /* Updated radial gradient to a warm, dark gold tone */
-        body { background-color: var(--dark-bg); color: var(--text-main); background-image: radial-gradient(circle at top center, #2a250d 0%, #000000 100%); min-height: 100vh; }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        body { 
+            background-color: var(--dark-bg); 
+            color: var(--text-main); 
+            background-image: 
+                radial-gradient(circle at 50% 8%, rgba(255, 215, 0, 0.22) 0%, transparent 55%),
+                radial-gradient(circle at 85% 65%, rgba(179, 143, 0, 0.15) 0%, transparent 45%),
+                radial-gradient(circle at 15% 85%, rgba(255, 238, 0, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 50% 100%, #030302 0%, #000000 100%);
+            min-height: 100vh; 
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+        
+        a { text-decoration: none; color: inherit; transition: 0.3s ease; }
         
         /* Header */
-        header { background: rgba(15, 15, 15, 0.95); backdrop-filter: blur(10px); padding: 15px 30px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100; }
-        .logo { background: linear-gradient(135deg, var(--primary), var(--accent)); color: #000; font-family: 'Chakra Petch', sans-serif; font-weight: 700; padding: 8px 15px; border-radius: 5px; font-size: 18px; box-shadow: var(--glow); letter-spacing: 1px; text-transform: uppercase; transform: skew(-10deg); }
+        header { 
+            background: rgba(15, 14, 10, 0.95); 
+            backdrop-filter: blur(12px); 
+            padding: 15px 30px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            border-bottom: 1px solid var(--border-color); 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+        }
+        
+        .logo { 
+            background: linear-gradient(135deg, var(--accent-yellow), var(--dark-gold)); 
+            color: #000; 
+            font-family: 'Chakra Petch', sans-serif; 
+            font-weight: 700; 
+            padding: 8px 18px; 
+            border-radius: 4px; 
+            font-size: 20px; 
+            box-shadow: var(--yellow-glow); 
+            letter-spacing: 1.5px; 
+            text-transform: uppercase; 
+            transform: skew(-10deg); 
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        
         .nav-links { display: flex; gap: 20px; font-size: 14px; font-weight: 500; }
-        .nav-links a:hover { color: var(--accent); }
+        .nav-links a:hover { color: var(--accent-yellow); text-shadow: 0 0 10px rgba(255,238,0,0.8); }
         
         .container { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
-        .breadcrumb { font-size: 13px; color: #a0a0a0; margin-bottom: 25px; background: #111; padding: 10px 15px; border-radius: 4px; display: inline-block; }
-        .breadcrumb span { color: var(--accent); font-weight: 600; }
+        
+        .breadcrumb { 
+            font-size: 13px; 
+            color: var(--text-muted); 
+            margin-bottom: 25px; 
+            background: #15140e; 
+            padding: 10px 18px; 
+            border-radius: 6px; 
+            border: 1px solid var(--border-color);
+            display: inline-block; 
+        }
+        .breadcrumb span { color: var(--primary-yellow); font-weight: 600; }
 
-        /* Movie Header */
-        .movie-header { display: flex; gap: 30px; background: var(--card-bg); padding: 30px; border-radius: 16px; border: 1px solid #333; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; }
-        .poster-large { width: 280px; flex-shrink: 0; }
-        .poster-large img { width: 100%; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.6); border: 2px solid #333; }
+        /* Movie Header Card */
+        .movie-header { 
+            display: flex; 
+            gap: 30px; 
+            background: linear-gradient(165deg, #1f1d13 0%, #0c0b07 100%); 
+            padding: 30px; 
+            border-radius: 16px; 
+            border: 1px solid var(--border-color); 
+            position: relative; 
+            overflow: hidden; 
+            box-shadow: 0 10px 35px rgba(0,0,0,0.9), var(--yellow-glow); 
+            margin-bottom: 40px; 
+        }
+
+        .movie-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--dark-gold), var(--primary-yellow), var(--accent-yellow), var(--primary-yellow));
+        }
+
+        .poster-large { width: 280px; flex-shrink: 0; margin: 0 auto; }
+        .poster-large img { 
+            width: 100%; 
+            border-radius: 12px; 
+            box-shadow: 0 12px 30px rgba(0,0,0,0.9), 0 0 20px rgba(255, 215, 0, 0.35); 
+            border: 2px solid var(--primary-yellow); 
+            display: block;
+        }
+
         .movie-info { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; }
         
-        /* Updated title gradient to white-to-pale-yellow */
-        .movie-title { font-family: 'Chakra Petch', sans-serif; font-size: 34px; font-weight: 700; margin-bottom: 20px; background: linear-gradient(90deg, #fff, #fff59d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; line-height: 1.2; text-transform: uppercase; }
+        .movie-title { 
+            font-family: 'Chakra Petch', sans-serif; 
+            font-size: 34px; 
+            font-weight: 700; 
+            margin-bottom: 18px; 
+            background: linear-gradient(90deg, #ffffff, #fff59d, var(--primary-yellow)); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            letter-spacing: 1.5px; 
+            line-height: 1.2; 
+            text-transform: uppercase; 
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
         
-        .meta-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; margin-top: 10px; }
-        /* Use Primary (Gold) and Accent (Yellow) for borders */
-        .meta-item { background: #222; padding: 10px 15px; border-radius: 4px; border-left: 3px solid var(--primary); font-size: 13px; }
-        .meta-item:nth-child(even) { border-left: 3px solid var(--accent); }
-        .meta-item strong { display: block; color: #aaa; font-size: 11px; text-transform: uppercase; margin-bottom: 4px; }
+        .meta-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); 
+            gap: 12px; 
+            margin-top: 10px; 
+        }
+        .meta-item { 
+            background: #211f15; 
+            padding: 10px 14px; 
+            border-radius: 6px; 
+            border-left: 3px solid var(--primary-yellow); 
+            border-top: 1px solid #363220;
+            border-right: 1px solid #363220;
+            border-bottom: 1px solid #363220;
+            font-size: 13px; 
+        }
+        .meta-item:nth-child(even) { border-left-color: var(--accent-yellow); }
+        .meta-item strong { display: block; color: var(--text-muted); font-size: 11px; text-transform: uppercase; margin-bottom: 2px; }
 
-        .section-heading { font-family: 'Chakra Petch', sans-serif; font-size: 24px; font-weight: 700; margin: 40px 0 20px 0; color: #fff; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 5px; text-transform: uppercase; }
+        .section-heading { 
+            font-family: 'Chakra Petch', sans-serif; 
+            font-size: 22px; 
+            font-weight: 700; 
+            margin: 40px 0 20px 0; 
+            color: #fff; 
+            border-bottom: 3px solid var(--primary-yellow); 
+            display: inline-block; 
+            padding-bottom: 5px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            text-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+        }
         
-        /* --- ZIP DOWNLOAD SECTION --- */
-        /* Updated zip section background to warmer dark tones */
-        .zip-section { background: linear-gradient(45deg, #1a180f, #0a0a0a); padding: 20px; border-radius: 10px; border: 1px solid #333; margin-bottom: 40px; text-align: center; }
-        .zip-title { font-size: 18px; color: #fff; margin-bottom: 15px; font-weight: bold; }
+        /* --- BATCH / ZIP DOWNLOAD SECTION --- */
+        .zip-section { 
+            background: linear-gradient(135deg, #211e11 0%, #0a0a05 100%); 
+            padding: 25px; 
+            border-radius: 14px; 
+            border: 1px solid var(--border-color); 
+            margin-bottom: 40px; 
+            text-align: center; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+        }
+        .zip-title { font-size: 16px; color: #fff; margin-bottom: 20px; font-weight: 600; letter-spacing: 0.5px; }
         .zip-grid { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
         
         /* --- EPISODE LIST SECTION --- */
-        .episode-container { display: grid; gap: 15px; }
-        /* Updated left border to primary gold */
-        .episode-card { background: #161616; padding: 15px 20px; border-radius: 8px; border-left: 4px solid var(--primary); display: flex; flex-direction: column; gap: 10px; transition: 0.3s; }
-        .episode-card:hover { background: #1f1f1f; transform: translateX(5px); }
+        .episode-container { display: grid; gap: 16px; }
+        .episode-card { 
+            background: linear-gradient(180deg, #18160e 0%, #0d0c07 100%); 
+            padding: 18px 22px; 
+            border-radius: 12px; 
+            border-left: 4px solid var(--primary-yellow); 
+            border-top: 1px solid #2d2919;
+            border-right: 1px solid #2d2919;
+            border-bottom: 1px solid #2d2919;
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+            transition: all 0.3s ease; 
+        }
+        .episode-card:hover { 
+            background: #222013; 
+            transform: translateX(6px); 
+            border-left-color: var(--accent-yellow);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7), 0 0 15px rgba(255, 215, 0, 0.25);
+        }
         
-        .ep-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 8px; margin-bottom: 5px; }
-        .ep-title { font-size: 16px; font-weight: 600; color: #fff; }
-        /* Updated episode number badge to gold with black text for contrast */
-        .ep-number { font-size: 12px; background: var(--primary); color: #000; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+        .ep-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 1px solid #2e2a19; 
+            padding-bottom: 10px; 
+        }
+        .ep-title { font-size: 16px; font-weight: 600; color: #ffffff; letter-spacing: 0.5px; }
+        .ep-number { 
+            font-family: 'Chakra Petch', sans-serif;
+            font-size: 12px; 
+            background: linear-gradient(135deg, var(--accent-yellow), var(--dark-gold)); 
+            padding: 3px 10px; 
+            border-radius: 4px; 
+            color: #000; 
+            font-weight: 700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+        }
 
-        .links-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        .links-row { display: flex; gap: 12px; flex-wrap: wrap; }
         
         /* Buttons */
-        .d-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 4px; font-weight: 600; font-size: 13px; transition: 0.3s; color: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
-        .d-btn:hover { transform: translateY(-2px); filter: brightness(1.2); }
+        .d-btn { 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center;
+            gap: 8px; 
+            padding: 10px 18px; 
+            border-radius: 6px; 
+            font-weight: 600; 
+            font-size: 13px; 
+            transition: all 0.3s ease; 
+            color: #fff; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5); 
+            border: 1px solid transparent;
+        }
+        .d-btn:hover { 
+            transform: translateY(-2px); 
+            filter: brightness(1.2); 
+        }
         
-        /* Updated Button Gradients to Yellow/Gold Themes */
-        /* 480p: Bronze/Dark Gold */
-        .btn-480 { background: linear-gradient(45deg, #8E855C, #5F593D); } 
-        /* 720p: Bright Gold/Orange - Changed text to black for readability */
-        .btn-720 { background: linear-gradient(45deg, #FFC107, #F57C00); color: #000; } 
-        /* 1080p: Brightest Yellow - Changed text to black for readability */
-        .btn-1080 { background: linear-gradient(45deg, #FFEB3B, #FBC02D); color: #000; font-weight: 700; }
+        .btn-480 { 
+            background: linear-gradient(145deg, #374151, #1f2937); 
+            border-color: #4b5563;
+        }
         
-        .btn-zip { width: 200px; justify-content: center; border: 1px solid rgba(255,255,255,0.2); }
+        .btn-720 { 
+            background: linear-gradient(145deg, #854d0e, #451a03); 
+            border-color: #a16207;
+            color: #fef08a;
+        }
+        .btn-720:hover { box-shadow: 0 0 14px rgba(161, 98, 7, 0.6); }
 
-        @media (max-width: 768px) { 
+        .btn-1080 { 
+            background: linear-gradient(145deg, #ca8a04, #713f12); 
+            border-color: #eab308;
+            color: #000;
+            font-weight: 700;
+        }
+        .btn-1080:hover { box-shadow: 0 0 14px rgba(234, 179, 8, 0.7); }
+
+        .btn-4k { 
+            background: linear-gradient(145deg, #facc15, #eab308); 
+            border-color: #fef08a;
+            color: #000;
+            font-weight: 700;
+        }
+        .btn-4k:hover { 
+            background: linear-gradient(135deg, #ffee00, #ffd700);
+            box-shadow: var(--neon-glow);
+            border-color: #ffffff;
+        }
+
+        .btn-zip { 
+            min-width: 210px; 
+            padding: 12px 18px;
+            flex-direction: column;
+            gap: 2px;
+            border: 1px solid rgba(255,255,255,0.15); 
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
             .movie-header { flex-direction: column; text-align: center; } 
+            .poster-large { width: 240px; }
+            .meta-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 650px) { 
+            header { padding: 12px 18px; }
+            .logo { font-size: 16px; padding: 6px 12px; }
             .zip-grid { flex-direction: column; }
             .btn-zip { width: 100%; }
             .links-row { flex-direction: column; }
             .d-btn { width: 100%; justify-content: center; }
+            .meta-grid { grid-template-columns: 1fr; }
+            .movie-title { font-size: 26px; }
         }
     </style>
 </head>
@@ -117,120 +327,162 @@
                     <div class="meta-item"><strong>IMDb Rating</strong><span>8.8/10</span></div>
                     <div class="meta-item"><strong>Total Episodes</strong><span>8 Episodes</span></div>
                     <div class="meta-item"><strong>Language</strong><span>Hindi (Org) + English</span></div>
+                    <div class="meta-item"><strong>Quality</strong><span>480p | 720p | 1080p | 4K UHD</span></div>
                     <div class="meta-item"><strong>Creator</strong><span>Eric Kripke</span></div>
                     <div class="meta-item"><strong>Starring</strong><span>Karl Urban, Antony Starr, Jensen Ackles</span></div>
                 </div>
                 <br>
-                <p style="font-size: 14px; color: #ccc; line-height: 1.6;">
+                <p style="font-size: 14px; color: #cbd5e1; line-height: 1.6;">
                     It's been a year of calm. Homelander's subdued. Butcher works for the government, supervised by Hughie of all people. But both men itch to turn this peace and quiet into blood and bone. So when The Boys learn of a mysterious Anti-Supe weapon, it sends them crashing into the Seven, starting a war, and chasing the legend of the first Superhero: Soldier Boy.
                 </p>
             </div>
         </div>
 
+        <!-- BATCH / ZIP DOWNLOAD SECTION -->
+        <h3 class="section-heading"><i class="fas fa-file-archive"></i> Batch / Zip Downloads (Full Season)</h3>
+        <div class="zip-section">
+            <div class="zip-title">Download the complete Season 3 Zip Pack in one click</div>
+            <div class="zip-grid">
+                <a href="https://pixeldrain.dev/u/G53YrJTR?download" class="d-btn btn-480 btn-zip">
+                    <span><i class="fas fa-download"></i> 480p Zip Pack</span>
+                    <span style="font-size:11px; opacity:0.85;">(1.35 GB Zip)</span>
+                </a>
+                <a href="https://pixeldrain.dev/u/VJPwmTrD?download" class="d-btn btn-720 btn-zip">
+                    <span><i class="fas fa-download"></i> 720p Zip Pack</span>
+                    <span style="font-size:11px; opacity:0.85;">(3.92 GB Zip)</span>
+                </a>
+                <a href="https://pixeldrain.dev/u/jFFXjRiW" class="d-btn btn-1080 btn-zip">
+                    <span><i class="fas fa-download"></i> 1080p Zip Pack</span>
+                    <span style="font-size:11px; opacity:0.85;">(11.1 GB Zip)</span>
+                </a>
+                <a href="https://hubcloud.ist/drive/hhsccsbhaw5jpfw" class="d-btn btn-4k btn-zip">
+                    <span><i class="fas fa-bolt"></i> 4K Ultra HD Zip Pack</span>
+                    <span style="font-size:11px; opacity:0.85;">(29.6 GB Zip)</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- INDIVIDUAL EPISODE LINKS SECTION -->
         <h3 class="section-heading"><i class="fas fa-list"></i> Individual Episode Links</h3>
         <div class="episode-container">
 
+            <!-- Episode 1 -->
             <div class="episode-card">
                 <div class="ep-header">
                     <span class="ep-title">Episode 1: Payback</span>
                     <span class="ep-number">S03 E01</span>
                 </div>
                 <div class="links-row">
-                    <a href="https://hubcloud.foo/drive/lulma2sv25lwbtr" class="d-btn btn-480">480p [170MB]</a>
-                    <a href="https://hubcloud.foo/drive/7nayijfgs_gwdpg" class="d-btn btn-720">720p [500MB]</a>
-                    <a href="https://hubcloud.foo/drive/eh5ufsrhhy1e9yu" class="d-btn btn-1080">1080p [1.4GB]</a>
+                    <a href="https://hubcloud.foo/drive/lulma2sv25lwbtr" class="d-btn btn-480"><i class="fas fa-download"></i> 480p [170MB]</a>
+                    <a href="https://hubcloud.foo/drive/7nayijfgs_gwdpg" class="d-btn btn-720"><i class="fas fa-download"></i> 720p [500MB]</a>
+                    <a href="https://hubcloud.foo/drive/eh5ufsrhhy1e9yu" class="d-btn btn-1080"><i class="fas fa-download"></i> 1080p [1.4GB]</a>
+                    <a href="https://hubcloud.ist/drive/gt47k1n7ougbqdo" class="d-btn btn-4k"><i class="fas fa-bolt"></i> 4K UHD [3.7GB]</a>
                 </div>
             </div>
 
+            <!-- Episode 2 -->
             <div class="episode-card">
                 <div class="ep-header">
                     <span class="ep-title">Episode 2: The Only Man in the Sky</span>
                     <span class="ep-number">S03 E02</span>
                 </div>
                 <div class="links-row">
-                    <a href="https://hubcloud.foo/drive/2ubmqwfa72die58" class="d-btn btn-480">480p [160MB]</a>
-                    <a href="https://hubcloud.foo/drive/uancc0qfxy0tcug" class="d-btn btn-720">720p [480MB]</a>
-                    <a href="https://hubcloud.foo/drive/egtdegl5jglvgte" class="d-btn btn-1080">1080p [1.3GB]</a>
+                    <a href="https://hubcloud.foo/drive/2ubmqwfa72die58" class="d-btn btn-480"><i class="fas fa-download"></i> 480p [160MB]</a>
+                    <a href="https://hubcloud.foo/drive/uancc0qfxy0tcug" class="d-btn btn-720"><i class="fas fa-download"></i> 720p [480MB]</a>
+                    <a href="https://hubcloud.foo/drive/egtdegl5jglvgte" class="d-btn btn-1080"><i class="fas fa-download"></i> 1080p [1.3GB]</a>
+                    <a href="https://hubcloud.ist/drive/ckkye5hepcygkyi" class="d-btn btn-4k"><i class="fas fa-bolt"></i> 4K UHD [3.7GB]</a>
                 </div>
             </div>
 
+            <!-- Episode 3 -->
             <div class="episode-card">
                 <div class="ep-header">
                     <span class="ep-title">Episode 3: Barbary Coast</span>
                     <span class="ep-number">S03 E03</span>
                 </div>
                 <div class="links-row">
-                    <a href="https://hubcloud.foo/drive/b12vnyspt0ib0jl" class="d-btn btn-480">480p [160MB]</a>
-                    <a href="https://hubcloud.foo/drive/ebewhej1151x9ae" class="d-btn btn-720">720p [470MB]</a>
-                    <a href="https://hubcloud.foo/drive/gecygrgzu7wg4re" class="d-btn btn-1080">1080p [1.3GB]</a>
+                    <a href="https://hubcloud.foo/drive/b12vnyspt0ib0jl" class="d-btn btn-480"><i class="fas fa-download"></i> 480p [160MB]</a>
+                    <a href="https://hubcloud.foo/drive/ebewhej1151x9ae" class="d-btn btn-720"><i class="fas fa-download"></i> 720p [470MB]</a>
+                    <a href="https://hubcloud.foo/drive/gecygrgzu7wg4re" class="d-btn btn-1080"><i class="fas fa-download"></i> 1080p [1.3GB]</a>
+                    <a href="https://hubcloud.ist/drive/lnbk9ajlurwhlbh" class="d-btn btn-4k"><i class="fas fa-bolt"></i> 4K UHD [3.7GB]</a>
                 </div>
             </div>
 
+            <!-- Episode 4 -->
             <div class="episode-card">
                 <div class="ep-header">
                     <span class="ep-title">Episode 4: Glorious Five Year Plan</span>
                     <span class="ep-number">S03 E04</span>
                 </div>
                 <div class="links-row">
-                    <a href="https://hubcloud.foo/drive/52tgn5tjuols71a" class="d-btn btn-480">480p [170MB]</a>
-                    <a href="https://hubcloud.foo/drive/gh55voggrrc5ffm" class="d-btn btn-720">720p [490MB]</a>
-                    <a href="https://hubcloud.foo/drive/c1rruov9qhu5kvq" class="d-btn btn-1080">1080p [1.4GB]</a>
+                    <a href="https://hubcloud.foo/drive/52tgn5tjuols71a" class="d-btn btn-480"><i class="fas fa-download"></i> 480p [170MB]</a>
+                    <a href="https://hubcloud.foo/drive/gh55voggrrc5ffm" class="d-btn btn-720"><i class="fas fa-download"></i> 720p [490MB]</a>
+                    <a href="https://hubcloud.foo/drive/c1rruov9qhu5kvq" class="d-btn btn-1080"><i class="fas fa-download"></i> 1080p [1.4GB]</a>
+                    <a href="https://hubcloud.ist/drive/8krsyus6rsgpymy" class="d-btn btn-4k"><i class="fas fa-bolt"></i> 4K UHD [3.7GB]</a>
                 </div>
             </div>
 
+            <!-- Episode 5 -->
             <div class="episode-card">
                 <div class="ep-header">
                     <span class="ep-title">Episode 5: The Last Time to Look on This World of Lies</span>
                     <span class="ep-number">S03 E05</span>
                 </div>
                 <div class="links-row">
-                    <a href="https://hubcloud.foo/drive/cpbmpoiejkjjiok" class="d-btn btn-480">480p [160MB]</a>
-                    <a href="https://hubcloud.foo/drive/s3ooc3apgss8asq" class="d-btn btn-720">720p [480MB]</a>
-                    <a href="https://hubcloud.foo/drive/kngkw6je6eqoevz" class="d-btn btn-1080">1080p [1.3GB]</a>
+                    <a href="https://hubcloud.foo/drive/cpbmpoiejkjjiok" class="d-btn btn-480"><i class="fas fa-download"></i> 480p [160MB]</a>
+                    <a href="https://hubcloud.foo/drive/s3ooc3apgss8asq" class="d-btn btn-720"><i class="fas fa-download"></i> 720p [480MB]</a>
+                    <a href="https://hubcloud.foo/drive/kngkw6je6eqoevz" class="d-btn btn-1080"><i class="fas fa-download"></i> 1080p [1.3GB]</a>
+                    <a href="https://hubcloud.ist/drive/dmi658am96ahwhs" class="d-btn btn-4k"><i class="fas fa-bolt"></i> 4K UHD [3.7GB]</a>
                 </div>
             </div>
 
+            <!-- Episode 6 -->
             <div class="episode-card">
                 <div class="ep-header">
                     <span class="ep-title">Episode 6: Herogasm</span>
                     <span class="ep-number">S03 E06</span>
                 </div>
                 <div class="links-row">
-                    <a href="https://hubcloud.foo/drive/je7b1iyd_b1l0io" class="d-btn btn-480">480p [180MB]</a>
-                    <a href="https://hubcloud.foo/drive/hdckvi9zag1vh88" class="d-btn btn-720">720p [520MB]</a>
-                    <a href="https://hubcloud.foo/drive/isoqickbt1a1xid" class="d-btn btn-1080">1080p [1.5GB]</a>
+                    <a href="https://hubcloud.foo/drive/je7b1iyd_b1l0io" class="d-btn btn-480"><i class="fas fa-download"></i> 480p [180MB]</a>
+                    <a href="https://hubcloud.foo/drive/hdckvi9zag1vh88" class="d-btn btn-720"><i class="fas fa-download"></i> 720p [520MB]</a>
+                    <a href="https://hubcloud.foo/drive/isoqickbt1a1xid" class="d-btn btn-1080"><i class="fas fa-download"></i> 1080p [1.5GB]</a>
+                    <a href="https://hubcloud.ist/drive/zjdzdfunjcbrbzd" class="d-btn btn-4k"><i class="fas fa-bolt"></i> 4K UHD [4.0GB]</a>
                 </div>
             </div>
 
+            <!-- Episode 7 -->
             <div class="episode-card">
                 <div class="ep-header">
                     <span class="ep-title">Episode 7: Here Comes a Candle to Light You to Bed</span>
                     <span class="ep-number">S03 E07</span>
                 </div>
                 <div class="links-row">
-                    <a href="https://hubcloud.foo/drive/rmgt730xi7wqqa7" class="d-btn btn-480">480p [170MB]</a>
-                    <a href="https://hubcloud.foo/drive/diigsuvoxxgbkib" class="d-btn btn-720">720p [490MB]</a>
-                    <a href="https://hubcloud.foo/drive/wwnn77wmm7hsyc1" class="d-btn btn-1080">1080p [1.4GB]</a>
+                    <a href="https://hubcloud.foo/drive/rmgt730xi7wqqa7" class="d-btn btn-480"><i class="fas fa-download"></i> 480p [170MB]</a>
+                    <a href="https://hubcloud.foo/drive/diigsuvoxxgbkib" class="d-btn btn-720"><i class="fas fa-download"></i> 720p [490MB]</a>
+                    <a href="https://hubcloud.foo/drive/wwnn77wmm7hsyc1" class="d-btn btn-1080"><i class="fas fa-download"></i> 1080p [1.4GB]</a>
+                    <a href="https://hubcloud.ist/drive/4hmmnx1cy9afjhe" class="d-btn btn-4k"><i class="fas fa-bolt"></i> 4K UHD [3.7GB]</a>
                 </div>
             </div>
 
+            <!-- Episode 8 -->
             <div class="episode-card">
                 <div class="ep-header">
                     <span class="ep-title">Episode 8: The Instant White-Hot Wild</span>
                     <span class="ep-number">S03 E08</span>
                 </div>
                 <div class="links-row">
-                    <a href="https://hubcloud.foo/drive/oaqytvmpgpotjys" class="d-btn btn-480">480p [180MB]</a>
-                    <a href="https://hubcloud.foo/drive/lgt3rsw3widglf3" class="d-btn btn-720">720p [510MB]</a>
-                    <a href="https://hubcloud.foo/drive/zz4m73wummkmkqu" class="d-btn btn-1080">1080p [1.5GB]</a>
+                    <a href="https://hubcloud.foo/drive/oaqytvmpgpotjys" class="d-btn btn-480"><i class="fas fa-download"></i> 480p [180MB]</a>
+                    <a href="https://hubcloud.foo/drive/lgt3rsw3widglf3" class="d-btn btn-720"><i class="fas fa-download"></i> 720p [510MB]</a>
+                    <a href="https://hubcloud.foo/drive/zz4m73wummkmkqu" class="d-btn btn-1080"><i class="fas fa-download"></i> 1080p [1.5GB]</a>
+                    <a href="https://hubcloud.ist/drive/d1ggrhhsvbb1esu" class="d-btn btn-4k"><i class="fas fa-bolt"></i> 4K UHD [4.0GB]</a>
                 </div>
             </div>
 
         </div>
     </main>
 
-    <footer style="text-align: center; padding: 30px; color: #555; font-size: 12px; border-top: 1px solid #222;">
-        &copy; 2025 Vought International. All Rights Reserved.
+    <footer style="text-align: center; padding: 30px; color: #777; font-size: 12px; border-top: 1px solid #2d2919; margin-top: 50px;">
+        &copy; 2026 Vought International. All Rights Reserved.
     </footer>
 
 </body>
