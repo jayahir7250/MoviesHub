@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stranger Things: Season 2 (2017) - Download All Episodes 480p, 720p, 1080p, 4K UHD</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+  <link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  <link href="[https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@700;900&family=Montserrat:wght@400;500;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@700;900&family=Montserrat:wght@400;500;600;700;800&display=swap)" rel="stylesheet">
+  <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+
+  <style>
+    /* =========================================================
+       STRANGER THINGS SEASON 2 - MIND FLAYER & FIERY SKY THEME
+       Theme: Apocalyptic Orange-Red Glow, Deep Purple/Navy Night Sky
+       ========================================================= */
+
+    :root {
+      --bg-dark: #07040d;
+      --bg-card: rgba(18, 10, 28, 0.88);
+      --bg-card-hover: rgba(32, 16, 50, 0.95);
+      
+      /* Theme Accents based on Poster */
+      --st-fire-orange: #ff4500;
+      --st-red-glow: rgba(255, 69, 0, 0.65);
+      --st-crimson: #e60023;
+      --st-lightning-purple: #9d4edd;
+      --st-amber: #ffaa00;
+      
+      --text-main: #f8fafc;
+      --text-muted: #a0a0b8;
+      --border-purple: rgba(157, 78, 221, 0.22);
+      --border-orange: rgba(255, 69, 0, 0.45);
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 5%, rgba(255, 69, 0, 0.30) 0%, transparent 60%),
+        radial-gradient(circle at 85% 35%, rgba(157, 78, 221, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 15% 85%, rgba(230, 0, 35, 0.15) 0%, transparent 50%),
+        linear-gradient(to bottom, #07040d 0%, #030106 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header / Navbar */
+    header {
+      background: rgba(7, 4, 13, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 69, 0, 0.35);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 12px var(--st-fire-orange), 0 0 25px var(--st-crimson);
+      text-decoration: none;
+      border-bottom: 2px solid var(--st-fire-orange);
+      padding-bottom: 2px;
+    }
+
+    .season-badge-header {
+      background: linear-gradient(135deg, var(--st-fire-orange), #a30000);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 6px 16px;
+      border-radius: 50px;
+      letter-spacing: 1px;
+      box-shadow: 0 0 15px var(--st-red-glow);
+      text-transform: uppercase;
+    }
+
+    /* Hero Banner Area */
+    .hero-section {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-orange);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 69, 0, 0.22);
+      backdrop-filter: blur(10px);
+      position: relative;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: row;
+      gap: 35px;
+      padding: 35px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Poster Frame */
+    .poster-box {
+      flex-shrink: 0;
+      width: 300px;
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.95), 0 0 30px var(--st-red-glow);
+      border: 2px solid var(--st-fire-orange);
+      transition: transform 0.3s ease;
+    }
+
+    .poster-box:hover {
+      transform: scale(1.02);
+    }
+
+    .poster-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Hero Content */
+    .hero-details {
+      flex-grow: 1;
+    }
+
+    .tag-line {
+      display: inline-block;
+      color: var(--st-amber);
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .show-title {
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: 2px;
+      color: #ffffff;
+      text-shadow: 0 0 15px var(--st-fire-orange), 0 0 35px var(--st-red-glow);
+      margin-bottom: 15px;
+    }
+
+    .show-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .meta-item {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--border-purple);
+    }
+
+    .meta-item.rating {
+      background: var(--st-fire-orange);
+      color: #fff;
+      border: none;
+      box-shadow: 0 0 10px var(--st-red-glow);
+    }
+
+    .synopsis {
+      font-size: 0.98rem;
+      color: #cbd5e1;
+      margin-bottom: 25px;
+      line-height: 1.7;
+    }
+
+    /* Quick Info Grid */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 15px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .info-box span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .info-box strong {
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    /* Section Titles */
+    .section-header {
+      margin: 45px 0 25px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      position: relative;
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-shadow: 0 0 10px var(--st-red-glow);
+    }
+
+    .section-title i {
+      color: var(--st-fire-orange);
+    }
+
+    .section-divider {
+      flex-grow: 1;
+      height: 2px;
+      background: linear-gradient(90deg, var(--st-fire-orange), var(--st-lightning-purple), transparent);
+    }
+
+    /* Download Buttons Base Styling */
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: none;
+    }
+
+    /* Season Zip Section */
+    .zip-section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-purple);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .zip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .zip-card {
+      background: rgba(10, 6, 18, 0.85);
+      border: 1px solid var(--border-purple);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .zip-card:hover {
+      border-color: var(--st-fire-orange);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 69, 0, 0.3);
+    }
+
+    .zip-quality {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      color: var(--st-amber);
+      margin-bottom: 5px;
+      letter-spacing: 1px;
+    }
+
+    .zip-size {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+
+    .btn-zip-480 { background: #334155; color: #fff; }
+    .btn-zip-480:hover { background: #475569; box-shadow: 0 0 15px rgba(71, 85, 105, 0.5); }
+
+    .btn-zip-720 { background: #8b5cf6; color: #fff; }
+    .btn-zip-720:hover { background: #7c3aed; box-shadow: 0 0 15px rgba(139, 92, 246, 0.5); }
+
+    .btn-zip-1080 { background: #d97706; color: #fff; }
+    .btn-zip-1080:hover { background: #b45309; box-shadow: 0 0 15px rgba(217, 119, 6, 0.5); }
+
+    .btn-zip-4k { background: linear-gradient(135deg, var(--st-fire-orange), #b30000); color: #fff; font-weight: 800; }
+    .btn-zip-4k:hover { background: linear-gradient(135deg, #ff5e1a, #d60000); box-shadow: 0 0 20px var(--st-red-glow); }
+
+    /* Episodes Section */
+    .episodes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .episode-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-purple);
+      border-radius: var(--radius-md);
+      padding: 22px 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .episode-card:hover {
+      border-color: var(--st-fire-orange);
+      background: var(--bg-card-hover);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8), 0 0 18px rgba(255, 69, 0, 0.2);
+    }
+
+    .ep-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+    }
+
+    .ep-number-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ep-num {
+      background: var(--st-fire-orange);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.5px;
+      box-shadow: 0 0 10px var(--st-red-glow);
+    }
+
+    .ep-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .ep-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .ep-download-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .btn-ep-dl {
+      background: rgba(25, 14, 38, 0.8);
+      border: 1px solid var(--border-purple);
+      color: var(--text-main);
+      padding: 10px 14px;
+      font-size: 0.82rem;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-ep-dl:hover {
+      border-color: var(--st-amber);
+      color: var(--st-amber);
+      background: rgba(255, 170, 0, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .btn-ep-dl.k4-btn {
+      border-color: var(--border-orange);
+      background: rgba(255, 69, 0, 0.1);
+      color: #ff9d80;
+    }
+
+    .btn-ep-dl.k4-btn:hover {
+      background: var(--st-fire-orange);
+      color: #fff;
+      box-shadow: 0 0 15px var(--st-red-glow);
+    }
+
+    /* Cast Section */
+    .cast-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 15px;
+    }
+
+    .cast-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-purple);
+      padding: 15px;
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+
+    .cast-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+    }
+
+    .cast-role {
+      font-size: 0.8rem;
+      color: var(--st-amber);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid var(--border-purple);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer p {
+      margin-bottom: 8px;
+    }
+
+    /* =========================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================= */
+
+    @media (max-width: 992px) {
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .poster-box {
+        width: 240px;
+      }
+
+      .show-title {
+        font-size: 2.8rem;
+      }
+
+      .show-meta {
+        justify-content: center;
+      }
+
+      .ep-download-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .brand-logo {
+        font-size: 1.3rem;
+      }
+
+      .show-title {
+        font-size: 2.1rem;
+      }
+
+      .hero-container {
+        padding: 20px;
+      }
+
+      .ep-download-buttons {
+        grid-template-columns: 1fr;
+      }
+
+      .zip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ep-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo">STRANGER THINGS 2</a>
+      <span class="season-badge-header">SEASON TWO (2017)</span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Section with Season 2 Poster Theme -->
+    <section class="hero-section">
+      <div class="hero-container">
+        
+        <!-- Movie Poster -->
+        <div class="poster-box">
+          <img src="images/sts2.jpg" alt="Stranger Things Season 2 Poster">
+        </div>
+
+        <!-- Details -->
+        <div class="hero-details">
+          <span class="tag-line">Netflix Original • It's Only Getting Stranger</span>
+          <h1 class="show-title">STRANGER THINGS 2</h1>
+          
+          <div class="show-meta">
+            <span class="meta-item rating">TV-14</span>
+            <span class="meta-item"><i class="fa-solid fa-calendar-days"></i> October 27, 2017</span>
+            <span class="meta-item"><i class="fa-solid fa-film"></i> 9 Episodes</span>
+            <span class="meta-item"><i class="fa-solid fa-language"></i> Dual Audio [Hindi + English]</span>
+            <span class="meta-item"><i class="fa-solid fa-layer-group"></i> Sci-Fi / Horror / Supernatural</span>
+          </div>
+
+          <p class="synopsis">
+            It's 1984, a year after Will Byers' return from the Upside Down. Though rescued, Will suffers visions of a massive, shadowy spider-like entity—the Mind Flayer—looming over Hawkins. As a new girl named Max arrives in town, Eleven discovers secrets about her past, and a sinister entity threatens to devour Hawkins from below.
+          </p>
+
+          <div class="info-grid">
+            <div class="info-box">
+              <span>Creators</span>
+              <strong>The Duffer Brothers</strong>
+            </div>
+            <div class="info-box">
+              <span>Network</span>
+              <strong>Netflix</strong>
+            </div>
+            <div class="info-box">
+              <span>Audio Formats</span>
+              <strong>AAC 2.0 / Dolby Digital 5.1</strong>
+            </div>
+            <div class="info-box">
+              <span>Subtitles</span>
+              <strong>English [Muxed Softsubs]</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FULL SEASON BATCH ZIPS SECTION -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-file-zipper"></i> Full Season Zip Downloads</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="zip-section-card">
+        <div class="zip-grid">
+          
+          <!-- 480p Zip -->
+          <div class="zip-card">
+            <div class="zip-quality">480p Batch Zip</div>
+            <div class="zip-size">x264 • ~1.8 GB • Complete Pack</div>
+            <a href="https://hubcloud.ist/drive/wj9wzct8uw0lm99" class="btn-download btn-zip-480">
+              <i class="fa-solid fa-download"></i> 480p Zip Download
+            </a>
+          </div>
+
+          <!-- 720p Zip -->
+          <div class="zip-card">
+            <div class="zip-quality">720p HEVC Zip</div>
+            <div class="zip-size">10bit x265 • ~3.8 GB • Complete Pack</div>
+            <a href="https://hubcloud.ist/drive/3gdwkm34hkwkikk" class="btn-download btn-zip-720">
+              <i class="fa-solid fa-download"></i> 720p Zip Download
+            </a>
+          </div>
+
+          <!-- 1080p Zip -->
+          <div class="zip-card">
+            <div class="zip-quality">1080p x265 Zip</div>
+            <div class="zip-size">10bit x265 • ~8.1 GB • Complete Pack</div>
+            <a href="https://hubcloud.ist/drive/nlnlj4fhwhp1xdd" class="btn-download btn-zip-1080">
+              <i class="fa-solid fa-download"></i> 1080p Zip Download
+            </a>
+          </div>
+
+          <!-- 4K Zip -->
+          <div class="zip-card">
+            <div class="zip-quality">4K Ultra HD Zip</div>
+            <div class="zip-size">2160p HDR Atmos • ~21.0 GB • Pack</div>
+            <a href="https://hubcloud.ist/drive/clccgg21azzlyl8" class="btn-download btn-zip-4k">
+              <i class="fa-solid fa-bolt"></i> 4K Zip Download
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EPISODE WISE DOWNLOAD LINKS SECTION -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-list-ol"></i> Episode Wise Download Links</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="episodes-list">
+
+        <!-- Episode 1 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER ONE</span>
+              <span class="ep-title">MADMAX</span>
+            </div>
+            <span class="ep-date">Aired: October 27, 2017</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcdn.wiki/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2m-4oCU19RKc3e5BMY7KdHSRKjy6JC3Su9B0UsTS6D2sQ7JUxlI6imdJVJnUVRkIoGiTjDi7XRvNpjW1SrhOhfL0A0vtVhi2CailzPJPVPoXENEllxR8x3UDkI_4Qfa_k6rmLhZxz13qlS7BmkBg-5KeEhWdN-tLm1f4VTD20KjALzad1grFJr9a7bffYcQjg-K9KpYfjIOrwP-jrHsJEsXyKNjwX-v2MtvHVDNx6_rZhwslc4" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [890MB]</a>
+            <a href="https://hubcloud.ist/drive/irvyezjcgr9cph9" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [2.3GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 2 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER TWO</span>
+              <span class="ep-title">Trick or Treat, Freak</span>
+            </div>
+            <span class="ep-date">Aired: October 27, 2017</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcdn.wiki/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2nQscoQdY54cSInFcCnfqJtJgij-hQ2lELL_--Ci-kL2tmVs3lPndgkYlr7kMuv-w7txP15FCEbO-bnCOeMpIf_r4knfIZo8XfPgTgOl2YWQB2KcWBUf-8xlRiNwlUgDbfrbGyW6i5h3U7Rbua6Pavl5K3MmPMRA5toIUJG-74zSZOxCxT3B2TyIw9fPQZ5a8lgoHqEkYgfhdd-5WcEtppVFdhlN6kywOm-E_nbQScsbk3z8E8" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [920MB]</a>
+            <a href="https://hubcloud.ist/drive/caeq06tezcvqevq" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [2.4GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 3 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER THREE</span>
+              <span class="ep-title">The Pollywog</span>
+            </div>
+            <span class="ep-date">Aired: October 27, 2017</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcdn.wiki/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2lNGuxRTE8bzCg7xWTdyYeAuqJ_3YVKy74fS6Nx5aT984cofg1tKWVfMLnluy9hmBMfQIUWWU1eaLRet74xHX9GByISDfaKFEGt5SwfC5TVJnpcU88-mhhyoSciv2GVHLW9s6J7ixPMZsrLwKmuwzrkBP2XqnZHYttLtoGdoxwV0PeohF1ZcMjZ6iCQc5O2JmTJ-KbWJ1aMEXhe43wtlwqD8lN9sO11mmoGYmF0X4vpVsC0Uq8" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [870MB]</a>
+            <a href="https://hubcloud.ist/drive/spmnlvddmvuycv1" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [2.2GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 4 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER FOUR</span>
+              <span class="ep-title">Will the Wise</span>
+            </div>
+            <span class="ep-date">Aired: October 27, 2017</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcdn.wiki/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2mWaXeupFSc_ZrcD5bcfuHDK7VrokCSNu4Xf9aPfbQh2xn-CYTPaMuuPbkzcq5SXZFWAuWf_kNnNkybWVjG6k2weHMRbIQgjSplVbUG_6am7-U59rkjqgYUM3qofhLfRAfVAhfk6sG7bJqFAZtS-lRSSKV4PLp6-esPB-mN0inqxnsdL_Iu1omeXyf_iIF1BL2HmrsPzuxPSSzxmXqHEO7lGZSJW_-RzPWnAlLHuRYS1FkH0ps" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [900MB]</a>
+            <a href="https://hubcloud.ist/drive/8kef8m3dhhqdpfh" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [2.3GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 5 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER FIVE</span>
+              <span class="ep-title">Dig Dug</span>
+            </div>
+            <span class="ep-date">Aired: October 27, 2017</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcdn.wiki/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2mozdcspvxFzLe9VrYGBKfmSjpYQbgBnAMz50j8jxIYuaJOBjT7l8Kixtix8x0DKmY2xNTHjJIEwogSLMPsc-7hjtVAOwNCwhtkiYpq83wu-xDQbEEzej-USTFKnfRcT5priT_QX72DiDZgEA4dnjC-dzma0ihHCZua2MTPpOsdmgs0H4itfOweSgYLsry1H_hXueaEAMa-krdtlapsl1rBuZ1qSj0tVxoLHqMrpKMgj_RH9gc" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [940MB]</a>
+            <a href="https://hubcloud.ist/drive/a1d577dmc7rcov0" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [2.5GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 6 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER SIX</span>
+              <span class="ep-title">The Spy</span>
+            </div>
+            <span class="ep-date">Aired: October 27, 2017</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcdn.wiki/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2l39jGwpYe3oKbWcqMT9w_LoNzhN5kEMa4vNZm1ZjhM4LT7le_mrFdu1vCdZOzHdFHFLmT8UJf4jn651nuDtrgzF1cb1AWyGJotPfoGB0z3u_Mb6FimdVVgFbQ6AavuODL4iBBWDqOcRqermrldUk3RS0XyeTAS0TewkGOOFgqrCIuKXN5kw1KZtcfC7XQrGithKc4nTxBFhiEfP42wZCxQ0whlURsFLtSm9skuJizIyN3-ook" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [960MB]</a>
+            <a href="https://hubcloud.ist/drive/shtnys3hyvbshzx" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [2.6GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 7 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER SEVEN</span>
+              <span class="ep-title">The Lost Sister</span>
+            </div>
+            <span class="ep-date">Aired: October 27, 2017</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcdn.wiki/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2ldVSS21poxOBwBbFL-zsG7C0cj4FVnJXcP8j8oUq3MOVl7ZiEG1OtXrscq7-TWCkeufwT4ohkW-KjN3xYha5egtF_ixTfcH2SG6aPmSnvarqI-v3BzNYJXtr8BdUcYAGs7wBkC8ASQAtzXgAdEbPrq6IV-JGZWH5LBFfE62gwoQy2eex1OIlh-PnqCRpLdhbhrFXbKyLPvSpoEpdakvFaB005g7p_ina-B5_YnVOzIJNpSo84" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [830MB]</a>
+            <a href="https://hubcloud.ist/drive/u66y7r1f71yn7vn" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [2.1GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 8 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER EIGHT</span>
+              <span class="ep-title">The Mind Flayer</span>
+            </div>
+            <span class="ep-date">Aired: October 27, 2017</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcdn.wiki/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2m2KAlywM4zX1m-ZJNEnMYxr9wanPw0oVdpvE_hUVAou6s3C4SshqjXt2oqYpWytEREZOcutCV9V7L-dY3CgyN5OsfhHJ2tQLN_OlSIZ4fKvXsi-j6yfblmN2q_qCu0ZNGPaQeaEEaTQEeOwgnd2wA7CfIyQmL3ebIXzYbRCAqoVx3bZ6nrBMBGQ9D2-EcAnP26Invu5ykNfPAoV-M9rIUfZABwLX8gAOuy-7aSaoPDUT9yPfA" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [980MB]</a>
+            <a href="https://hubcloud.ist/drive/lak2gkbj0r2afb0" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [2.7GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 9 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER NINE</span>
+              <span class="ep-title">The Gate</span>
+            </div>
+            <span class="ep-date">Aired: October 27, 2017</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcdn.wiki/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2mDR7zcJPEA0wQcgdZ-dro-YgFfZbVxss0Nnkc7FvcdvhW9wQ4gzv50ykqVIf7acfgJOekhUt3u5iNzoThhia_OewrmZQUXW_kHAXVSTvgqwmQ30Oy_NSdIxs7Zz8W7Uq3lpS9QDB2Yxf1bL_k4bx2Khbp6oiPeEozGlT_PGyIASTZqBqzTH7DJAiMZ5cbU7akrHeKbwAk4Ihajccum_AjVRxe_dkZCZEjcUgt7GeeXotWXMng" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [1.1GB]</a>
+            <a href="https://hubcloud.ist/drive/iup8d66pivwznaa" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [3.0GB]</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STAR CAST SECTION -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-users"></i> Starring Cast</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="cast-grid">
+        <div class="cast-card">
+          <div class="cast-name">Millie Bobby Brown</div>
+          <div class="cast-role">Eleven</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Noah Schnapp</div>
+          <div class="cast-role">Will Byers</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Winona Ryder</div>
+          <div class="cast-role">Joyce Byers</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">David Harbour</div>
+          <div class="cast-role">Jim Hopper</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Finn Wolfhard</div>
+          <div class="cast-role">Mike Wheeler</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Sadie Sink</div>
+          <div class="cast-role">Max Mayfield</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Gaten Matarazzo</div>
+          <div class="cast-role">Dustin Henderson</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Caleb McLaughlin</div>
+          <div class="cast-role">Lucas Sinclair</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Joe Keery</div>
+          <div class="cast-role">Steve Harrington</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Dacre Montgomery</div>
+          <div class="cast-role">Billy Hargrove</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Stranger Things Season 2 (2017)</strong> — Netflix Original Series</p>
+      <p>All download links provided in 480p, 720p, 1080p, and 4K Ultra HD resolution options.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stranger Things: Season 4 (2022) - Download All Episodes 480p, 720p, 1080p, 4K UHD</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@700;900&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* =========================================================
+       STRANGER THINGS SEASON 4 - VECNA / CREEL HOUSE THEME
+       Theme: Deep Crimson Red, Creel Clock Darkness & Fiery Red Glow
+       ========================================================= */
+
+    :root {
+      --bg-dark: #070308;
+      --bg-card: rgba(22, 6, 15, 0.88);
+      --bg-card-hover: rgba(38, 10, 26, 0.95);
+      
+      /* Theme Accents based on S4 Poster */
+      --st-red: #ff1e27;
+      --st-red-glow: rgba(255, 30, 39, 0.75);
+      --st-orange: #ff3b00;
+      --st-orange-glow: rgba(255, 59, 0, 0.6);
+      --st-purple: #8b0000;
+      --st-amber: #e63946;
+      
+      --text-main: #f8fafc;
+      --text-muted: #a1a1aa;
+      --border-orange: rgba(255, 59, 0, 0.3);
+      --border-red: rgba(255, 30, 39, 0.55);
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 50% 5%, rgba(255, 30, 39, 0.28) 0%, transparent 60%),
+        radial-gradient(circle at 80% 35%, rgba(139, 0, 0, 0.25) 0%, transparent 50%),
+        radial-gradient(circle at 20% 75%, rgba(255, 59, 0, 0.15) 0%, transparent 45%),
+        linear-gradient(to bottom, #070308 0%, #020104 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      padding-bottom: 60px;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header / Navbar */
+    header {
+      background: rgba(7, 3, 8, 0.93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 30, 39, 0.35);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 16px 0;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.9);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 12px var(--st-red), 0 0 25px var(--st-red);
+      text-decoration: none;
+      border-bottom: 2px solid var(--st-red);
+      padding-bottom: 2px;
+    }
+
+    .brand-logo span {
+      color: var(--st-red);
+    }
+
+    .season-badge-header {
+      background: linear-gradient(135deg, var(--st-red), #8b0000);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 6px 16px;
+      border-radius: 50px;
+      letter-spacing: 1px;
+      box-shadow: 0 0 18px var(--st-red-glow);
+      text-transform: uppercase;
+    }
+
+    /* Hero Banner Area */
+    .hero-section {
+      margin: 40px 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-red);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 35px rgba(255, 30, 39, 0.25);
+      backdrop-filter: blur(10px);
+      position: relative;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: row;
+      gap: 35px;
+      padding: 35px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Poster Frame */
+    .poster-box {
+      flex-shrink: 0;
+      width: 300px;
+      position: relative;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.95), 0 0 30px var(--st-red-glow);
+      border: 2px solid var(--st-red);
+      transition: transform 0.3s ease;
+    }
+
+    .poster-box:hover {
+      transform: scale(1.02);
+    }
+
+    .poster-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Hero Content */
+    .hero-details {
+      flex-grow: 1;
+    }
+
+    .tag-line {
+      display: inline-block;
+      color: #ff4d4d;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .show-title {
+      font-family: 'Cinzel', serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: 2px;
+      color: #ffffff;
+      text-shadow: 0 0 18px var(--st-red), 0 0 35px var(--st-red-glow);
+      margin-bottom: 15px;
+    }
+
+    .show-title span {
+      color: var(--st-red);
+      display: inline-block;
+      text-shadow: 0 0 20px var(--st-red);
+    }
+
+    .show-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .meta-item {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 5px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid var(--border-orange);
+    }
+
+    .meta-item.rating {
+      background: linear-gradient(135deg, var(--st-red), #8b0000);
+      color: #fff;
+      font-weight: 800;
+      border: none;
+      box-shadow: 0 0 12px var(--st-red-glow);
+    }
+
+    .synopsis {
+      font-size: 0.98rem;
+      color: #cbd5e1;
+      margin-bottom: 25px;
+      line-height: 1.7;
+    }
+
+    /* Quick Info Grid */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      background: rgba(0, 0, 0, 0.55);
+      padding: 15px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .info-box span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .info-box strong {
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    /* Section Titles */
+    .section-header {
+      margin: 45px 0 25px 0;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      position: relative;
+    }
+
+    .section-title {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-shadow: 0 0 12px var(--st-red-glow);
+    }
+
+    .section-title i {
+      color: var(--st-red);
+    }
+
+    .section-divider {
+      flex-grow: 1;
+      height: 2px;
+      background: linear-gradient(90deg, var(--st-red), var(--st-purple), transparent);
+    }
+
+    /* Download Buttons Base Styling */
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: none;
+    }
+
+    /* Season Zip Section */
+    .zip-section-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-red);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    }
+
+    .zip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .zip-card {
+      background: rgba(14, 4, 10, 0.9);
+      border: 1px solid var(--border-red);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .zip-card:hover {
+      border-color: var(--st-red);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 30, 39, 0.3);
+    }
+
+    .zip-quality {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      color: #ff4d4d;
+      margin-bottom: 5px;
+      letter-spacing: 1px;
+    }
+
+    .zip-size {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-bottom: 15px;
+    }
+
+    .btn-zip-480 { background: #334155; color: #fff; }
+    .btn-zip-480:hover { background: #475569; box-shadow: 0 0 15px rgba(71, 85, 105, 0.5); }
+
+    .btn-zip-720 { background: #b91c1c; color: #fff; }
+    .btn-zip-720:hover { background: #991b1b; box-shadow: 0 0 15px rgba(185, 28, 28, 0.5); }
+
+    .btn-zip-1080 { background: #8b5cf6; color: #fff; }
+    .btn-zip-1080:hover { background: #7c3aed; box-shadow: 0 0 15px rgba(139, 92, 246, 0.5); }
+
+    .btn-zip-4k { background: linear-gradient(135deg, var(--st-red), #8b0000); color: #fff; font-weight: 800; }
+    .btn-zip-4k:hover { background: linear-gradient(135deg, #ff4d4d, #b30000); box-shadow: 0 0 22px var(--st-red-glow); }
+
+    /* Episodes Section */
+    .episodes-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .episode-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-red);
+      border-radius: var(--radius-md);
+      padding: 22px 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .episode-card:hover {
+      border-color: var(--st-red);
+      background: var(--bg-card-hover);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8), 0 0 18px rgba(255, 30, 39, 0.2);
+    }
+
+    .ep-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+    }
+
+    .ep-number-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .ep-num {
+      background: linear-gradient(135deg, var(--st-red), #8b0000);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      letter-spacing: 0.5px;
+      box-shadow: 0 0 10px var(--st-red-glow);
+    }
+
+    .ep-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .ep-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .ep-download-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .btn-ep-dl {
+      background: rgba(30, 8, 18, 0.8);
+      border: 1px solid var(--border-red);
+      color: var(--text-main);
+      padding: 10px 14px;
+      font-size: 0.82rem;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-ep-dl:hover {
+      border-color: var(--st-red);
+      color: var(--st-red);
+      background: rgba(255, 30, 39, 0.12);
+      transform: translateY(-2px);
+    }
+
+    .btn-ep-dl.k4-btn {
+      border-color: var(--border-red);
+      background: rgba(255, 30, 39, 0.18);
+      color: #ff8080;
+    }
+
+    .btn-ep-dl.k4-btn:hover {
+      background: var(--st-red);
+      color: #fff;
+      box-shadow: 0 0 15px var(--st-red-glow);
+    }
+
+    /* Cast Section */
+    .cast-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 15px;
+    }
+
+    .cast-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-red);
+      padding: 15px;
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+
+    .cast-name {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+    }
+
+    .cast-role {
+      font-size: 0.8rem;
+      color: #ff4d4d;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid var(--border-red);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    footer p {
+      margin-bottom: 8px;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 992px) {
+      .hero-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .poster-box {
+        width: 240px;
+      }
+
+      .show-title {
+        font-size: 2.8rem;
+      }
+
+      .show-meta {
+        justify-content: center;
+      }
+
+      .ep-download-buttons {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .brand-logo {
+        font-size: 1.3rem;
+      }
+
+      .show-title {
+        font-size: 2.1rem;
+      }
+
+      .hero-container {
+        padding: 20px;
+      }
+
+      .ep-download-buttons {
+        grid-template-columns: 1fr;
+      }
+
+      .zip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ep-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo">STRANGER THINGS <span>4</span></a>
+      <span class="season-badge-header">SEASON FOUR (2022)</span>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-container">
+        
+        <!-- Movie Poster -->
+        <div class="poster-box">
+          <img src="images/sts4.jpg" alt="Stranger Things Season 4 Poster">
+        </div>
+
+        <!-- Details -->
+        <div class="hero-details">
+          <span class="tag-line">Netflix Original • Every Ending Has A Beginning</span>
+          <h1 class="show-title">STRANGER THINGS <span>4</span></h1>
+          
+          <div class="show-meta">
+            <span class="meta-item rating">TV-14</span>
+            <span class="meta-item"><i class="fa-solid fa-calendar-days"></i> May 27, 2022</span>
+            <span class="meta-item"><i class="fa-solid fa-film"></i> 9 Episodes</span>
+            <span class="meta-item"><i class="fa-solid fa-language"></i> Dual Audio [Hindi + English]</span>
+            <span class="meta-item"><i class="fa-solid fa-layer-group"></i> Sci-Fi / Horror / Mystery</span>
+          </div>
+
+          <p class="synopsis">
+            It has been six months since the Battle of Starcourt, which brought terror and destruction to Hawkins. Struggling with the aftermath, our group of friends are separated for the first time — and navigating high school hasn't made things any easier. In this vulnerable time, a new supernatural threat surfaces, presenting a gruesome mystery that could end the horrors of the Upside Down.
+          </p>
+
+          <div class="info-grid">
+            <div class="info-box">
+              <span>Creators</span>
+              <strong>The Duffer Brothers</strong>
+            </div>
+            <div class="info-box">
+              <span>Network</span>
+              <strong>Netflix</strong>
+            </div>
+            <div class="info-box">
+              <span>Audio Formats</span>
+              <strong>AAC 2.0 / Dolby Digital 5.1</strong>
+            </div>
+            <div class="info-box">
+              <span>Subtitles</span>
+              <strong>English [Muxed Softsubs]</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FULL SEASON BATCH ZIPS SECTION -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-file-zipper"></i> Full Season Zip Downloads</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="zip-section-card">
+        <div class="zip-grid">
+          
+          <!-- 480p Zip -->
+          <div class="zip-card">
+            <div class="zip-quality">480p Batch Zip</div>
+            <div class="zip-size">x264 • ~2.8 GB • Complete Pack</div>
+            <a href="https://hubcloud.ist/drive/5i8yh-yt-jppjmk" class="btn-download btn-zip-480">
+              <i class="fa-solid fa-download"></i> 480p Zip Download
+            </a>
+          </div>
+
+          <!-- 720p Zip -->
+          <div class="zip-card">
+            <div class="zip-quality">720p HEVC Zip</div>
+            <div class="zip-size">10bit x265 • ~5.5 GB • Complete Pack</div>
+            <a href="https://hubcloud.ist/drive/h1ag661m1cfywly" class="btn-download btn-zip-720">
+              <i class="fa-solid fa-download"></i> 720p Zip Download
+            </a>
+          </div>
+
+          <!-- 1080p Zip -->
+          <div class="zip-card">
+            <div class="zip-quality">1080p x265 Zip</div>
+            <div class="zip-size">10bit x265 • ~11.5 GB • Complete Pack</div>
+            <a href="https://hubcloud.ist/drive/xdkk1mmquoq8fzo" class="btn-download btn-zip-1080">
+              <i class="fa-solid fa-download"></i> 1080p Zip Download
+            </a>
+          </div>
+
+          <!-- 4K Zip -->
+          <div class="zip-card">
+            <div class="zip-quality">4K Ultra HD Zip</div>
+            <div class="zip-size">2160p HDR Atmos • ~32.0 GB • Pack</div>
+            <a href="https://hubcloud.ist/drive/rip1gfgeh3ihcgh" class="btn-download btn-zip-4k">
+              <i class="fa-solid fa-bolt"></i> 4K Zip Download
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EPISODE WISE DOWNLOAD LINKS SECTION -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-list-ol"></i> Episode Wise Download Links</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="episodes-list">
+
+        <!-- Episode 1 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER ONE</span>
+              <span class="ep-title">The Hellfire Club</span>
+            </div>
+            <span class="ep-date">Aired: May 27, 2022</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcloud.ist/drive/aqzs1v_xwbxdsea" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 720p [620MB]</a>
+            <a href="https://pixeldrain.dev/u/1catpcKa" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [1.2GB]</a>
+            <a href="https://hubcloud.ist/drive/14vxexxzqv40hdq" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [3.4GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 2 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER TWO</span>
+              <span class="ep-title">Vecna's Curse</span>
+            </div>
+            <span class="ep-date">Aired: May 27, 2022</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcloud.ist/drive/mwazz1dqzdd9hwa" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 720p [600MB]</a>
+            <a href="https://pixeldrain.dev/u/AMopYaGR" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [1.1GB]</a>
+            <a href="https://hubcloud.ist/drive/lba97y1zpllcpls" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [3.2GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 3 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER THREE</span>
+              <span class="ep-title">The Monster and the Superhero</span>
+            </div>
+            <span class="ep-date">Aired: May 27, 2022</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcloud.ist/drive/incvjorvf1iict1" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 720p [580MB]</a>
+            <a href="https://pixeldrain.dev/u/cVyRvkhg" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [1.1GB]</a>
+            <a href="https://hubcloud.ist/drive/2z7xj23jd9c3src" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [3.1GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 4 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER FOUR</span>
+              <span class="ep-title">Dear Billy</span>
+            </div>
+            <span class="ep-date">Aired: May 27, 2022</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcloud.ist/drive/kbldfibpklu86kl" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 720p [650MB]</a>
+            <a href="https://pixeldrain.dev/u/q74nTtyp" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [1.3GB]</a>
+            <a href="https://hubcloud.ist/drive/wyildlmut96ceuf" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [3.6GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 5 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER FIVE</span>
+              <span class="ep-title">The Nina Project</span>
+            </div>
+            <span class="ep-date">Aired: May 27, 2022</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcloud.ist/drive/u9ccuahl6i7e6-u" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 720p [620MB]</a>
+            <a href="https://pixeldrain.dev/u/q74nTtyp" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [1.2GB]</a>
+            <a href="https://hubcloud.ist/drive/wurt9kc0pgc0owv" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [3.3GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 6 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER SIX</span>
+              <span class="ep-title">Dive</span>
+            </div>
+            <span class="ep-date">Aired: May 27, 2022</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcloud.ist/drive/ci1moy3vucl41u4" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 720p [600MB]</a>
+            <a href="https://pixeldrain.dev/u/Qqwj5Vu2" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [1.1GB]</a>
+            <a href="https://hubcloud.ist/drive/p262zrzlx7kzr56" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [3.2GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 7 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER SEVEN</span>
+              <span class="ep-title">The Massacre at Hawkins Lab</span>
+            </div>
+            <span class="ep-date">Aired: May 27, 2022</span>
+          </div>
+          <div class="ep-download-buttons">
+\            <a href="https://hubcloud.ist/drive/vm9vh1kej-9w7je" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 720p [850MB]</a>
+            <a href="https://pixeldrain.dev/u/bxrZXpam" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [1.7GB]</a>
+            <a href="https://hubcloud.ist/drive/st113a14j2t3s11" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [4.8GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 8 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER EIGHT</span>
+              <span class="ep-title">Papa</span>
+            </div>
+            <span class="ep-date">Aired: July 1, 2022</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcloud.ist/drive/rsc2iirlyqmrg12" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 720p [760MB]</a>
+            <a href="https://pixeldrain.dev/u/k7Xx489C" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [1.5GB]</a>
+            <a href="https://hubcloud.ist/drive/raao1jtdtko78tm" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [4.2GB]</a>
+          </div>
+        </div>
+
+        <!-- Episode 9 -->
+        <div class="episode-card">
+          <div class="ep-header-row">
+            <div class="ep-number-title">
+              <span class="ep-num">CHAPTER NINE</span>
+              <span class="ep-title">The Piggyback</span>
+            </div>
+            <span class="ep-date">Aired: July 1, 2022</span>
+          </div>
+          <div class="ep-download-buttons">
+            <a href="https://hubcloud.ist/drive/n7vtdts6oa6enwn" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 720p [1.1GB]</a>
+            <a href="https://pixeldrain.dev/u/67J6fJR5" class="btn-ep-dl"><i class="fa-solid fa-download"></i> 1080p [2.2GB]</a>
+            <a href="https://hubcloud.ist/drive/ltl1197ymlehymo" class="btn-ep-dl k4-btn"><i class="fa-solid fa-bolt"></i> 4K UHD [6.1GB]</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- STAR CAST SECTION -->
+    <section>
+      <div class="section-header">
+        <h2 class="section-title"><i class="fa-solid fa-users"></i> Starring Cast</h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="cast-grid">
+        <div class="cast-card">
+          <div class="cast-name">Millie Bobby Brown</div>
+          <div class="cast-role">Eleven</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Finn Wolfhard</div>
+          <div class="cast-role">Mike Wheeler</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">David Harbour</div>
+          <div class="cast-role">Jim Hopper</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Winona Ryder</div>
+          <div class="cast-role">Joyce Byers</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Gaten Matarazzo</div>
+          <div class="cast-role">Dustin Henderson</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Caleb McLaughlin</div>
+          <div class="cast-role">Lucas Sinclair</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Noah Schnapp</div>
+          <div class="cast-role">Will Byers</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Sadie Sink</div>
+          <div class="cast-role">Max Mayfield</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Joe Keery</div>
+          <div class="cast-role">Steve Harrington</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Maya Hawke</div>
+          <div class="cast-role">Robin Buckley</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Joseph Quinn</div>
+          <div class="cast-role">Eddie Munson</div>
+        </div>
+        <div class="cast-card">
+          <div class="cast-name">Jamie Campbell Bower</div>
+          <div class="cast-role">Vecna / Henry Creel</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><strong>Stranger Things Season 4 (2022)</strong> — Netflix Original Series</p>
+      <p>All download links provided in 480p, 720p, 1080p, and 4K Ultra HD resolution options.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
