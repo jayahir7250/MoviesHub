@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Captain Miller (2024) - Download Movie (480p, 720p, 1080p, 4K UHD)</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Captain Miller Theme: Dusty Ochre Amber, Burnt Sepia & Fiery Crimson Accent */
+        body {
+            background-color: #0d0805;
+            background-image: 
+                radial-gradient(circle at 50% 10%, rgba(217, 119, 6, 0.28) 0%, transparent 60%),
+                radial-gradient(circle at 80% 60%, rgba(220, 38, 38, 0.22) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(120, 53, 15, 0.3) 0%, transparent 45%),
+                radial-gradient(circle at 50% 95%, rgba(13, 8, 5, 0.98) 0%, transparent 100%);
+            color: #f1f5f9;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1080px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header with Integrated Mobile Menu (No standalone navbar) */
+        .page-header {
+            margin-bottom: 25px;
+            border-bottom: 1px solid #3b2014;
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        .header-top-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .page-header-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .page-header h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 28px;
+            color: #ffffff;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            text-shadow: 0 0 14px rgba(245, 158, 11, 0.3);
+        }
+
+        .page-header h1 span {
+            color: #ef4444;
+            text-shadow: 0 0 16px rgba(239, 68, 68, 0.9);
+        }
+
+        /* Header Actions & Menu Toggle */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .media-type-tag {
+            background: linear-gradient(135deg, #dc2626, #b45309);
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding: 4px 14px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            box-shadow: 0 0 14px rgba(220, 38, 38, 0.6);
+        }
+
+        .menu-toggle-btn {
+            background: #1c110b;
+            border: 1px solid #f59e0b;
+            color: #f59e0b;
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle-btn:hover {
+            background: #f59e0b;
+            color: #0d0805;
+            box-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+        }
+
+        /* Collapsible Header Navigation Menu */
+        .header-mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, margin-top 0.3s ease;
+            background: #170d08;
+            border-radius: 10px;
+            border: 0px solid #452415;
+            margin-top: 0;
+        }
+
+        .header-mobile-menu.active {
+            max-height: 250px;
+            margin-top: 15px;
+            border-width: 1px;
+            padding: 10px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+        }
+
+        .header-menu-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-menu-list li a {
+            display: block;
+            padding: 10px 20px;
+            color: #f1f5f9;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .header-menu-list li a:hover {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+        }
+
+        /* Movie Main Card */
+        .series-card {
+            background: linear-gradient(165deg, #1b0f0a 0%, #0d0704 100%);
+            border: 1px solid #452415;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.95), 0 0 25px rgba(217, 119, 6, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 25px;
+            margin-bottom: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #f59e0b, #ef4444, #b45309, #f59e0b);
+        }
+
+        .poster-wrapper {
+            flex: 1 1 260px;
+            max-width: 310px;
+            margin: 0 auto;
+        }
+
+        .poster-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #f59e0b;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9), 0 0 20px rgba(245, 158, 11, 0.4);
+            display: block;
+        }
+
+        .details-wrapper {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .series-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 34px;
+            color: #ffffff;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #ef4444;
+            display: inline-block;
+            padding-bottom: 4px;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+        }
+
+        .series-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+
+        .meta-badge {
+            background: #2b170e;
+            color: #e2e8f0;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            border: 1px solid #522c1b;
+        }
+
+        .meta-rating {
+            background: linear-gradient(135deg, #ef4444, #b45309);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(239, 68, 68, 0.5);
+        }
+
+        .meta-4k-badge {
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 800;
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+        }
+
+        .info-list {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-list li {
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        .info-list strong {
+            color: #ffffff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-top: 10px;
+            line-height: 1.7;
+        }
+
+        /* Section Containers */
+        .section-box {
+            background: linear-gradient(180deg, #180e09 0%, #0d0805 100%);
+            border: 1px solid #452415;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.85);
+        }
+
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title i {
+            color: #f59e0b;
+            filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.8));
+        }
+
+        /* Download Grid - 480p, 720p, 1080p, 4K */
+        .movie-dl-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .movie-dl-card {
+            background: #110a06;
+            border: 1px solid #3b2014;
+            border-radius: 12px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-dl-card:hover {
+            border-color: #f59e0b;
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+            transform: translateY(-4px);
+        }
+
+        .quality-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #2e180e;
+            padding-bottom: 10px;
+        }
+
+        .quality-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .quality-tag {
+            background: #24120a;
+            color: #e2e8f0;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid #4a2515;
+        }
+
+        .tag-4k {
+            background: #450a0a;
+            color: #fca5a5;
+            border-color: #7f1d1d;
+        }
+
+        .dl-details {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        .dl-details p {
+            margin-bottom: 5px;
+        }
+
+        .dl-details strong {
+            color: #e2e8f0;
+        }
+
+        .action-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(145deg, #2b170e, #140b06);
+            border: 1px solid #ef4444;
+            color: #ffffff;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-download:hover {
+            background: linear-gradient(135deg, #ef4444, #b45309);
+            color: #ffffff;
+            box-shadow: 0 0 16px rgba(239, 68, 68, 0.7);
+            border-color: #fca5a5;
+        }
+
+        .btn-download.btn-4k-special {
+            border-color: #38bdf8;
+            background: linear-gradient(145deg, #0c2a3a, #061724);
+        }
+
+        .btn-download.btn-4k-special:hover {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            box-shadow: 0 0 18px rgba(56, 189, 248, 0.7);
+            border-color: #bae6fd;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .movie-dl-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .series-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-wrapper {
+                max-width: 100%;
+            }
+
+            .series-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .movie-dl-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-download {
+                padding: 10px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header with Integrated Responsive Mobile Menu (No Navbar) -->
+        <header class="page-header">
+            <div class="header-top-row">
+                <div class="page-header-title">
+                    <h1><span>Periodic</span> Action</h1>
+                    <span class="media-type-tag"><i class="fas fa-film"></i> Movie</span>
+                </div>
+                
+             
+                
+        </header>
+
+        <!-- Movie Main Card -->
+        <div class="series-card">
+            <div class="poster-wrapper">
+                <img src="images/captain_miller.jpg" alt="Captain Miller Movie Poster">
+            </div>
+            
+            <div class="details-wrapper">
+                <div>
+                    <h2 class="series-title">Captain Miller (2024)</h2>
+                    
+                    <div class="series-meta">
+                        <span class="meta-rating"><i class="fas fa-star"></i> 7.0/10</span>
+                        <span class="meta-badge">2024</span>
+                        <span class="meta-badge">UA 16+</span>
+                        <span class="meta-badge">2h 37m</span>
+                        <span class="meta-4k-badge">4K Ultra HD</span>
+                        <span class="meta-badge">Dual Audio [Tamil + Hindi]</span>
+                    </div>
+
+                    <ul class="info-list">
+                        <li><strong>Type:</strong> Feature Film</li>
+                        <li><strong>Genre:</strong> Action, Adventure, Drama, Period Thriller</li>
+                        <li><strong>Director:</strong> Arun Matheswaran</li>
+                        <li><strong>Stars:</strong> Dhanush, Shiva Rajkumar, Sundeep Kishan, Priyanka Arul Mohan, Edward Sonnenblick</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p | 2160p (4K UHD)</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        Set in the 1930s during British colonial rule in India, Analeesan "Eesa", a former British Indian Army soldier known as Captain Miller, turns against the oppressors after witnessing atrocities against his local village and people. He leads an aggressive resistance movement to reclaim a sacred local treasure and bring freedom to his land.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Movie Download Links Section (480p, 720p, 1080p, 4K) -->
+        <div class="section-box">
+            <h3 class="section-title"><i class="fas fa-download"></i> Download Links</h3>
+            
+            <div class="movie-dl-grid">
+
+                <!-- 480p Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">480p SD</span>
+                            <span class="quality-tag">x264</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~500 MB</p>
+                            <p><strong>Audio:</strong> Tamil + Hindi [Stereo]</p>
+                            <p><strong>Subtitles:</strong> English Subtitles</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcdn.wiki/dl/?link=https://video-downloads.googleusercontent.com/ADGPM2mNYM7IYTP_w59Y0ND6GQ-BK3FgmE0lnLdWZ2CWM4buGm7lReXG-rtWZPeZOvbBOTdNpfaK85mVy2MyVpQd_epi-qJicao7YHhyOYtbc42QVN0D6EqhZYgf1EMWuGPNFHkUOT1P_UYz0Y_Try3EPqEE8FwB6MqnM0E-4wA01fbBkg257Ibn1e6FLe1rRri5Cjo413yuIkAnNM9H160dAKBFXN3uiDZjP8ZqS61vXfBFCfsPtwA" target="_blank" class="btn-download">
+                            <i class="fas fa-download"></i> Download 480p SD
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 720p Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">720p HD</span>
+                            <span class="quality-tag">x264 / HEVC</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~1.4 GB</p>
+                            <p><strong>Audio:</strong> Tamil + Hindi [DD 5.1]</p>
+                            <p><strong>Subtitles:</strong> English Subtitles</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/sav9fw4ca1as6vd" target="_blank" class="btn-download">
+                            <i class="fas fa-download"></i> Download 720p HD
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 1080p Quality Card -->
+                <div class="movie-dl-card">
+                    <div>
+                        <div class="quality-header">
+                            <span class="quality-title">1080p Full HD</span>
+                            <span class="quality-tag">x264 10-bit</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~3.0 GB</p>
+                            <p><strong>Audio:</strong> Tamil + Hindi [Dolby Digital 5.1]</p>
+                            <p><strong>Subtitles:</strong> English ESub</p>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="https://hubcloud.ist/drive/0hyha7xhepxhaee" target="_blank" class="btn-download">
+                            <i class="fas fa-download"></i> Download 1080p FHD
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const menuToggleBtn = document.getElementById('menuToggle');
+        const headerMenu = document.getElementById('headerMenu');
+
+        menuToggleBtn.addEventListener('click', () => {
+            headerMenu.classList.toggle('active');
+            const icon = menuToggleBtn.querySelector('i');
+            if (headerMenu.classList.contains('active')) {
+                icon.className = 'fas fa-times';
+            } else {
+                icon.className = 'fas fa-bars';
+            }
+        });
+    </script>
+</body>
+</html>

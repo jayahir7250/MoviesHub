@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiger Nageswara Rao (2023) - Movie Download (480p, 720p, 1080p, 4K UHD)</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Oswald:wght@500;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gritty Metallic Charcoal & Rusted Iron/Copper Aesthetic */
+        body {
+            background-color: #070605;
+            background-image: 
+                radial-gradient(circle at 50% 15%, rgba(184, 115, 51, 0.2) 0%, transparent 55%),
+                radial-gradient(circle at 85% 70%, rgba(138, 70, 24, 0.18) 0%, transparent 50%),
+                radial-gradient(circle at 15% 85%, rgba(45, 38, 34, 0.4) 0%, transparent 45%),
+                radial-gradient(circle at 50% 100%, #070605 0%, transparent 100%);
+            color: #d1d5db;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1080px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header Bar - No Navbar */
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #2a211a;
+            position: relative;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .header-brand h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 26px;
+            font-weight: 900;
+            color: #e5e7eb;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+        }
+
+        .header-brand h1 span {
+            color: #b87333;
+            text-shadow: 0 0 12px rgba(184, 115, 51, 0.6);
+        }
+
+        .type-badge {
+            background: linear-gradient(135deg, #a3531d, #422006);
+            color: #f3f4f6;
+            font-family: 'Oswald', sans-serif;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid #d97706;
+        }
+
+        /* Menu Trigger Button (Opens Side Drawer) */
+        .menu-trigger-btn {
+            background: #181310;
+            border: 1px solid #b87333;
+            color: #b87333;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+            font-size: 15px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .menu-trigger-btn:hover {
+            background: #b87333;
+            color: #070605;
+            box-shadow: 0 0 15px rgba(184, 115, 51, 0.5);
+        }
+
+        /* Off-Canvas Slide Drawer Menu (No Dropdown) */
+        .drawer-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(4px);
+            z-index: 998;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .drawer-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .side-drawer {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 280px;
+            height: 100vh;
+            background: #110d0a;
+            border-left: 2px solid #b87333;
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.9);
+            z-index: 999;
+            transform: translateX(100%);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            padding: 25px 20px;
+        }
+
+        .side-drawer.active {
+            transform: translateX(0);
+        }
+
+        .drawer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #2a211a;
+            margin-bottom: 20px;
+        }
+
+        .drawer-header h3 {
+            font-family: 'Oswald', sans-serif;
+            color: #b87333;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .drawer-close-btn {
+            background: none;
+            border: none;
+            color: #9ca3af;
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .drawer-close-btn:hover {
+            color: #f3f4f6;
+        }
+
+        .drawer-menu-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .drawer-menu-list a {
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 10px 14px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #1a1410;
+            border: 1px solid #2e2118;
+            transition: all 0.2s ease;
+        }
+
+        .drawer-menu-list a:hover {
+            background: #b87333;
+            color: #070605;
+            border-color: #d97706;
+        }
+
+        /* Movie Main Card */
+        .movie-card {
+            background: linear-gradient(160deg, #17110d 0%, #0b0806 100%);
+            border: 1px solid #3d2b1f;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 35px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), 0 0 20px rgba(184, 115, 51, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #b87333, #d97706, #78350f, #b87333);
+        }
+
+        .poster-container {
+            flex: 1 1 260px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .poster-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #523724;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.95), 0 0 15px rgba(184, 115, 51, 0.25);
+            display: block;
+        }
+
+        .movie-details {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .movie-title {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+            border-bottom: 2px solid #b87333;
+            padding-bottom: 6px;
+        }
+
+        .movie-meta-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .badge {
+            background: #241912;
+            color: #d1d5db;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid #4a3324;
+        }
+
+        .badge-rating {
+            background: linear-gradient(135deg, #d97706, #78350f);
+            color: #ffffff;
+            font-weight: 700;
+            border-color: #f59e0b;
+        }
+
+        .badge-4k {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #ffffff;
+            font-weight: 700;
+            border-color: #60a5fa;
+        }
+
+        .info-grid {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-grid li {
+            margin-bottom: 8px;
+            color: #9ca3af;
+        }
+
+        .info-grid strong {
+            color: #f3f4f6;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #9ca3af;
+            line-height: 1.7;
+            margin-top: 10px;
+        }
+
+        /* Download Section Box */
+        .download-box {
+            background: linear-gradient(180deg, #15100c 0%, #080605 100%);
+            border: 1px solid #3d2b1f;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.85);
+        }
+
+        .section-heading {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-heading i {
+            color: #b87333;
+        }
+
+        /* Download Cards Grid */
+        .dl-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .dl-card {
+            background: #100b08;
+            border: 1px solid #332116;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .dl-card:hover {
+            border-color: #b87333;
+            box-shadow: 0 0 18px rgba(184, 115, 51, 0.35);
+            transform: translateY(-4px);
+        }
+
+        .dl-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #261810;
+            padding-bottom: 8px;
+        }
+
+        .dl-quality-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        .dl-tag {
+            background: #24160e;
+            color: #d1d5db;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 4px;
+            border: 1px solid #4a2d1d;
+        }
+
+        .dl-tag-4k {
+            background: #3b0707;
+            color: #fca5a5;
+            border-color: #991b1b;
+        }
+
+        .dl-details {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        .dl-details p {
+            margin-bottom: 4px;
+        }
+
+        .dl-details strong {
+            color: #e5e7eb;
+        }
+
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(145deg, #24170f, #120b07);
+            border: 1px solid #b87333;
+            color: #ffffff;
+            padding: 11px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-download:hover {
+            background: linear-gradient(135deg, #b87333, #78350f);
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(184, 115, 51, 0.6);
+            border-color: #f59e0b;
+        }
+
+        .btn-download.btn-4k-special {
+            border-color: #2563eb;
+            background: linear-gradient(145deg, #0f172a, #0a0f1d);
+        }
+
+        .btn-download.btn-4k-special:hover {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.6);
+            border-color: #93c5fd;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .dl-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .movie-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-container {
+                max-width: 100%;
+            }
+
+            .movie-title {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .dl-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Integrated Header Bar (No Navbar) -->
+        <header class="page-header">
+            <div class="header-brand">
+                <h1>TIGER <span>NAGESWARA RAO</span></h1>
+                <span class="type-badge"><i class="fas fa-film"></i> Movie</span>
+            </div>
+
+         
+        </header>
+
+        <!-- Movie Details Main Card -->
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="images/tiger_n.jpg" alt="Tiger Nageswara Rao Movie Poster">
+            </div>
+
+            <div class="movie-details">
+                <div>
+                    <h2 class="movie-title">Tiger Nageswara Rao (2023)</h2>
+
+                    <div class="movie-meta-tags">
+                        <span class="badge badge-rating"><i class="fas fa-star"></i> 6.6/10</span>
+                        <span class="badge">2023</span>
+                        <span class="badge">UA 16+</span>
+                        <span class="badge">2h 52m</span>
+                        <span class="badge badge-4k">4K Ultra HD</span>
+                        <span class="badge">Multi Audio [Telugu + Hindi]</span>
+                    </div>
+
+                    <ul class="info-grid">
+                        <li><strong>Genre:</strong> Action, Crime, Historical Drama, Thriller</li>
+                        <li><strong>Director:</strong> Vamsee</li>
+                        <li><strong>Stars:</strong> Ravi Teja, Anupam Kher, Nupur Sanon, Gayatri Bhardwaj, Renu Desai</li>
+                        <li><strong>Audio Tracks:</strong> Telugu (Original), Hindi Dubbed [DD 5.1]</li>
+                        <li><strong>Available Formats:</strong> 480p | 720p | 1080p | 2160p (4K UHD)</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        Set in the 1970s in Stuartpuram, Andhra Pradesh, this action period thriller follows the daring exploits of Tiger Nageswara Rao, a notorious and evasive thief who engineered legendary robberies across India and challenged the national law enforcement agencies.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Links Grid (480p, 720p, 1080p, 4K) -->
+        <div class="download-box">
+            <h3 class="section-heading"><i class="fas fa-download"></i> Download Links</h3>
+
+            <div class="dl-grid">
+
+                <!-- 480p Card -->
+                <div class="dl-card">
+                    <div>
+                        <div class="dl-card-header">
+                            <span class="dl-quality-title">480p SD</span>
+                            <span class="dl-tag">x264</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~600 MB</p>
+                            <p><strong>Audio:</strong> Telugu + Hindi</p>
+                            <p><strong>Subtitles:</strong> English ESub</p>
+                        </div>
+                    </div>
+                    <a href="https://hubcloud.ist/drive/dq6k9zwyqbcznyb" target="_blank" class="btn-download">
+                        <i class="fas fa-download"></i> Download 480p SD
+                    </a>
+                </div>
+
+                <!-- 720p Card -->
+                <div class="dl-card">
+                    <div>
+                        <div class="dl-card-header">
+                            <span class="dl-quality-title">720p HD</span>
+                            <span class="dl-tag">x264 / HEVC</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~1.5 GB</p>
+                            <p><strong>Audio:</strong> Telugu + Hindi [DD 5.1]</p>
+                            <p><strong>Subtitles:</strong> English ESub</p>
+                        </div>
+                    </div>
+                    <a href="https://hubcloud.ist/drive/iooil55zqifjzhk" target="_blank" class="btn-download">
+                        <i class="fas fa-download"></i> Download 720p HD
+                    </a>
+                </div>
+
+                <!-- 1080p Card -->
+                <div class="dl-card">
+                    <div>
+                        <div class="dl-card-header">
+                            <span class="dl-quality-title">1080p Full HD</span>
+                            <span class="dl-tag">x264 10-Bit</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~3.2 GB</p>
+                            <p><strong>Audio:</strong> Telugu + Hindi [DD 5.1]</p>
+                            <p><strong>Subtitles:</strong> English ESub</p>
+                        </div>
+                    </div>
+                    <a href="https://hubcloud.ist/drive/a5quknh2msh16c3" target="_blank" class="btn-download">
+                        <i class="fas fa-download"></i> Download 1080p FHD
+                    </a>
+                </div>
+
+                <!-- 4K Ultra HD Card -->
+                
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Off-Canvas Drawer Element (Responsive Mobile Side Navigation, No Dropdown) -->
+   
+      
+
+    <!-- JavaScript for Off-Canvas Side Drawer -->
+    <script>
+        const openDrawerBtn = document.getElementById('openDrawerBtn');
+        const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+        const sideDrawer = document.getElementById('sideDrawer');
+        const drawerOverlay = document.getElementById('drawerOverlay');
+
+        function openDrawer() {
+            sideDrawer.classList.add('active');
+            drawerOverlay.classList.add('active');
+        }
+
+        function closeDrawer() {
+            sideDrawer.classList.remove('active');
+            drawerOverlay.classList.remove('active');
+        }
+
+        openDrawerBtn.addEventListener('click', openDrawer);
+        closeDrawerBtn.addEventListener('click', closeDrawer);
+        drawerOverlay.addEventListener('click', closeDrawer);
+    </script>
+</body>
+</html>
