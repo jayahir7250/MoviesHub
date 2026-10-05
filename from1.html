@@ -30,7 +30,7 @@
 
         /* Container */
         .container {
-            max-width: 1050px;
+            max-width: 1080px;
             margin: 30px auto;
             padding: 0 20px;
         }
@@ -104,7 +104,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #14b8a6, #06b6d4, #14b8a6);
+            background: linear-gradient(90deg, #14b8a6, #06b6d4, #f59e0b, #14b8a6);
         }
 
         .poster-wrapper {
@@ -145,7 +145,7 @@
         .series-meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 10px;
             margin: 15px 0;
             font-size: 13px;
         }
@@ -157,6 +157,12 @@
             border-radius: 6px;
             font-weight: 600;
             border: 1px solid #1c455c;
+        }
+
+        .meta-badge.badge-4k {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            color: #ffffff;
+            border-color: #38bdf8;
         }
 
         .meta-rating {
@@ -242,6 +248,7 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
 
         .zip-btn:hover {
@@ -250,6 +257,17 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 22px rgba(20, 184, 166, 0.6);
             border-color: #2dd4bf;
+        }
+
+        .zip-btn.zip-btn-4k {
+            border-color: #ea580c;
+            background: linear-gradient(145deg, #1c131d 0%, #0c0812 100%);
+        }
+
+        .zip-btn.zip-btn-4k:hover {
+            background: linear-gradient(135deg, #c2410c, #9a3412);
+            border-color: #fdba74;
+            box-shadow: 0 8px 22px rgba(234, 88, 12, 0.6);
         }
 
         .zip-btn span {
@@ -285,7 +303,7 @@
         }
 
         .ep-info {
-            flex: 1 1 220px;
+            flex: 1 1 200px;
         }
 
         .ep-number {
@@ -308,13 +326,14 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            align-items: center;
         }
 
         .ep-dl-btn {
             background: #0f2734;
             color: #2dd4bf;
             border: 1px solid #1e4b63;
-            padding: 8px 14px;
+            padding: 8px 12px;
             border-radius: 6px;
             text-decoration: none;
             font-size: 12px;
@@ -332,7 +351,26 @@
             box-shadow: 0 0 12px rgba(20, 184, 166, 0.6);
         }
 
+        .ep-dl-btn.btn-4k {
+            color: #fdba74;
+            border-color: #9a3412;
+            background: #1d0f11;
+        }
+
+        .ep-dl-btn.btn-4k:hover {
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            color: #ffffff;
+            border-color: #fed7aa;
+            box-shadow: 0 0 12px rgba(234, 88, 12, 0.6);
+        }
+
         /* Responsive Design */
+        @media (max-width: 900px) {
+            .zip-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .series-card {
                 flex-direction: column;
@@ -345,10 +383,6 @@
 
             .series-title {
                 font-size: 26px;
-            }
-
-            .zip-grid {
-                grid-template-columns: 1fr 1fr;
             }
 
             .episode-card {
@@ -368,8 +402,10 @@
             }
 
             .ep-dl-btn {
-                padding: 6px 10px;
+                padding: 7px 10px;
                 font-size: 11px;
+                flex: 1 1 calc(50% - 8px);
+                justify-content: center;
             }
         }
     </style>
@@ -401,6 +437,7 @@
                         <span class="meta-badge">2022</span>
                         <span class="meta-badge">TV-MA</span>
                         <span class="meta-badge">10 Episodes</span>
+                        <span class="meta-badge badge-4k">4K UHD</span>
                         <span class="meta-badge">Dual Audio [Eng + Hin]</span>
                     </div>
 
@@ -409,7 +446,7 @@
                         <li><strong>Genre:</strong> Horror, Mystery, Sci-Fi, Drama</li>
                         <li><strong>Creator:</strong> John Griffin</li>
                         <li><strong>Stars:</strong> Harold Perrineau, Catalina Sandino Moreno, Eion Bailey, David Alpay, Elizabeth Saunders</li>
-                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p | 2160p (4K UHD)</li>
                     </ul>
 
                     <p class="synopsis">
@@ -444,6 +481,13 @@
                     1080p Batch Zip
                     <span>~9.5 GB Complete Pack</span>
                 </a>
+
+                <!-- 4K Zip -->
+                <a href="https://hubcloud.ist/drive/7xvq01qhrs1fec1" target="_blank" class="zip-btn zip-btn-4k">
+                    <i class="fas fa-download fa-lg"></i>
+                    4K UHD Batch Zip
+                    <span>~18.5 GB Complete Pack</span>
+                </a>
             </div>
         </div>
 
@@ -460,8 +504,10 @@
                         <div class="ep-title">Long Day's Journey Into Night</div>
                     </div>
                     <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/from_s01e01_480p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
                         <a href="https://hubcloud.ist/drive/xrn7eer_6cex5_k" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/tmqleacv83dddti" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/3druu8ev0zdpuqh" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -472,8 +518,10 @@
                         <div class="ep-title">The Way Things Are Now</div>
                     </div>
                     <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/from_s01e02_480p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
                         <a href="https://hubcloud.ist/drive/fmqr1gkd0drf4d1" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/ld1fy5pkialfszl" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/ajmypjjpz5hp5y0" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -484,8 +532,10 @@
                         <div class="ep-title">All Good Things</div>
                     </div>
                     <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/from_s01e03_480p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
                         <a href="https://hubcloud.ist/drive/ztivppddizxi9vm" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/1hq10f18qlmhers" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/a0jehr5n5kmjm1u" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -496,8 +546,10 @@
                         <div class="ep-title">A Rock and a Farway Place</div>
                     </div>
                     <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/from_s01e04_480p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
                         <a href="https://hubcloud.ist/drive/oxuinf_swff7kf1" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/29g2o3l94npevwe" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/migamoi1ii6aifo" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -508,8 +560,10 @@
                         <div class="ep-title">Silhouettes</div>
                     </div>
                     <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/from_s01e05_480p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
                         <a href="https://hubcloud.ist/drive/4kxacac4gj0aoao" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/1pyrmrf88ra7r1p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/rv1195hbgdq5nov" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -520,8 +574,10 @@
                         <div class="ep-title">Book 74</div>
                     </div>
                     <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/from_s01e06_480p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
                         <a href="https://hubcloud.ist/drive/lmnjl3jbupb_n84" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/b4wxcftgtiti1wt" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/xvp7uepwszwjcqj" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -532,8 +588,10 @@
                         <div class="ep-title">All Good Things...</div>
                     </div>
                     <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/from_s01e07_480p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
                         <a href="https://hubcloud.ist/drive/5ptyutypte1tiu0" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/gb44g77jyrnxvg1" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/j7qca6fujkha6ah" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -544,8 +602,10 @@
                         <div class="ep-title">Broken Windows, Cowbells, Cream Soda</div>
                     </div>
                     <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/from_s01e08_480p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
                         <a href="https://hubcloud.ist/drive/fcz_6bxby6yicj6" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/szeyb9yy9d1ey7i" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/lpv7tuv2vyctkap" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -556,8 +616,10 @@
                         <div class="ep-title">Into the Woods</div>
                     </div>
                     <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/from_s01e09_480p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
                         <a href="https://hubcloud.ist/drive/08bwge5teubgw20" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/u1sthlbnh7dl3ds" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/hmb7qan1nqenwi5" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -568,8 +630,10 @@
                         <div class="ep-title">Oh, the Places We'll Go</div>
                     </div>
                     <div class="ep-links">
+                        <a href="https://hubcloud.ist/drive/from_s01e10_480p" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 480p</a>
                         <a href="https://hubcloud.ist/drive/ynburr17m872jbm" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/qgyrlvoexwyylxv" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/rcqkdmebsq22ved" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
