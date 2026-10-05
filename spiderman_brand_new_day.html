@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Man: Brand New Day (2026) - Download Movie (480p, 720p, 1080p, 4K UHD)</title>
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Montserrat:wght@300;400;600;700;900&family=Teko:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Crimson Red, Deep Dusk Navy & Gold Accent Theme matching Spider-Man poster */
+        body {
+            background-color: #060911;
+            background-image: 
+                radial-gradient(circle at 50% 12%, rgba(225, 29, 72, 0.35) 0%, transparent 60%),
+                radial-gradient(circle at 85% 65%, rgba(245, 158, 11, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 15% 85%, rgba(30, 58, 138, 0.35) 0%, transparent 50%),
+                radial-gradient(circle at 50% 100%, #060911 0%, transparent 100%);
+            color: #f8fafc;
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 40px;
+            min-height: 100vh;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1080px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Header Bar (No Navbar, No Menu) */
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e11d48;
+            position: relative;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .header-brand h1 {
+            font-family: 'Teko', sans-serif;
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 1;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+        }
+
+        .header-brand h1 span.spidey-red {
+            color: #e11d48;
+            text-shadow: 0 0 14px rgba(225, 29, 72, 0.7);
+        }
+
+        .header-brand h1 span.gold-text {
+            color: #f59e0b;
+            text-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+        }
+
+        .type-badge {
+            background: linear-gradient(135deg, #e11d48, #9f1239);
+            color: #ffffff;
+            font-family: 'Oswald', sans-serif;
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid #fda4af;
+        }
+
+        /* Movie Main Card */
+        .movie-card {
+            background: linear-gradient(160deg, #0f172a 0%, #030712 100%);
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            padding: 25px;
+            margin-bottom: 35px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.95), 0 0 25px rgba(225, 29, 72, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #e11d48, #f59e0b, #2563eb, #e11d48);
+        }
+
+        .poster-container {
+            flex: 1 1 260px;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .poster-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #e11d48;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.95), 0 0 20px rgba(225, 29, 72, 0.4);
+            display: block;
+        }
+
+        .movie-details {
+            flex: 2 1 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .movie-title {
+            font-family: 'Teko', sans-serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: #e11d48;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            line-height: 0.95;
+            text-shadow: 0 0 15px rgba(225, 29, 72, 0.4);
+        }
+
+        .movie-title-sub {
+            font-family: 'Oswald', sans-serif;
+            font-size: 26px;
+            color: #f59e0b;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            border-bottom: 2px solid #e11d48;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+            text-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+        }
+
+        .movie-meta-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .badge {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            border: 1px solid #334155;
+        }
+
+        .badge-rating {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #000000;
+            font-weight: 700;
+            border-color: #fef08a;
+        }
+
+        .badge-4k {
+            background: linear-gradient(135deg, #e11d48, #be123c);
+            color: #ffffff;
+            font-weight: 700;
+            border-color: #fecdd3;
+        }
+
+        .info-grid {
+            list-style: none;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+
+        .info-grid li {
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        .info-grid strong {
+            color: #ffffff;
+        }
+
+        .synopsis {
+            font-size: 14px;
+            color: #f8fafc;
+            line-height: 1.7;
+            margin-top: 10px;
+            background: #090d16;
+            padding: 14px;
+            border-radius: 8px;
+            border-left: 3px solid #e11d48;
+        }
+
+        /* Download Section Box */
+        .download-box {
+            background: linear-gradient(180deg, #0f172a 0%, #030712 100%);
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
+        }
+
+        .section-heading {
+            font-family: 'Oswald', sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-heading i {
+            color: #e11d48;
+        }
+
+        /* Download Cards Grid */
+        .dl-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .dl-card {
+            background: #080d1a;
+            border: 1px solid #1e293b;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .dl-card:hover {
+            border-color: #e11d48;
+            box-shadow: 0 0 18px rgba(225, 29, 72, 0.4);
+            transform: translateY(-4px);
+        }
+
+        .dl-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 8px;
+        }
+
+        .dl-quality-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        .dl-tag {
+            background: #1e293b;
+            color: #38bdf8;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 4px;
+            border: 1px solid #0284c7;
+        }
+
+        .dl-tag-4k {
+            background: #2a0a12;
+            color: #fca5a5;
+            border-color: #e11d48;
+        }
+
+        .dl-details {
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        .dl-details p {
+            margin-bottom: 4px;
+        }
+
+        .dl-details strong {
+            color: #ffffff;
+        }
+
+        .btn-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: linear-gradient(145deg, #1d4ed8, #1e40af);
+            border: 1px solid #60a5fa;
+            color: #ffffff;
+            padding: 11px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-download:hover {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.7);
+            border-color: #bfdbfe;
+        }
+
+        .btn-download.btn-spidey-primary {
+            border-color: #fda4af;
+            background: linear-gradient(145deg, #e11d48, #9f1239);
+        }
+
+        .btn-download.btn-spidey-primary:hover {
+            background: linear-gradient(135deg, #f43f5e, #be123c);
+            box-shadow: 0 0 15px rgba(225, 29, 72, 0.75);
+            border-color: #ffffff;
+        }
+
+        .btn-download.btn-4k-special {
+            border-color: #fef08a;
+            background: linear-gradient(145deg, #d97706, #78350f);
+        }
+
+        .btn-download.btn-4k-special:hover {
+            background: linear-gradient(135deg, #f59e0b, #b45309);
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.8);
+            border-color: #ffffff;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .dl-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .movie-card {
+                flex-direction: column;
+                padding: 18px;
+            }
+
+            .poster-container {
+                max-width: 100%;
+            }
+
+            .movie-title {
+                font-size: 42px;
+            }
+            
+            .movie-title-sub {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .dl-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Header Bar (No Menu / No Navbar) -->
+        <header class="page-header">
+            <div class="header-brand">
+                <h1>SPIDER-MAN: <span class="spidey-red">BRAND</span> <span class="gold-text">NEW DAY</span></h1>
+                <span class="type-badge"><i class="fas fa-spider"></i> Marvel Studios (2026)</span>
+            </div>
+        </header>
+
+        <!-- Movie Main Card -->
+        <div class="movie-card">
+            <div class="poster-container">
+                <img src="images/spiderman_brand_new_day.jpg" alt="Spider-Man Brand New Day Movie Poster">
+            </div>
+
+            <div class="movie-details">
+                <div>
+                    <h2 class="movie-title">SPIDER-MAN</h2>
+                    <span class="movie-title-sub">BRAND NEW DAY (2026)</span>
+
+                    <div class="movie-meta-tags">
+                        <span class="badge badge-rating"><i class="fas fa-star"></i> 8.8/10</span>
+                        <span class="badge">2026</span>
+                        <span class="badge">PG-13</span>
+                        <span class="badge">2h 28m</span>
+                        <span class="badge badge-4k">4K IMAX Enhanced</span>
+                        <span class="badge">Multi Audio</span>
+                    </div>
+
+                    <ul class="info-grid">
+                        <li><strong>Genre:</strong> Superhero, Action, Sci-Fi, Crime</li>
+                        <li><strong>Director:</strong> Marvel Studios</li>
+                        <li><strong>Cast:</strong> Tom Holland, Mark Ruffalo (Hulk), Jon Bernthal (Punisher), Zendaya, Michael Mando (Scorpion)</li>
+                        <li><strong>Audio Tracks:</strong> English (Original), Hindi, Tamil, Telugu [DD 5.1 / Atmos]</li>
+                        <li><strong>Available Formats:</strong> 480p | 720p | 1080p | 2160p (4K UHD)</li>
+                    </ul>
+
+                    <p class="synopsis">
+                        Stripped of his identity and navigating New York City completely alone, Peter Parker swings into a gritty new era. Forced into an uneasy truce with Frank Castle (The Punisher) and calling upon Bruce Banner (Hulk), Spider-Man must protect the streets against Mac Gargan's lethal Scorpion upgrade and the deadly Hand shadow assassins.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download Links Grid (480p, 720p, 1080p, 4K) -->
+        <div class="download-box">
+            <h3 class="section-heading"><i class="fas fa-download"></i> Download Links</h3>
+
+            <div class="dl-grid">
+
+                <!-- 480p Card -->
+                <div class="dl-card">
+                    <div>
+                        <div class="dl-card-header">
+                            <span class="dl-quality-title">480p SD</span>
+                            <span class="dl-tag">x264 Web-DL</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~480 MB</p>
+                            <p><strong>Audio:</strong> Multi [Dual Audio]</p>
+                            <p><strong>Subtitles:</strong> English ESub</p>
+                        </div>
+                    </div>
+                    <a href="https://hubcloud.ist/drive/nkjnnxnxnf0kgup" target="_blank" class="btn-download">
+                        <i class="fas fa-download"></i> Download 480p SD
+                    </a>
+                </div>
+
+                <!-- 720p Card -->
+                <div class="dl-card">
+                    <div>
+                        <div class="dl-card-header">
+                            <span class="dl-quality-title">720p HD</span>
+                            <span class="dl-tag">HEVC 10-bit</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~1.3 GB</p>
+                            <p><strong>Audio:</strong> Multi [DD 5.1]</p>
+                            <p><strong>Subtitles:</strong> English ESub</p>
+                        </div>
+                    </div>
+                    <a href="https://hubcloud.ist/drive/rdtrgttdtr5rbad" target="_blank" class="btn-download btn-spidey-primary">
+                        <i class="fas fa-download"></i> Download 720p HD
+                    </a>
+                </div>
+
+                <!-- 1080p Card -->
+                <div class="dl-card">
+                    <div>
+                        <div class="dl-card-header">
+                            <span class="dl-quality-title">1080p Full HD</span>
+                            <span class="dl-tag">x264 IMAX</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~2.8 GB</p>
+                            <p><strong>Audio:</strong> Multi [DD 5.1]</p>
+                            <p><strong>Subtitles:</strong> English ESub</p>
+                        </div>
+                    </div>
+                    <a href="https://hubcloud.ist/drive/lrk1ccjycckv2hw" target="_blank" class="btn-download btn-spidey-primary">
+                        <i class="fas fa-download"></i> Download 1080p FHD
+                    </a>
+                </div>
+
+                <!-- 4K Ultra HD Card -->
+                <div class="dl-card">
+                    <div>
+                        <div class="dl-card-header">
+                            <span class="dl-quality-title">2160p 4K UHD</span>
+                            <span class="dl-tag dl-tag-4k">HDR10+ / Dolby Vision</span>
+                        </div>
+                        <div class="dl-details" style="margin-top: 12px;">
+                            <p><strong>Size:</strong> ~7.5 GB</p>
+                            <p><strong>Audio:</strong> Multi [Dolby Atmos]</p>
+                            <p><strong>Subtitles:</strong> English MSub</p>
+                        </div>
+                    </div>
+                    <a href="https://hubcloud.ist/drive/gp1qgttkvavkkvv" target="_blank" class="btn-download btn-4k-special">
+                        <i class="fas fa-download"></i> Download 4K Ultra HD
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
