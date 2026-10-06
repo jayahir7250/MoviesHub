@@ -30,7 +30,7 @@
 
         /* Container */
         .container {
-            max-width: 1050px;
+            max-width: 1080px;
             margin: 30px auto;
             padding: 0 20px;
         }
@@ -159,6 +159,12 @@
             border: 1px solid #144359;
         }
 
+        .meta-badge.badge-4k {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            color: #ffffff;
+            border-color: #38bdf8;
+        }
+
         .meta-rating {
             background: linear-gradient(135deg, #0891b2, #0e7490);
             color: #ffffff;
@@ -242,6 +248,7 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             position: relative;
             overflow: hidden;
+            text-align: center;
         }
 
         .zip-btn:hover {
@@ -250,6 +257,17 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 22px rgba(6, 182, 212, 0.6);
             border-color: #38bdf8;
+        }
+
+        .zip-btn.zip-btn-4k {
+            border-color: #ea580c;
+            background: linear-gradient(145deg, #1c131d 0%, #0c0812 100%);
+        }
+
+        .zip-btn.zip-btn-4k:hover {
+            background: linear-gradient(135deg, #c2410c, #9a3412);
+            border-color: #fdba74;
+            box-shadow: 0 8px 22px rgba(234, 88, 12, 0.6);
         }
 
         .zip-btn span {
@@ -285,7 +303,7 @@
         }
 
         .ep-info {
-            flex: 1 1 220px;
+            flex: 1 1 200px;
         }
 
         .ep-number {
@@ -308,13 +326,14 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
+            align-items: center;
         }
 
         .ep-dl-btn {
             background: #0a212d;
             color: #38bdf8;
             border: 1px solid #144359;
-            padding: 8px 14px;
+            padding: 8px 12px;
             border-radius: 6px;
             text-decoration: none;
             font-size: 12px;
@@ -332,7 +351,26 @@
             box-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
         }
 
+        .ep-dl-btn.btn-4k {
+            color: #fdba74;
+            border-color: #9a3412;
+            background: #1d0f11;
+        }
+
+        .ep-dl-btn.btn-4k:hover {
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            color: #ffffff;
+            border-color: #fed7aa;
+            box-shadow: 0 0 12px rgba(234, 88, 12, 0.6);
+        }
+
         /* Responsive Design */
+        @media (max-width: 900px) {
+            .zip-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
         @media (max-width: 768px) {
             .series-card {
                 flex-direction: column;
@@ -345,10 +383,6 @@
 
             .series-title {
                 font-size: 26px;
-            }
-
-            .zip-grid {
-                grid-template-columns: 1fr 1fr;
             }
 
             .episode-card {
@@ -368,8 +402,10 @@
             }
 
             .ep-dl-btn {
-                padding: 6px 10px;
+                padding: 7px 10px;
                 font-size: 11px;
+                flex: 1 1 calc(50% - 8px);
+                justify-content: center;
             }
         }
     </style>
@@ -401,6 +437,7 @@
                         <span class="meta-badge">2023</span>
                         <span class="meta-badge">TV-MA</span>
                         <span class="meta-badge">10 Episodes</span>
+                        <span class="meta-badge badge-4k">4K UHD</span>
                         <span class="meta-badge">Dual Audio [Eng + Hin]</span>
                     </div>
 
@@ -409,7 +446,7 @@
                         <li><strong>Genre:</strong> Horror, Mystery, Sci-Fi, Drama</li>
                         <li><strong>Creator:</strong> John Griffin</li>
                         <li><strong>Stars:</strong> Harold Perrineau, Catalina Sandino Moreno, Eion Bailey, David Alpay, Elizabeth Saunders</li>
-                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p</li>
+                        <li><strong>Available Quality:</strong> 480p | 720p | 1080p | 2160p (4K UHD)</li>
                     </ul>
 
                     <p class="synopsis">
@@ -444,6 +481,13 @@
                     1080p Batch Zip
                     <span>~10.2 GB Complete Pack</span>
                 </a>
+
+                <!-- 4K Zip -->
+                <a href="https://hubcloud.ist/drive/zeyqzrz6srd1q1l" target="_blank" class="zip-btn zip-btn-4k">
+                    <i class="fas fa-download fa-lg"></i>
+                    4K UHD Batch Zip
+                    <span>~19.8 GB Complete Pack</span>
+                </a>
             </div>
         </div>
 
@@ -462,6 +506,7 @@
                     <div class="ep-links">
                         <a href="https://hubcloud.ist/drive/5n7y788pwly7y0n" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/63dpg1dw82cwpbp" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/o4l6omvfbybvuuf" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -474,6 +519,7 @@
                     <div class="ep-links">
                         <a href="https://hubcloud.ist/drive/ovzuibk1i7uondu" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/7dl5fggf5l5yagz" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/f29rinbs1p8mfdz" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -486,6 +532,7 @@
                     <div class="ep-links">
                         <a href="https://hubcloud.ist/drive/kgmugw5953e1h7f" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/ro3y3vqqqv0k0kq" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/dqsin54eqdqwadq" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -498,6 +545,7 @@
                     <div class="ep-links">
                         <a href="https://hubcloud.ist/drive/f29_vkb89qv99bp" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/r0145bdxa4bax4d" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/rmrcwrmxf5x5bbr" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -510,6 +558,7 @@
                     <div class="ep-links">
                         <a href="https://hubcloud.ist/drive/4bccxwzumcydyz_" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/em11kayaveokjfe" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/41kaxxwdskcismm" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -522,6 +571,7 @@
                     <div class="ep-links">
                         <a href="https://hubcloud.ist/drive/sjr7jceceswcbw_" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/rfrr7rfad9ticd1" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/wtdxvddzzt5jt3k" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -534,6 +584,7 @@
                     <div class="ep-links">
                         <a href="https://hubcloud.ist/drive/kdlyrmsdrddfzrt" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/pcwnccahcahwc1c" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/r8obe21c811ytyc" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -546,6 +597,7 @@
                     <div class="ep-links">
                         <a href="https://hubcloud.ist/drive/yexmfmvyq1qyjxo" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/jmyzmqssbshsqbf" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/gcswljqkwuc64ej" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -558,6 +610,7 @@
                     <div class="ep-links">
                         <a href="https://hubcloud.ist/drive/krww1oyc8k8z18h" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/ycengpkyuyfb1pe" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/76oy67kikkjzird" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
@@ -570,6 +623,7 @@
                     <div class="ep-links">
                         <a href="https://hubcloud.ist/drive/d4y7uogrukrvj6r" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 720p</a>
                         <a href="https://hubcloud.ist/drive/1pp0ulpsggjd0r1" target="_blank" class="ep-dl-btn"><i class="fas fa-download"></i> 1080p</a>
+                        <a href="https://hubcloud.ist/drive/1q7ip97pph99nqq" target="_blank" class="ep-dl-btn btn-4k"><i class="fas fa-download"></i> 4K UHD</a>
                     </div>
                 </div>
 
